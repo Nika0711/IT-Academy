@@ -1,0 +1,24 @@
+body{
+  background-image: url(background1.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+}
+h1{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', monospace;
+  font-weight: bold; 
+  color:darkslateblue;
+  letter-spacing:2px;
+}
+p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, fantasy; 
+  font-weight: 900;
+}
+ul{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, fantasy;
+  word-spacing: 10px;
+  line-height: 25px;
+  font-weight: cursive;
+}
+
+li{color: blue;
+}

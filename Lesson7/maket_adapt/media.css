@@ -1,0 +1,95 @@
+@media all and (min-width: 1200px) and (max-width:1920px){
+    div.header p, div.footer p{
+        text-transform: uppercase; 
+        color: darkblue;
+        font-size: 20px;
+    }
+    .container{
+       background-color: orange;
+       font-size: 20px;
+   } 
+   .header, .footer{
+        text-align: center;
+
+   }
+}
+      @media all and (min-width:992px) and (max-width:1200px){
+    .container{
+              font-size: 20px;
+          }
+    .header, .footer{
+        background-color: lightseagreen;
+    }
+    div.header p, div.footer p{
+        text-transform: uppercase; 
+        color: rgb(10, 10, 150);
+        font-size: 20px;
+    }
+    .header, .footer{
+        text-align: center;
+      }
+    }
+      @media all and (min-width:560px) and (max-width:992px){
+    .menu{
+       width: 200px;
+       float: right;
+       background-color: orchid;
+   }
+   .content{
+            padding-left: 60 px;
+            margin-top: -15px;
+            background-image: url(/Lesson5/maket_div/ball.png);
+            background-position: left top;
+            background-repeat: repeat-y;
+            font-size: 15px;
+            margin-left: 0;
+      }
+      .container{
+       background-color: transparent;
+       font-size: 20px;
+   } 
+   .header, .footer{
+        text-align: center;
+    }
+}
+@media all and (max-width:560px){
+    .menu{
+       width: 150px;
+       float: right;
+       background-color: pink;
+   }
+   .content{
+            padding-left: 60 px;
+            margin-top: -15px;
+            background-position: left top;
+            background-repeat: repeat-y;
+            font-size: 15px;
+            margin-left: 0;
+      }
+      .container{
+       background-color: transparent;
+       font-size: 15x;
+   } 
+   img{
+       display: none;
+   }
+   div.header p, div.footer p{
+        text-transform: uppercase; 
+        color: rgb(10, 10, 150);
+        font-size: 15px;
+        text-align: center;
+        height: 10px;
+    }
+    div.content p{
+     padding-left: 10px;
+   }
+   .clearfix::after{
+       content: '';
+       display:block;
+       clear: both;
+   }
+   div.menu p{
+    font-weight: bold; 
+    padding-left:25px;
+   }
+}

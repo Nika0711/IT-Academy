@@ -1,0 +1,95 @@
+/* Variant 1*/
+
+.variant1>a { 
+    display:inline-block;
+    padding: 5px;
+    border-right: 4px red solid;   
+    color: green}
+    
+    .variant1>a:hover{
+    cursor: pointer;
+    color:red;
+    }
+
+/* Variant 2*/
+    
+    .variant2{
+    float:left;
+    }
+    
+    .variant2 div{
+    border-right: 4px red solid;  
+    height: 28px;
+    float:left;
+    padding-left: 5px;
+    padding-right: 7px;
+
+    }
+    .variant2 div>a {
+    color:green;
+    }
+    .variant2 div>a:hover{
+    cursor: pointer;
+    color:red;
+    }
+/* Variant 3*/
+.variant3 div{
+    float:left;
+}
+.variant3 div>a{
+    vertical-align: 20px;
+    color: green;
+}
+.variant3 div>a:hover{
+    cursor: pointer;
+    color:red;  
+}
+/* Variant 4*/
+.variant4 div{
+    float:left;
+}
+.variant4 div>a{
+    color: green;  
+}
+.variant4 div>a:hover{
+    cursor: pointer;
+    color:red;  
+}
+.variant4 div>a[href^='https://']::after {content: url(redline.png);
+ vertical-align: -20px;}
+
+/* Variant 5*/
+.variant5 div{
+    float:left;
+    margin-right: 10px;
+}
+.variant5 div>a{
+    color:green;
+    vertical-align:-5px;
+}
+.variant5 div>div{
+background-color: red;
+float: right;
+width:4px;
+height: 30px;
+margin-left: 7px;
+}
+
+/* Variant 6*/
+.variant6 div:first-of-type{
+    margin-left: 3px;
+}
+.variant6 div{
+    float:left;
+    margin-left:10px;
+}
+.variant6 div:nth-child(odd) a{
+    color:green;
+
+}
+.variant6 div:nth-child(even){
+background-color: red;
+width:4px;
+height: 30px;
+margin-left: 7px;
+}

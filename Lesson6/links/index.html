@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links__maket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Вариант 1 с использованием расположения ссылок в виде инлайн-блочных элементов, которым можно задать  красную границу справа.       -->
+<h3>Вариант 1</h3>
+    <div>
+        <div class="variant1">
+            <a href='https://www.wikipedia.org/'>первая ссылка</a>
+            <a href='http://htmlbook.ru/'>вторая ссылка</a>
+            <a href='https://www.it-academy.by/'>третья ссылка</a>
+            <a href='https://www.onliner.by/'>четвертая ссылка</a>
+            <a href='https://www.youtube.com/'>пятая ссылка</a> 
+        </div>   
+    </div>
+ <!-- Вариант 2, где каждая ссылка расположена в отдельном блоке, разделители - это правая граница блоков. Минусы: нужно описывать больше стилей для элементов-->   
+ <h3>Вариант 2</h3>
+    <div class="variant2">
+    <div><a href='https://www.wikipedia.org/'>первая ссылка</a></div>
+    <div><a href='http://htmlbook.ru/'>вторая ссылка</a></div>
+    <div><a href='https://www.it-academy.by/'>третья ссылка</a></div>
+    <div><a href='https://www.onliner.by/'>четвертая ссылка</a></div> 
+    <div> <a href='https://www.youtube.com/'>пятая ссылка</a> </div> 
+   </div>
+    <br>
+<!--   Вариант 3, где красная полоса- это рисунок. Плюсы: мньше описания стиле. Минус: больше кода.   -->
+
+<h3>Вариант 3</h3>
+    <div class="variant3">
+        <div>
+            <a href='https://www.wikipedia.org/'>первая ссылка</a>
+            <img src="redline.png" alt="redline"></div>
+        <div><a href='http://htmlbook.ru/'>вторая ссылка</a>
+            <img src="redline.png" alt="redline"></div>
+        <div><a href='https://www.it-academy.by/'>третья ссылка</a>
+            <img src="redline.png" alt="redline"></div>
+        <div><a href='https://www.onliner.by/'>четвертая ссылка</a>
+            <img src="redline.png" alt="redline"></div> 
+        <div> <a href='https://www.youtube.com/'>пятая ссылка</a>
+            <img src="redline.png" alt="redline"> </div> 
+    </div>
+    <br>
+    <br>
+<!-- Вариант 4, где линия добавляется через селектор псевдоэлемента :after.  -->
+<h3>Вариант 4</h3>
+    <div class="variant4">
+    <div><a href='https://www.wikipedia.org/'>первая ссылка</a></div>
+    <div><a href='https://www.w3schools.com/html/html_css.asp'>вторая ссылка</a></div>
+    <div><a href='https://www.it-academy.by/'>третья ссылка</a></div>
+    <div><a href='https://www.onliner.by/'>четвертая ссылка</a></div> 
+    <div><a href='https://www.youtube.com/'>пятая ссылка</a> </div> 
+   </div>
+    </div>
+    <br>
+    <br>
+    <br>
+<!-- Вариант 5, в котором красные полоски реализованы черенз вложенные в див с сылкаими блоки с нужной высотой и шириной и зафлоченные вправо.        -->
+<h3>Вариант 5</h3>
+    <div class="variant5">
+        <div>
+            <a href='https://www.wikipedia.org/'>первая ссылка</a>
+            <div></div>
+        </div>  
+        <div> <a href='http://htmlbook.ru/'>вторая ссылка</a>
+            <div></div>
+        </div>  
+        <div>   
+            <a href='https://www.it-academy.by/'>третья ссылка</a>
+            <div></div>
+        </div> 
+        <div>
+            <a href='https://www.onliner.by/'>четвертая ссылка</a>
+            <div></div>
+        </div> 
+        <div>
+            <a href='https://www.youtube.com/'>пятая ссылка</a> 
+            <div></div>
+        </div>   
+    </div>
+    <br>
+    <br>
+<!-- Вариант 6, в котором 10 отдельных дивов, расположенных друг за другом. Стилизация элементов через nth-child(even) и nth-child(odd)--> 
+
+<h3>Вариант 6</h3>
+    <div class="variant6">
+        <div><a href='https://www.wikipedia.org/'>первая ссылка</a></div>
+        <div></div>
+        <div><a href='http://htmlbook.ru/'>вторая ссылка</a></div>
+        <div></div>    
+        <div><a href='https://www.it-academy.by/'>третья ссылка</a></div>
+        <div></div>
+        <div><a href='https://www.onliner.by/'>четвертая ссылка</a></div> 
+        <div></div>
+        <div> <a href='https://www.youtube.com/'>пятая ссылка</a> </div>
+        <div></div>        
+     </div>   
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

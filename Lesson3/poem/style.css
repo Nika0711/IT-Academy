@@ -1,0 +1,19 @@
+html{
+    font-size: 20px;
+  }
+  
+  h2, h4, p{
+    text-align: center;
+  }
+  body
+  {
+    background-image: url(background.jpg);
+    background-size: 120%;
+  }
+  p{
+      font-family: 'Caveat', cursive;
+
+  }
+  h2, h4{
+font-family: 'MarckScript-Regular';
+  }

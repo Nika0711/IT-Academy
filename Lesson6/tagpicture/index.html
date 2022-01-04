@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><code>Picture Tag</code></title>
+</head>
+<style>
+picture{
+    float: left;
+    margin-right: 20px;
+}
+h3{
+    text-align: center;
+    color:indigo;
+    font-size: 30px;
+}
+</style>
+<body>
+   <h3>Tag <b>picture</b></h3>
+    <picture>
+        <source media="(min-width: 650px)" srcset="600pxdog.jpg">
+        <source media="(min-width: 465px)" srcset="200px-dog.jpg">
+        <img src="100pxdog.jpg" alt="Dog" style="width:auto;">
+      </picture>
+      <p>
+        HTML-элемент <b>picture</b> служит контейнером для одного или более элементов <b>source</b> и одного элемента <b>img</b> для обеспечения оптимальной версии изображения для различных размеров экрана. Браузер рассмотрит каждый из дочерних элементов <b>source</b> и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <b>source</b>найдено не будет, то будет выбран файл, указанный  атрибутом  src элемента<b>img</b> . Затем выбранное изображение отображается в пространстве, занятом элементом <b>img</b>.</p> 
+      </p>
+      <p>Чтобы выбрать оптимальное изображение, user agent  анализирует атрибуты srcset, media, и type элемента <b><source></b> и выбирает совместимое изображение, которое наилучшим образом соответствует текущему макету страницы, характеристикам устройства отображения и т. д.</p>
+
+       <p>Элемент <b>picture</b> часто используют для того, чтобы обеспечить HiDPI (Retina)-версию изображений для дисплеев с высоким разрешением, а также для добавления других форматов изображений, не поддерживаемых всеми браузерами.</p>
+   
+       <p style="font-weight: bold; font-style: oblique;color: indigo; font-variant: small-caps;">Если изменить ширину экрана, можно увидеть, как меняется размер изображения. Так браузер выбирает соотвутствующую картину, подходящую по параметром для конкретной ширины браузера пользователя.</p>
+      <!--Resize the browser to see different versions of the picture loading at different viewport sizes.
+      The browser looks for the first source element where the media query matches the user's current viewport width,
+      and fetches the image specified in the srcset attribute.</p>
+      
+      <p>The img element is required as the last child tag of the picture declaration block.
+      The img element is used to provide backward compatibility for browsers that do not support the picture element, or if none of the source tags matched.
+      </p> -->
+      
+      
+      
+</body>
+</html>
