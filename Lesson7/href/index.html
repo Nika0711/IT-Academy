@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess</title>
 </head>
+<style>
+    @media print{
+        a href:first-of-type::after{
+           content: "ссылка Информация на https://chesspro.ru/statistic/botvinnik.shtml";
+               }
+        a href:nth-of-type(2)::after{
+            content: "ссылка Информация на "https://chesspro.ru/statistic/karpov.shtml"
+        }
+        a href:nth-of-type(3)::after{
+           content: "ссылка Информация на "https://chesspro.ru/statistic/kasparov.shtml"
+               }
+    }
+</style>
 <body>
     <a name="beginning"></a>
     <p style="font-weight: bolder; font-size:24px;"> Михаил Ботвинник </p>
