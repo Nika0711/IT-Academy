@@ -1,0 +1,52 @@
+
+/*сброс дефолтных настроек*/
+*{
+    margin:0;   
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    
+color: #000000;
+}
+li{
+    list-style: none;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+/*header*/
+.header{
+
+}
+.header-top{
+
+}
+.header-top ul{
+    padding-top: 29px;
+}
+.header-top ul li{
+    float:left;
+ margin-right: 26px;
+
+}
+.header-top ul li a{
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
