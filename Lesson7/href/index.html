@@ -7,17 +7,19 @@
     <title>Chess</title>
 </head>
 <style>
-    @media print{
-        a href:first-of-type::after{
-           content: "ссылка Информация на https://chesspro.ru/statistic/botvinnik.shtml";
-               }
-        a href:nth-of-type(2)::after{
-            content: "ссылка Информация на "https://chesspro.ru/statistic/karpov.shtml"
-        }
-        a href:nth-of-type(3)::after{
-           content: "ссылка Информация на "https://chesspro.ru/statistic/kasparov.shtml"
-               }
+    @page{
+        size: landscape;
     }
+    @media print {
+        a[href^='https://']:before{
+        content: ' ccылка ';
+        }
+        a[href^='https://']::after{
+           content: ' на ' attr(href);   
+         }
+    }
+
+
 </style>
 <body>
     <a name="beginning"></a>
