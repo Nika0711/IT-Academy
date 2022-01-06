@@ -35,7 +35,7 @@ body{
 .header-top{
 
 }
-.header-top ul{
+.header-top ul.header-top-menu li{
     padding-top: 29px;
 }
 .header-top ul li{
