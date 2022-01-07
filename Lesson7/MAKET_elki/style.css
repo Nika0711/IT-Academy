@@ -14,6 +14,8 @@
     content:'';
     display:block;
     clear:both;
+    background-color: red;
+    background-size: 1px;
 }
 a{
     text-decoration: none;
@@ -165,13 +167,77 @@ body{
     width: 511px;
     height: 226px;
     background: #FF715B;
-    font-family: "Noto Sans", sans-serif;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 30px;
     float:right;
-    
+}
+.sale-red-block h1{
+    color: #FFFFFF;
+    font-style: normal;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    padding-top: 41px;
+}
+.sale-red-block h1 span:first-child{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+    display: block;
 
-
+}
+.sale-red-block h1 span:nth-child(2){
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 60px;
+    display: block;
+}
+.sale-red-block h1 span:last-child{
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+}
+/*filter*/
+.filter-wrap{
+}
+.filter{
+    height: 96px;
+    width: 272px;
+    border-left: 1px solid #F5F5F5;
+    border-right: 1px solid #F5F5F5;
+    float:left;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 30px;
+}
+.filters-wrap ul{
+    float:right;
+    margin-top: 32px;
+}
+.filter img{
+  margin-left: 83px;
+  margin-right: 8px;
+}
+.filter span{
+    vertical-align: 7px;
+}
+.filters-wrap ul li{
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    float:left;
+    margin-right: 64px;
+}
+.filters-wrap ul li:last-child{
+    margin-right: 0px;
+}
+.filters-wrap ul li a:hover{
+    display:inline-block;
+    border-bottom: 2px solid #FF715B;
+    padding-bottom: 6px;
 }
