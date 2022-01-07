@@ -8,12 +8,11 @@
 .container{
     width: 1140px;
     margin: 0 auto;
-    border: solid 1px red;
 }
 .clearfix::after{
-    content: '';
-    display: block;
-    clear: both;
+    content:'';
+    display:block;
+    clear:both;
 }
 a{
     text-decoration: none;
@@ -28,48 +27,69 @@ body{
     color: black;
 }
 /*header*/
-.header{
 
-}
-.header-top{
-
+.header-top ul.header-top-menu {
+    padding-top: 29px;
+    margin-right: 76px;
+    float:left;
 }
 .header-top ul.header-top-menu li{
-    padding-top: 29px;
+    float: left;
+    margin-right:26px;
 }
-.header-top ul li{
-    float:left;
-    margin-right: 26px;
-
-}
-.header-top ul li a{
+.header-top ul.header-top-menu li a{
     font-family: "Noto Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
 }
+
 /*header-top-icons*/
 .header-top-icons{
     float:right;
-    background-color: greenyellow;
-    padding-top: 24px;
-  
+    padding-top: 24px;  
 }
 .header-top-icons li{
-margin-right:24px;
-float: left;
+    margin-right:24px;
+    float: left;
 }
 .header-top-icons li:nth-child(3){
     margin-right:45px;
     }
 .header-top-icons li:last-child img{
-margin-right: 8px;
+    margin-right: 8px;
+}
+
+.header-top-icons li:last-child span{
+    vertical-align: 7px;
+}
+.header-top .phone{
+    padding-top: 24px;
+}
+.header-top .phone img{
+    margin-right: 8px;
+ 
+}
+.header-top .phone span{
+    vertical-align: 7px;
+    margin-right: 90px;
+}
+/*header-search*/
+.header-search{
 
 }
-.header-top-icons li img {
- margin-top: 20px;
+.header-search img[alt="hamburger"]{
+    float:left;
+  
 }
-.header-top-icons li:last-child span{
-vertical-align: 7px;
+.header-search img[alt="logo"]{
+    float:left;
+  
+}
+.header-search .search{
+    float:left;
+}
+.header-search button{
+    float: left;
 }
