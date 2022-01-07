@@ -8,6 +8,7 @@
 .container{
     width: 1140px;
     margin: 0 auto;
+   
 }
 .clearfix::after{
     content:'';
@@ -28,8 +29,10 @@ body{
 }
 /*header*/
 
-.header-top ul.header-top-menu {
-    padding-top: 29px;
+
+/*header-top-menu*/
+.header-top ul.header-top-menu{
+    padding-top: 26px;
     margin-right: 76px;
     float:left;
 }
@@ -44,7 +47,6 @@ body{
     font-size: 12px;
     line-height: 16px;
 }
-
 /*header-top-icons*/
 .header-top-icons{
     float:right;
@@ -59,8 +61,8 @@ body{
     }
 .header-top-icons li:last-child img{
     margin-right: 8px;
+    padding-top: 0 px;
 }
-
 .header-top-icons li:last-child span{
     vertical-align: 7px;
 }
@@ -69,27 +71,107 @@ body{
 }
 .header-top .phone img{
     margin-right: 8px;
- 
 }
 .header-top .phone span{
     vertical-align: 7px;
     margin-right: 90px;
 }
 /*header-search*/
-.header-search{
-
-}
 .header-search img[alt="hamburger"]{
     float:left;
-  
+    margin-top: 65px;
+    margin-right: 45px;
 }
 .header-search img[alt="logo"]{
     float:left;
-  
+    margin-top: 36px;
+    margin-right: 45px;
 }
 .header-search .search{
     float:left;
+    background: #F9F9F9;
+    border-radius: 8px;
+    width: 702px;
+    height: 52px;
+    margin-top: 51px;
+    padding-top: 14px;
+    padding-left: 24px;
 }
 .header-search button{
-    float: left;
+    float:right;
+    background: #81B43F;
+    border-radius: 8px;
+    width: 156px;
+    height: 52px;
+    border: none;
+    margin-top: 52px;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;  
+    color: #FFFFFF;
+}
+.header-search .search span{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    background: rgba(0, 0, 0, 0,5);
+    vertical-align: 6px;
+    margin-left: 16px;   
+}
+.header-search button span:first-child{
+    display: inline-block;
+    height: 28px;
+    border-right: 1px solid #FFFFFF;
+    padding-right: 14px;
+    vertical-align: sub;
+}
+.header-search button span:last-child{
+    vertical-align: sub;
+    margin-left: 14px;
+}
+/*header-bottom-menu*/
+.header-bottom-menu{
+
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-top: 24px;
+    margin-left: 205px;
+}
+.header-bottom-menu li{
+    float:left;
+    margin-left: 29px;
+  
+}
+.header-bottom-menu li.active{
+    color: #FF715B;
+}
+/*sale*/
+.sale{
+    height: 381px;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 37px;
+    padding-top: 80px;
+}
+.sale-red-block{
+    width: 511px;
+    height: 226px;
+    background: #FF715B;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    float:right;
+    
+
+
 }
