@@ -325,7 +325,7 @@ cursor: pointer;
 text-align:center;
 }
 .catalog-item-img img{
-    width: 100px;
+    width: 100%;
     margin-top: 16px;
 }
 .stars span:not(.text){
@@ -338,30 +338,34 @@ background: url(images/star.svg) no-repeat;
 }
 .stars span.empty{
     background: url(images/star0.svg);
-    opacity: 0.2;
+    opacity: 0.3;
 }
 .stars span.text{
     font-family: "Noto Sans", sans-serif; 
-    font-size: 10px
-    line-height: 160%;
+    font-size: 10px;
     margin-left: 7px;
-color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 .catalog-item h5{
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
     font-size: 14px;  
+    line-height: 160%;
     color: #000000;
 }
 .catalog-item p{
     font-family: "Noto Sans", sans-serif;
     font-size: 12px;
+    line-height: 160%;
     color: rgba(0, 0, 0, 0.5);
+    margin-bottom:2px;
 }
 .catalog-item h4{
     font-family: "Noto Sans", sans-serif;
     font-weight: bold;
     font-size: 16px;
+    line-height:22px;
+    color:black;
 }
 .catalog-item .basket{
     background: url(images/basket.png) cover no-repeat;
@@ -369,7 +373,7 @@ color: rgba(0, 0, 0, 0.5);
     background-size: 23px;
     border-radius: 8px;
     width: 36px;
-    height:36px;
+    height:36px;  
     float:right;
     margin-top: 24px;
 }
