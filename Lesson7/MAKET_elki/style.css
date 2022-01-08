@@ -321,7 +321,14 @@ cursor: pointer;
     padding-right: 20px;
     margin-bottom: 16px;
     float:left;
-    margin-right:16px;
+    margin-right:8px;
+    margin-left:8px;
+
+}
+.catalog-items{
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top:28px;
 }
 .catalog-item-img{
 text-align:center;
