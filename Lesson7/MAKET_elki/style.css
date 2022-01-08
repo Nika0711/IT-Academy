@@ -241,3 +241,48 @@ body{
     border-bottom: 2px solid #FF715B;
     padding-bottom: 6px;
 }
+/*catalog*/
+.catalog{
+    background: #F9F9F9;
+    padding-top: 66px;
+}
+.catalog-breadcrumbs{
+float: left;
+width:620px;
+}
+ .catalog-breadcrumbs ul{
+ 
+}
+.catalog-breadcrumbs ul li{
+    float:left;
+}
+
+.catalog-breadcrumbs ul li a{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.catalog-breadcrumbs ul li a.active{
+    color: black;
+}
+.catalog-breadcrumbs ul li img{
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: -3px;
+}
+.catalog .catalog-sort{
+    float:right;
+}
+.catalog-breadcrumbs h2{
+    font-family:"Noto Sans",sans-serif ;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+}
+.catalog-breadcrumbs h2 span{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+}
