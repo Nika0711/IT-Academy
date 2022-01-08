@@ -385,3 +385,15 @@ background: url(images/star.svg) no-repeat;
     background-size: 23px; 
     margin-top: -24px;
 }
+.christmas-toys{
+    background:url(images/toys.jpg) center bo-repeat;
+    height: 209px;
+    background-size: cover;
+
+}
+.christmas-toys h2{
+
+}
+.christmas-toys button{
+
+}
