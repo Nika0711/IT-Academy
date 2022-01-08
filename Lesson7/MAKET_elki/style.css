@@ -470,9 +470,17 @@ float:left;
 }
 .footer .social{
     text-align:center;
+    margin-top: 77px;
 }
 .footer .social img{
     margin-left: 9px;
-    margin-right: 9px;
-   
+    margin-right: 9px;   
+}
+.footer > p{
+    margin-top: 20px;
+    text-align:center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.5);
 }
