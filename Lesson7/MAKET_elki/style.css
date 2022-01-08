@@ -468,3 +468,11 @@ float:left;
     width: 100px;
     height: 26px;
 }
+.footer .social{
+    text-align:center;
+}
+.footer .social img{
+    margin-left: 9px;
+    margin-right: 9px;
+   
+}
