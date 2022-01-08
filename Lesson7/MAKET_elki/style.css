@@ -313,6 +313,7 @@ cursor: pointer;
     width: 272px;
     height: 387px;
     background-color: white;
+    border-radius: 8px;
     background: url(images/love.svg) right 20px top 20px no-repeat white;
     padding-top: 20px;
     padding-left: 20px;
@@ -323,4 +324,48 @@ text-align:center;
 }
 .catalog-item-img img{
     width: 100px;
+    margin-top: 16px;
+}
+.stars span:not(.text){
+    display:inline-block;
+    height: 9px;
+    width: 9px;   
+}
+.stars span:not(.text):not(.empty){
+background: url(images/star.svg) no-repeat;
+}
+.stars span.empty{
+    background: url(images/star0.svg);
+    opacity: 0.2;
+}
+.stars span.text{
+    font-family: "Noto Sans", sans-serif; 
+    font-size: 10px
+    line-height: 160%;
+    margin-left: 7px;
+color: rgba(0, 0, 0, 0.5);
+}
+.catalog-item h5{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;  
+    color: #000000;
+}
+.catalog-item p{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.catalog-item h4{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.catalog-item .basket{
+    background: url(images/basket.png) cover no-repeat;
+    background: #81B43F;
+    background-size: 23px;
+    border-radius: 8px;
+    width: 36px;
+    height:36px;
 }
