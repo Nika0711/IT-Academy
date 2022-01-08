@@ -285,4 +285,38 @@ width:620px;
     font-family: "Noto Sans", sans-serif;
     font-size: 14px;
     line-height: 19px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 19px;
+}
+/*catalog-sort*/
+.catalog-sort{
+
+}
+.catalog-sort ul{
+margin-top: 16px;
+}
+.catalog-sort ul li{
+float:left;
+font-family: "Noto Sans", sans-serif;
+font-style: normal;
+font-weight: normal;
+color: rgba(0, 0, 0, 0.5);
+margin-left: 15px;
+cursor: pointer;
+}
+.catalog-sort ul li:first-child{
+    color:black;
+}
+.catalog-sort img{
+    float:right;
+    margin-left: 16px;
+}
+}
+/*catalog-item*/
+
+.catalog-item{
+    width: 272px;
+    height: 387px;
+    background-color: white;
+    background: url(images/love.svg) right 20px top 20px no-repeat white;
 }
