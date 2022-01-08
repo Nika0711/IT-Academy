@@ -368,8 +368,8 @@ background: url(images/star.svg) no-repeat;
     color:black;
 }
 .catalog-item .basket{
-    background: url(images/basket.png) cover no-repeat;
     background: #81B43F;
+    background: url(images/basket.png);
     background-size: 23px;
     border-radius: 8px;
     width: 36px;
