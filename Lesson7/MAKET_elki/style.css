@@ -320,6 +320,8 @@ cursor: pointer;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 16px;
+    float:left;
+    margin-right:16px;
 }
 .catalog-item-img{
 text-align:center;
