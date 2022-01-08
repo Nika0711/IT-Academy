@@ -401,15 +401,12 @@ background: url(images/star.svg) no-repeat;
 }
 .christmas-toys button{
     width: 191px;
-    height:47px;
     font-family:"Noto Sans",sans-serif;
     font-weight: 600;
     font-size: 14px;
-    line-height: 19px;
-    width: 143px;
-    height: 19px;
-    color: #000000;  
+    line-height: 19px; 
+    height: 47px; 
     border: 1px solid black;
-    border-radius: 5 px;
+    border-radius: 5px;
     background:transparent;
 }
