@@ -368,12 +368,11 @@ background: url(images/star.svg) no-repeat;
     color:black;
 }
 .catalog-item .basket{
-    background: #81B43F;
-    background: url(images/basket.png);
-    background-size: 23px;
-    border-radius: 8px;
     width: 36px;
     height:36px;  
+    border-radius: 8px;
     float:right;
-    margin-top: 24px;
+    background: url(images/basket.png) center no-repeat #81B43F;
+    background-size: 23px; 
+    margin-top: -24px;
 }
