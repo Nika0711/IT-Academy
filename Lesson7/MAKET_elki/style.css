@@ -399,14 +399,72 @@ background: url(images/star.svg) no-repeat;
     color: #000000;
     margin-bottom: 12px;
 }
-.christmas-toys button{
+.btn{
     width: 191px;
     font-family:"Noto Sans",sans-serif;
     font-weight: 600;
     font-size: 14px;
-    line-height: 19px; 
-    height: 47px; 
+    line-height: 19px;  
     border: 1px solid black;
     border-radius: 5px;
     background:transparent;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.catalog .container > .btn{
+    margin-top:30px;
+    height: 47px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+}
+.catalog .container > p{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 30px;
+}
+/*footer*/
+.footer{
+padding-top: 56px;
+padding-bottom: 28px;
+background-color: rgba(218,218,218,0.3);
+}
+.footer ul{
+float:left;
+}
+.footer ul:first-child{
+   margin-right: 126px;
+ }
+.footer ul:nth-child(2){
+    margin-right: 110px; 
+     }
+.footer ul:last-child{
+    margin-right: 91px; 
+}
+.footer ul li:first-child{
+    margin-bottom: 12px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+.footer ul li{
+    margin-bottom: 8px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.footer ul li img:first-child{
+    width: 140px;
+    height: 54px;
+}
+.footer ul li img:last-child{
+    width: 100px;
+    height: 26px;
 }
