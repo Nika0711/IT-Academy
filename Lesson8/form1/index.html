@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        p{
+            margin: 0;
+            padding:0;
+        }
+        select [name="month"]{
+            width:125px;
+        }
+        input, select{
+            margin-bottom: 7px;
+        }
+         textarea{
+             width:200px;
+             height:50px;
+         }
+    </style>
+    
+
+</head>
+
+<body>
+    <h1>Заполните форму</h1>
+<form action="http://fe.it-academy.by/TestForm.php">
+<fieldset>
+        <legend>Личные данные</legend>
+         <input type ="text" name="lastaname" maxlength="25" autofocus placeholder="Фамилия"><br>
+         <input type ="text" name="firstaname" maxlength="20" placeholder="Имя"><br>
+         <input type ="text" name="patronimictaname"maxlength="24" placeholder="Отчество"><br>  
+    <fieldset>
+        <legend>Паспортные данные</legend>
+         <input type ="text" name="seria" maxlength="2"placeholder="AA" >
+         <input type ="number" name="number" maxlength="7" placeholder="1234567">       
+    </fieldset>
+    <fieldset>
+        <legend>Дата рождения</legend>
+         <input type ="number" name="year" maxlength="4" placeholder="2000" ><br>
+    <select name="month">
+             <option value="1">Январь</option> 
+             <option value="1">Февраль</option>   
+             <option value="1">Март</option>  
+              <option value="1">Апрель</option>                 
+    </select>
+    <input type ="number" name="day" maxlength="2" placeholder="01"> <br>        
+    </fieldset>
+    <select name="country" >
+        <option value="1">РБ</option>
+        <option value="2">РФ</option>
+    </select>
+    <p>Адрес</p>
+   <textarea name="address"></textarea>
+</fieldset>
+
+<fieldset>
+     <legend>Интересы</legend>
+</fieldset>
+<fieldset>
+        <legend>Хобби</legend>
+       <label><input type="checkbox" name="hobby[] value='fishing">Рыбалка <br></label> 
+        <label><input type="checkbox" name="hobby[] value='diving">Дайвинг<br></label>
+        <label><input type="checkbox" name="hobby[] value='astronomy">Астрономия<br>/label>
+        <label><input type="checkbox" name="hobby[] value='philately">Марки<br></label>
+</fieldset>
+<fieldset>
+    <legend>Домашние животные</legend>
+    <select name="animal">
+        <optgroup label="Попугаи">
+
+        </optgroup>
+
+        <optgroup label="Рыба"></optgroup>
+        <optgroup label="Птицы"></optgroup>
+    </select>
+
+  
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>
