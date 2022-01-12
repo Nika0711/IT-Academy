@@ -1,13 +1,17 @@
-@media all and (max-width:540px){
+@media all and (max-width:560px)
+{
+
     label{
         width: 175px;
         float:right;
         }
         input[type="text"], textarea{
+            width: 20%;
         }
         .article{
             height:20px;
-            margin-right:40px;  
+            margin-right:40px; 
+            text-decoration: tomato;    
         }
     }
 
