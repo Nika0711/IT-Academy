@@ -1,0 +1,15 @@
+.title{
+    margin-left: 175px;
+    margin-right: 40px;
+}
+label{
+width: 175px;
+float:left;
+}
+input[type="text"], textarea{
+    width: 100%;
+}
+.article{
+    height:20px;
+    margin-right:40px;  
+}

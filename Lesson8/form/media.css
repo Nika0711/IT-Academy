@@ -1,0 +1,17 @@
+@media all  and (max-width:650px){
+    .title{
+        float:none;
+
+    }
+    label{
+    width: 175px;
+    float:left;
+    }
+    input[type="text"], textarea{
+        width: 100%;
+    }
+    .article{
+        height:20px;
+        margin-right:40px;  
+    }
+}
