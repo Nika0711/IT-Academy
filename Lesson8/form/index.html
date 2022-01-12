@@ -8,15 +8,20 @@
 </head>
 <style>
 .title{
-    margin-left: 150px;
-    margin-right: 42px;
+    margin-left: 175px;
+    margin-right: 40px;
 }
 label{
-width: 150px;
+width: 175px;
+margin-left: 5px;
 float:left;
 }
-input[type="text"]{
+input[type="text"], textarea{
     width: 100%;
+}
+.article{
+    height:20px;
+    margin-right:40px;  
 }
 </style>
 <body>
@@ -34,14 +39,23 @@ input[type="text"]{
     <option value="programming">программирование</option>
 </select>
 <br>
-
-
-
-
-
-
-
-
+<br>
+<label for="publication">Публикация:</label>
+ <input type="radio" name="publication" id="publication" value="on a site">на сайте
+ <input type="radio" name="publication" id="publication" value="in a journal">в журнале
+ <input type="radio" name="publication" id="publication" value="ona site and in a journal">на сайте и в журнале
+<br>
+<br>
+ <label for="comment">Разрешить комментарии:</label>
+ <input type="checkbox" name="yes" id="comment" checked>
+ <br>
+ <br>
+ <label for="article">Текст статьи:</label>
+ <div class="article">
+ <textarea name="article" id="article" cols="5" rows="5"></textarea>
+</div>
+ <br>
+ <input type="submit" value="Опубликовать" name="publish">
 </form>
     
 </body>
