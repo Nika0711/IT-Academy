@@ -1,0 +1,27 @@
+
+.images{
+    position:relative;
+    width: 400px;
+    height:500px;
+    display: inline-block;
+    border: solid red 1px;
+    margin-left:auto;
+    margin-right:auto;
+    top:50%;
+    left: 30%;
+}
+.images img{
+    position:absolute;
+}
+.images img:first-child{
+
+}
+.images img:first-child:nth-child(2){
+
+}
+.images img:first-child:nth-child(3){
+
+}
+.images img:last-child{
+    
+}
