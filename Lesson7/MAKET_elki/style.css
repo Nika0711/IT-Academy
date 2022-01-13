@@ -383,7 +383,7 @@ background: url(images/star.svg) no-repeat;
     background-size: 23px; 
     margin-top: -24px;
 }
-.christmas-toys{
+.toys{
     background:url(images/toys.jpg) center no-repeat;
     height: 209px;
     background-size: cover;
@@ -391,7 +391,7 @@ background: url(images/star.svg) no-repeat;
     padding-top:61px;
     padding-left: 136px;
 }
-.christmas-toys h2{
+.toys h2{
     font-family: "Noto Sans", sans-serif;
     font-weight: 600;
     font-size: 36px;

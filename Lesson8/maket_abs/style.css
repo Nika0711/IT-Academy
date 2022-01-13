@@ -1,12 +1,12 @@
 
 .images{
-    position:relative;
+    position: relative;
     width: 500px;
     height:500px;
-    display: inline-block;
+    display:block;
     border: solid red 1px;
-    top: 50%;
-    left: 500px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .images img{
     position:absolute;
