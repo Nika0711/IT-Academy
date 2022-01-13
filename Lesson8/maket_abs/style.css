@@ -1,5 +1,5 @@
 
-.images{
+.container{
     position: relative;
     width: 500px;
     height:500px;
@@ -7,24 +7,24 @@
     margin-right: auto;
     margin-left: auto;
 }
-.images img{
+.container img{
     position:absolute;
     width: 250px;
     height: 250px;
 }
-.images img:first-child{
+.container img:first-child{
     top:10px;
     left:10px;
 }
-.images img:nth-child(2){
+.container img:nth-child(2){
     top: 10px;
     left: 250px;
 }
-.images img:nth-child(3){
+.container img:nth-child(3){
     bottom: 5px;
     right: 100px;
 }
-.images img:last-child{
+.container img:last-child{
     top: 90px ;
     left: 150px ;
 }
