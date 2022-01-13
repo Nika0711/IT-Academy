@@ -28,3 +28,30 @@
     top: 90px ;
     left: 150px ;
 }
+.container img:first-child:hover {
+    position: absolute;
+    top: 90px;
+    left: 150px;
+    z-index: 1;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
+.container img:nth-child(2):hover{
+    position: absolute;
+    top: 90px;
+    left: 150px;
+    z-index: 1;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
+.container img:nth-child(3):hover{
+    position: absolute;
+    top: 90px;
+    left: 150px;
+    z-index: 1;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
