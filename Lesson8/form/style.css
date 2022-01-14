@@ -1,4 +1,7 @@
-
+.title{
+    margin-left: 175px;
+    margin-right: 40px;
+}
 label{
 width: 175px;
 float:left;
