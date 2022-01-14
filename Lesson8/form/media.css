@@ -1,17 +1,25 @@
-@media all and (max-width:560px)
-{
-    label{
-        width: 175px;
-        float:right;
-        }
-        input[type="text"], textarea{
-            width: 20%;
-        }
-        .article{
-            height:20px;
-            margin-right:40px; 
-            text-decoration: tomato;    
-        }
-    }
+@media all and (min-width:330px) and (max-width:530px){
+label{
+    display:inline-block;
+    float: none;
+    width:100%;
+    position:relative;
 
-    
+}
+.title{
+    margin-left: 0px;
+    margin-top: 10px;
+    width:100%;
+}
+select{
+    width:100%;
+    margin-top:10px;
+}
+input[type="radio"]{
+   width:100%;
+}
+.radio input{
+    display:block;
+}
+
+}

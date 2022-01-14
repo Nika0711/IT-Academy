@@ -41,10 +41,13 @@ input[type="text"], textarea{
 </select>
 <br>
 <br>
-<label for="publication">Публикация:</label>
+<div class="radio">
+    <label for="publication">Публикация:</label>
  <input type="radio" name="publication" id="publication" value="on a site">на сайте
  <input type="radio" name="publication" id="publication" value="in a journal">в журнале
  <input type="radio" name="publication" id="publication" value="ona site and in a journal">на сайте и в журнале
+</div>
+
 <br>
 <br>
  <label for="comment">Разрешить комментарии:</label>
@@ -54,9 +57,10 @@ input[type="text"], textarea{
  <label for="article">Текст статьи:</label>
  <div class="article">
  <textarea name="article" id="article" cols="5" rows="5"></textarea>
+ <br>
+ <input type="submit" value="Опубликовать">
 </div>
  <br>
-<input type="submit" value="Опубликовать">
 </form>
 
 </body>
