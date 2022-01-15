@@ -193,8 +193,6 @@ body{
     line-height: 30px;
 }
 /*filter*/
-.filter-wrap{
-}
 .filter{
     height: 96px;
     width: 272px;
@@ -246,9 +244,6 @@ body{
 float: left;
 width:620px;
 }
- .catalog-breadcrumbs ul{
- 
-}
 .catalog-breadcrumbs ul li{
     float:left;
 }
@@ -285,9 +280,6 @@ width:620px;
     margin-left: 19px;
 }
 /*catalog-sort*/
-.catalog-sort{
-
-}
 .catalog-sort ul{
 margin-top: 16px;
 }

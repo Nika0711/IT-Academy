@@ -6,7 +6,8 @@
     }
     label{
     float: none;
-    display:block;
+    display: block;
+    margin-bottom: 10px;
     }
     input[type="text"]{
         margin-top:10px;
@@ -14,8 +15,21 @@
     input[type="text"], textarea{
         width: 100%;
     }
+    input[type="radio"]{
+        display: block;
+
+    }
+    input[type="checkbox"]{
+        display: block;
+        margin-top: -26px;
+        margin-left: 180px;
+    }
+   span{
+        display: block;
+        margin-left: 30px;
+        margin-top: -15px;
+}
     .article{
         height:20px;
         margin-right:40px;  
     }
-}
