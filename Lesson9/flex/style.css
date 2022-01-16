@@ -1,4 +1,7 @@
-
+body{
+    display:flex;
+    flex-direction:column;
+}
 .header{
 display:flex;    
 justify-content: space-around;  
@@ -14,30 +17,38 @@ margin-right: 0 auto;
 }
 .container{
 display:flex;
-justify-content: flex-start;
 flex-direction:row;
 flex-shrink: 2;
 flex-grow: 3;    
 }
 .menu{
-flex-basis: 200px;  
+width: 200px;  
 background-color:orange;
 }
 .menu p{
 font-weight: bold; 
-padding-left: 5px
+padding-left: 5px;
+width:200px;
 }
 .content{
+    align-content:stretch;
+    align-items:flex-start;
+    flex-flow: column-reverse wrap-reverse;  
+    justify-content: center;
     background: white;
-    margin-left: 220px;
+    margin-left: 10px;
     background-image: url(../../Lesson5/maket_div/ball.png);
     background-position: right top;
     background-repeat: repeat-y;
 }
 .content p{
     padding-left: 10px;
-}
-
+    padding-top: 10px;
+    margin-top: 5px;}   
+.img{
+    margin-left: 10px;
+    height: 200px;
+    width: 300px;}
 .footer{
     display: flex; 
     flex-shrink: 2;
