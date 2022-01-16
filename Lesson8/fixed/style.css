@@ -1,7 +1,7 @@
 .fixedblock{
     background-color: lightgreen;
     border: solid green 1px;
-    position: absolute;
+    position: fixed;
     right: 100px;
     top: 62px;
     width: 80px;
