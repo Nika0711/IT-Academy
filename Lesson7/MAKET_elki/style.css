@@ -447,6 +447,7 @@ float:left;
      }
 .footer ul:last-child{
     margin-right: 91px; 
+    margin-left: 55px;
 }
 .footer ul li:first-child{
     margin-bottom: 12px;

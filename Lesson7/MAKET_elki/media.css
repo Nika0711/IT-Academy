@@ -33,10 +33,10 @@
     width: 289px;
 }
 .footer ul:first-child, .footer ul:nth-child(2){
-    margin-right: 60px;
+    margin-right: 50px;
   }
 .footer ul:last-child{
-    margin-right: 30px;
+    margin-right: 9px;
 }
 
 
@@ -93,7 +93,6 @@
      width:100%
  }
  .catalog-sort ul{
-     width:440px;
      float:left;
  }
  .catalog-sort ul li:first-child{
@@ -186,7 +185,10 @@
     margin-bottom: 40px;
 }
 .footer ul:nth-child(2){
-height: auto;}
+    height: auto;}
+.footer ul:last-child{
+    margin-left: 0px;
+}
 }
 
  @media all and (max-width:425px){
