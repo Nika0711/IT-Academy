@@ -1,8 +1,48 @@
-@media all and (max-width:560px){
+@media all and (max-width:360px){
     .header, .footer{
+        display:none;
+    }
+    .header p, .footer p{
         display:none;
     }
     .content{
         background-image: none;
+        width:100%;
+    }
+
+    .container{
+        flex-direction:column-reverse;
+        padding-right:20px;
+    }
+    .menu{
+        background-color: white;
+        width:100%;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-left: 10px;
+        padding-top:20px;
+    }
+    .menu ul li{
+        font-size:15px;
+        list-style-type: none;
+    }
+    .menu p{
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom:-25px}
+    .img{
+        float:none;
+        width:100%;
+    }
+    .img img {
+        width: 100%;
+    }
+    .content p{
+        font-size:15px;
+        width:100%;
     }
 }
