@@ -31,7 +31,7 @@
             75% {background-color: purple;color: blue}
             to {background-color:rgb(167, 11, 83); color:rgb(89, 128, 12)}
         } 
-        @-webkit-keyframes Anim_elem3
+        @keyframes Anim_elem3
         {
             0% {clip-path: polygon(20px 80px, 100px 30px, 120px 200px)}
             50% {clip-path: polygon(30px 100px, 150px 60px, 150px 250px)}
@@ -39,7 +39,9 @@
         }
         @keyframes Anim_elem4
         {
-            -webkit-filter (hue-rotate:120deg);
+          0% { background-image:radial-gradient( circle at 20% bottom, purple, orange 50%, pink);}
+          50% { background-image:radial-gradient( circle at 50% bottom, orange, orange 30%, purple);}
+          100%  { background-image:radial-gradient( circle at 70% bottom, purple, orange 10%, pink);}
         }
     
         .container{
@@ -52,7 +54,7 @@
         }
         .container:hover .elem2{animation: Anim_elem2 5s; transform:scale(1.5);}
         .container:hover .elem3{animation: Anim_elem3 2s; background-color:salmon;}
-        .container:hover .elem4{animation: Anim_elem4 3s}
+        .container:hover .elem4{animation: Anim_elem4 3s; transform: translate(-50px 50px) rotate(10deg);}
 
         .element1{
         border:solid 1px red;
@@ -92,7 +94,7 @@
             border: solid 1px red;
         }
         .element4{
-            border: solid 1px red;
+            border: solid 3px red;
         }
         .elem3{
             width:300px;
