@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        @keyframes Anim_elem1a 
+        {
+            from { tranform:rotate(0deg)}
+            25%  { transform:rotate(-25deg)}
+            50%  {transform:rotate(0deg)}
+            to { transform:rotate(25deg)}
+        }
+        @keyframes Anim_elem1b
+        {
+            from { top: 10px; left: 10px}
+            to { top: 10px; right:-100px;}
+        }
+        @keyframes Anim_elem2
+        {
+            from {background-color:blue; color: yellow}
+            25% {background-color:mediumpurple; color:yellowgreen}
+            50% {background-color: rgb(48, 11, 82); color: rgb(231, 78, 7)}
+            75% {background-color: purple;color: blue}
+            to {background-color:rgb(167, 11, 83); color:rgb(89, 128, 12)}
+        } 
+    
+        .container{
+            width: 800px;
+            height:800px;
+            background-color: cornsilk;
+            border:solid 1px red;
+        }
+        .container .elem2:hover
+        {
+        cursor:pointer;
+        animation: Anim_elem2 35s;
+        }
+        .element1{
+        border:solid 1px red;
+        position:relative;
+        }
+        .elem1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 30px;
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 10px;
+            margin-left:20px;
+            margin-bottom: 20px;
+            font-size: 25px;
+            position:relative;
+          
+        }
+        .element2{
+            border: solid 1px red;
+        }
+        .elem2{
+            width: 150px;
+            height:80px;
+            background-color:blue; 
+            font-size: 30px;  
+            text-align:center;
+            padding-top:20px;
+            margin-top: 20px;
+            margin-bottom:20px;
+            color:yellow;
+            animation: Anim_elem2 5s;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="element1">
+            <p class="elem1">element1</p>
+        </div>
+        <div class="element2">
+            <p class="elem2">element2</p>
+        </div>
+        <div class="element3"></div>
+        <div class="element4"></div>
+
+    </div>
+</body>
+</html>
