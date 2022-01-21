@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animation</title>
     <style>
         *{
             margin: 0px;
@@ -13,39 +13,47 @@
         }
         @keyframes Anim_elem1a 
         {
-            from { tranform:rotate(0deg)}
-            25%  { transform:rotate(-25deg)}
+            from {transform: rotate(0deg)}
+            25%  {transform:rotate(-50deg)}
             50%  {transform:rotate(0deg)}
-            to { transform:rotate(25deg)}
+            to {transform:rotate(50deg)}
         }
         @keyframes Anim_elem1b
         {
-            from { top: 10px; left: 10px}
-            to { top: 10px; right:-100px;}
+            from {top: 10px; left: 10px}
+            to {top: 10px; right:-400px;}
         }
         @keyframes Anim_elem2
         {
             from {background-color:blue; color: yellow}
             25% {background-color:mediumpurple; color:yellowgreen}
-            50% {background-color: rgb(48, 11, 82); color: rgb(231, 78, 7)}
+            50% {background-color: rgb(48, 11, 82); color: red}
             75% {background-color: purple;color: blue}
             to {background-color:rgb(167, 11, 83); color:rgb(89, 128, 12)}
         } 
+        @-webkit-keyframes Anim_elem3
+        {
+            0% {clip-path: polygon(20px 80px, 100px 30px, 120px 200px)}
+            50% {clip-path: polygon(30px 100px, 150px 60px, 150px 250px)}
+            100% {clip-path: polygon(20px 80px, 100px 30px, 120px 200px)}
+        }
+        @keyframes Anim_elem4
+        { box-shadow: 0 0 20px gray }
     
         .container{
-            width: 800px;
-            height:800px;
-            background-color: cornsilk;
-            border:solid 1px red;
+            background-color: lightyellow;
+            width:800px;
+            height: 800px;
         }
-        .container .elem2:hover
-        {
-        cursor:pointer;
-        animation: Anim_elem2 35s;
+        .container:hover{
+            cursor:pointer;
         }
+        .container:hover .elem2{animation: Anim_elem2 5s; transform:scale(1.5);}
+        .container:hover .elem3{animation: Anim_elem3 2s; background-color:salmon;}
+        .container:hover .elem4{animation: Anim_elem4 3s}
+
         .element1{
         border:solid 1px red;
-        position:relative;
         }
         .elem1{
             width: 100px;
@@ -59,6 +67,7 @@
             margin-bottom: 20px;
             font-size: 25px;
             position:relative;
+            animation:Anim_elem1a 2s linear alternate infinite, Anim_elem1b 3s  linear alternate infinite;
           
         }
         .element2{
@@ -73,10 +82,31 @@
             padding-top:20px;
             margin-top: 20px;
             margin-bottom:20px;
+            margin-left: 20px;
             color:yellow;
-            animation: Anim_elem2 5s;
+            transition-duration: 5s;
         }
-        
+        .element3{
+            border: solid 1px red;
+        }
+        .elem3{
+            width:300px;
+            height:300px;
+            background-color:rgb(174, 219, 85);
+            margin: -14px;
+            -webkit-clip-path: polygon(20px 80px, 100px 30px, 120px 200px);
+        }
+        .elem4{
+            width:200px;
+            height: 200px;
+            background-image:radial-gradient( circle at 20% bottom, purple, orange 50%, pink);
+            margin: 20px;
+            text-align:center;
+            padding-top:70px;
+            font-size: 30px;
+            -webkit-clip-path: circle(100px at 100px 100px );
+            box-shadow: 0 0 20px gray;
+        }
     </style>
 </head>
 
@@ -85,12 +115,17 @@
         <div class="element1">
             <p class="elem1">element1</p>
         </div>
+      
         <div class="element2">
             <p class="elem2">element2</p>
         </div>
-        <div class="element3"></div>
-        <div class="element4"></div>
-
+        <div class="element3">
+            <p class="elem3">el3</p>
+        </div>
+        <div class="element4">
+            <p class="elem4">element4</p>
+        </div>
+    </div>
     </div>
 </body>
 </html>
