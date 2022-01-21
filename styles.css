@@ -1,6 +1,6 @@
 body{
   background-image: url(background1.jpg);
-  background-size: 120%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 h1{
@@ -17,8 +17,7 @@ ul{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, fantasy;
   word-spacing: 10px;
   line-height: 25px;
-  font-weight: cursive;
-}
+  font-weight: cursive;}
 
 li{color: blue;
 }
