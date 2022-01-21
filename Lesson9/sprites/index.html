@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vecotr sprite</title>
+    
+<style>
+    @keyframes Animation
+    {
+        from {background: url(walkingman.png) 0 0;} 
+        to {background: url(walkingman.png) -2591px 0; } /*2966-375=2591*/
+     }
+     #walkingman
+     {
+      width: 375px ;
+      height: 750px;
+      animation: Animation 1s steps(7) infinite; 
+     }
+    
+</style>
+
+
+</head>
+<body>
+ <div id='walkingman'></div>
+
+</body>
+</html>
