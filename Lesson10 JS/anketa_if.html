@@ -11,27 +11,40 @@
 <script>
 
 var surname=prompt("Введите Вашу фамилию");
+console.log (surname)
 var name=prompt ("Bведите Ваше имя");
+console.log (name)
 var middle=prompt ("Bведите Ваше отчество");
+console.log (middle)
 console.log ('Ваше ФИО:'+ (surname)+ (name)+ (middle));
+
 var age=parseInt(prompt ('Введите Ваш возраст'));
-if (isNaN(age))
-console.log ('Вы ввели некорректное число');
+if (isNaN(age)) {
+alert ('Вы ввели некорректное значение');}
+else if (age > 100) {
+alert("Вы ввели некорректный возраст")
+}
 else
 {console.log ("Ваш возраст в годах:" +(age));
 console.log ("Ваш возраст в днях:" + (age*365));
 console.log ("Через 5 лет Вам будет:" +(age+5));}
 
 var gender=confirm('Вы мужчина?');
-if (gender) {console.log ("мужчина")};
- if (age > 62) {console.log ("Вы на пенсии")};
-else {console.log ('Не на пенсии')}
-else {console.log ('женщина')};
-else if(age > 58)
-{console.log ("Вы на пенсии")};
-else {console.log ('Не на пенсии')};
+if (gender) 
+  {console.log ("мужчина");}
+else if ( age > 62 )
+console.log ('Вы на пенсии');
+else if ( age <= 62)
+ console.log ('Не на пенсии');
+else {console.log ('женщина');}
 
+/*if (gender) = ''
+else if (age > 58)
+{console.log ("Вы на пенсии");}
+else {console.log ('Не на пенсии')};*/
 
+if 
+alert ('Ваше ФИО:' (surname) + (name)+ (middle) +"\n" + "Ваш возраст в годах:" +(age) + "\n" + "Ваш возраст в днях:" + (age*365) + "\n" + "Через 5 лет Вам будет:" +(age+5) + "\n" + "ваш пол:" + gender  + '\n'+ 'вы на пенсии:')
 </script>
 
 </body>
