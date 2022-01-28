@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript_Anketa</title>
+</head>
+<body>
+    
+<script>
+
+var surname=prompt("Введите Вашу фамилию");
+var name=prompt ("Bведите Ваше имя");
+var middle=prompt ("Bведите Ваше отчество");
+console.log ('Ваше ФИО:'+ (surname)+ (name)+ (middle));
+var age=parseInt(prompt ('Введите Ваш возраст'));
+if (isNaN(age))
+console.log ('Вы ввели некорректное число');
+else
+{console.log ("Ваш возраст в годах:" +(age));
+console.log ("Ваш возраст в днях:" + (age*365));
+console.log ("Через 5 лет Вам будет:" +(age+5));}
+
+var gender=confirm('Вы мужчина?');
+if (gender) {console.log ("мужчина")};
+ if (age > 62) {console.log ("Вы на пенсии")};
+else {console.log ('Не на пенсии')}
+else {console.log ('женщина')};
+else if(age > 58)
+{console.log ("Вы на пенсии")};
+else {console.log ('Не на пенсии')};
+
+
+</script>
+
+</body>
+</html>
