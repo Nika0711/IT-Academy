@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa_oper (without if)</title>
+</head>
+<body>
+    <script>
+
+        var surname=prompt("Введите Вашу фамилию");
+        var name=prompt ("Bведите Ваше имя");
+        var patronymic=prompt ("Bведите Ваше отчество");
+        
+        var age=parseInt(prompt ('Введите Ваш возраст'));
+
+        /*isNaN(age)? alert ('Вы ввели некорректное значение'): 
+        {console.log ("Ваш возраст в годах:" + age );
+        console.log ("Ваш возраст в днях:" + age*365);
+        console.log ("Через 5 лет Вам будет:" + age+5 );}*/
+        
+        var gender=confirm('Вы мужчина?');
+        (gender)? gender = 'мужчина': gender= 'женщина'
+        var pension= "нет";
+        (gender) (age>= 63)? pension="да": (age>=58) pension="да"
+  
+        
+        alert ('Ваше ФИО: ' + ' '+ surname + ' '+' '+ name+' ' +' ' + ' '+ patronymic +"\n"
+               + "Ваш возраст в годах: " +  age  + "\n"  
+               + "Ваш возраст в днях: " +  (age*365)  + "\n" 
+                + "Через 5 лет Вам будет: " + (age+5) + "\n" 
+                + "Ваш пол: " + gender  + '\n'+ 
+                'Вы на пенсии: ' + pension)
+        </script> 
+</body>
+</html>
