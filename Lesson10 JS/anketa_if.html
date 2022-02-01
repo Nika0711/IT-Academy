@@ -14,37 +14,44 @@ var surname=prompt("Введите Вашу фамилию");
 console.log (surname)
 var name=prompt ("Bведите Ваше имя");
 console.log (name)
-var middle=prompt ("Bведите Ваше отчество");
-console.log (middle)
-console.log ('Ваше ФИО:'+ (surname)+ (name)+ (middle));
+var patronymic=prompt ("Bведите Ваше отчество");
+console.log (patronymic)
+console.log ('Ваше ФИО:'+ surname+ name+ patronymic);
 
 var age=parseInt(prompt ('Введите Ваш возраст'));
 if (isNaN(age)) {
 alert ('Вы ввели некорректное значение');}
-else if (age > 100) {
+ if (age > 100) {
 alert("Вы ввели некорректный возраст")
 }
 else
-{console.log ("Ваш возраст в годах:" +(age));
-console.log ("Ваш возраст в днях:" + (age*365));
-console.log ("Через 5 лет Вам будет:" +(age+5));}
+{console.log ("Ваш возраст в годах:" + age );
+console.log ("Ваш возраст в днях:" + age*365);
+console.log ("Через 5 лет Вам будет:" + age+5 );}
 
 var gender=confirm('Вы мужчина?');
-if (gender) 
-  {console.log ("мужчина");}
-else if ( age > 62 )
-console.log ('Вы на пенсии');
-else if ( age <= 62)
- console.log ('Не на пенсии');
-else {console.log ('женщина');}
+if 
+(gender){
+gender = 'мужчина';
+console.log('мужчина');
+} else {
+gender= 'женщина';
+console.log('женщина');
+}
 
-/*if (gender) = ''
-else if (age > 58)
-{console.log ("Вы на пенсии");}
-else {console.log ('Не на пенсии')};
+var pension= "нет";
+if (gender)
+ if (age>= 63) pension="да";
+ else
+  if (age>=58) pension="да";
+console.log (pension)
 
-
-alert ('Ваше ФИО:' (surname) + (name)+ (middle) +"\n" + "Ваш возраст в годах:" +(age) + "\n" + "Ваш возраст в днях:" + (age*365) + "\n" + "Через 5 лет Вам будет:" +(age+5) + "\n" + "ваш пол:" + gender  + '\n'+ 'вы на пенсии:')*/
+alert ('Ваше ФИО: ' + ' '+ surname + ' '+' '+ name+' ' +' ' + ' '+ patronymic +"\n"
+       + "Ваш возраст в годах: " +  age  + "\n"  
+       + "Ваш возраст в днях: " +  (age*365)  + "\n" 
+        + "Через 5 лет Вам будет: " + (age+5) + "\n" 
+        + "Ваш пол: " + gender  + '\n'+ 
+        'Вы на пенсии: ' + pension)
 </script>
 
 </body>
