@@ -21,10 +21,13 @@
         console.log ("Через 5 лет Вам будет:" + age+5 );}*/
         
         var gender=confirm('Вы мужчина?');
-        (gender)? gender = 'мужчина': gender= 'женщина'
-        var pension= "нет";
-        (gender) (age>= 63)? pension="да": (age>=58) pension="да"
+        (gender)? gender = 'мужчина': gender= 'женщина';
+
+      /* var pension = (age>= 63)? pension="да": pension="нет";
+         (age>=58)? pension="да": pension="нет";*/
   
+        var pension = ((age>= 63) && (gender === 'мужчина')) ||((age>= 58) && (gender === 'женщина')) ? pension="да": pension="нет"; 
+    
         
         alert ('Ваше ФИО: ' + ' '+ surname + ' '+' '+ name+' ' +' ' + ' '+ patronymic +"\n"
                + "Ваш возраст в годах: " +  age  + "\n"  
