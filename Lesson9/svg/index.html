@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domik_svg</title>
+    <style>
+        div{
+            background-color: ;
+        }
+    </style>
+</head>
+<body>
+    <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+     <rect width="250" height="300" x="100" y="200" stroke="brown" stroke-width="4" fill="darkgrey"></rect>
+     <defs>
+        <linearGradient id="LG5" x1="20%" y1="20%" x2="30%" y2="30%"
+                spreadMethod="repeat">
+            <stop offset="0%" stop-color="grey" />
+            <stop offset="100%" stop-color="yellow" />
+        </linearGradient>
+     </defs>
+     <defs>
+        <pattern id="TRP1" width="10" height="10"
+            patternUnits="userSpaceOnUse">
+            <polygon points="5,0 10,10 0,10" stroke="red" fill="yellow" />
+        </pattern>
+     </defs>   
+     <rect x="100" y="200" width="250" height="300"  fill="url(#LG5)"></rect>
+     <rect width="50" height="100" x="200" y="290"  rx="10" ry="10" stroke="brown" stroke-width="5" fill="yellow"></rect>
+     <rect width="30" height="80" x="120" y="100" stroke="brown" stroke-width="2" fill="firebrick"></rect>
+     <circle cx="130" cy="80" r="10" stroke="grey" fill="grey"></circle>
+     <circle cx="120" cy="50" r="8" stroke="grey" fill="grey"></circle>
+     <circle cx="100" cy="40" r="6" stroke="grey" fill="grey"></circle>
+     <circle cx="80" cy="30" r="5" stroke="grey" fill="grey"></circle>
+     <circle cx="240" cy="340" r="5" stroke="brown" fill="brown"></circle>
+     <rect width="55" height="55" x="120" y="270"  rx="10" ry="10" stroke="brown" stroke-width="2" fill="white"></rect>
+     <rect width="55" height="55" x="270" y="270"  rx="10" ry="10" stroke="brown" stroke-width="2" fill="white"></rect>
+     <polyline points="100,200 225,75 350,200" stroke="brown" stroke-width="5" fill="firebrick"></polyline>
+     <line x1="147" y1="270" x2="147" y2="325"stroke="brown" stroke-width="5"></line>
+     <line x1="297" y1="270" x2="297" y2="325"stroke="brown" stroke-width="5"></line>
+     <line x1="121" y1="297" x2="176" y2="297" stroke="brown" stroke-width="5"></line>
+     <line x1="270" y1="297" x2="325" y2="297" stroke="brown" stroke-width="5"></line>
+   
+    </svg>
+ 
+</body>
+</html>
