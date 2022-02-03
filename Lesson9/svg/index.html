@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domik_svg</title>
     <style>
-        div{
-            background-color: ;
-        }
+      .roof:hover{
+
+      }
+
+      .house:hover{
+      fill: url(LG1);}
     </style>
 </head>
 <body>
@@ -20,6 +23,11 @@
             <stop offset="0%" stop-color="brown" />
             <stop offset="100%" stop-color="yellow" />
         </linearGradient>
+        <linearGradient id="LG1" x1="20%" y1="20%" x2="30%" y2="30%"
+        spreadMethod="repeat">
+        <stop offset="0%" stop-color="green" />
+        <stop offset="100%" stop-color="grey" />
+    </linearGradient>
      </defs>
      <defs>
         <pattern id="TRP1" width="10" height="10"
@@ -36,8 +44,8 @@
         <stop offset="100%" stop-color="lightgrey" />
     </radialGradient>
      </defs>  
-      <rect width="30" height="80" x="120" y="100" stroke="brown" stroke-width="2" fill="url(#TRP2)"></rect>
-     <rect x="100" y="200" width="250" height="300"  fill="url(#LG5)"></rect>
+     <rect width="30" height="80" x="120" y="100" stroke="brown" stroke-width="2" fill="url(#TRP2)"></rect>
+     <rect class="house" x="100" y="200" width="250" height="300"  fill="url(#LG5)"></rect>
      <rect width="50" height="100" x="200" y="290"  rx="10" ry="10" stroke="brown" stroke-width="5" fill="yellow"></rect>
      <circle cx="130" cy="80" r="10"  fill="url(#RG1)"></circle>
      <circle cx="120" cy="50" r="8"  fill="url(#RG1)"></circle>
@@ -46,12 +54,12 @@
      <circle cx="240" cy="340" r="5" stroke="brown" fill="brown"></circle>
      <rect width="55" height="55" x="120" y="270"  rx="10" ry="10" stroke="brown" stroke-width="2" fill="white"></rect>
      <rect width="55" height="55" x="270" y="270"  rx="10" ry="10" stroke="brown" stroke-width="2" fill="white"></rect>
-     <polyline points="100,200 225,75 350,200" stroke="brown" stroke-width="7" fill="url(#TRP1)"></polyline>
+     <polyline class="house" points="100,200 225,75 350,200" stroke="brown" stroke-width="7" fill="url(#TRP1)"></polyline>
      <line x1="147" y1="270" x2="147" y2="325"stroke="brown" stroke-width="5"></line>
      <line x1="297" y1="270" x2="297" y2="325"stroke="brown" stroke-width="5"></line>
      <line x1="121" y1="297" x2="176" y2="297" stroke="brown" stroke-width="5"></line>
      <line x1="270" y1="297" x2="325" y2="297" stroke="brown" stroke-width="5"></line>
-   
+
     </svg>
  
 </body>
