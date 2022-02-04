@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries_JS functions</title>
+    
     <style>
+
         input{
             height: 70px; 
             width: 500px; 
@@ -25,8 +27,9 @@
     <script>
 
     var сountrysH={ 'Германия':'Берлин', 'Франция':'Париж', 'Россия':'Москва',
-                    'Беларусь':'Минск','Италия':'Рим', 'Польша': 'Варшава',};
-        console.log( сountrysH );
+                    'Беларусь':'Минск','Италия':'Рим', 'Польша': 'Варшава',}
+                    
+    console.log( сountrysH );
        
     var сountryName=prompt('Введите название страны:');
 
@@ -41,7 +44,6 @@
 
         addCountry(countryName,capitalName)
     }
-
     function addCountry(countryName,capitalName){  
         countrysH[countryName]=capitalName;
     }
@@ -68,7 +70,7 @@
             return 'нет информации о стране ' + countryName + '!' ;
     }
 
-    function listCountrysData{
+    function listCountrysData() {
         var countries = confirm('Вывести перечень всех стран?');
         if (countries){
         console.log( 'страна: ' + сountryName + ' столица: ' + сountrysH[сountryName]);
@@ -77,7 +79,7 @@
         console.log ('Действие отменено')    
         }
         
-        listCountrys(countrysH)
+        listCountrys()
 
     }
     function listCountrys() {                 
@@ -86,9 +88,6 @@
             res+='\n'+getCountryInfo(key);
         return res;
     }
-
-
-
 
     </script>
     
