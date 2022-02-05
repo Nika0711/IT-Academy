@@ -19,74 +19,69 @@
 </head>
 
 <body>
-    <input type="button" onclick="getCountryData()" value="получение информации о стране">
-    <input type="button" onclick="addCountryData()" value="ввод информации о стране">
-    <input type="button" onclick="listCountrysData()" value="перечень всех стран">
+    <input type="button" onclick="getCapital()" value="получение информации о стране">
+    <input type="button" onclick="addNewCountry()" value="ввод информации о стране">
+    <input type="button" onclick="listCountrys()" value="перечень всех стран">
     <input type="button" onclick="deleteCountryData()" value="удаление информации о стране">
     
     <script>
 
     var сountrysH={ 'Германия':'Берлин', 'Франция':'Париж', 'Россия':'Москва',
                     'Беларусь':'Минск','Италия':'Рим', 'Польша': 'Варшава',}
-                    
-    console.log( сountrysH );
        
-    var сountryName=prompt('Введите название страны:');
-
+    /*var сountryName=prompt('Введите название страны:');
     if ( сountryName in сountrysH )
       alert( 'страна: ' + сountryName + ' столица: ' + сountrysH[сountryName] );
     else
-      alert( 'Нет информации о стране ' + сountryName + '!' );
+      alert( 'Нет информации о стране ' + сountryName + '!' );*/
 
-    function addCountryData(countryName,capitalName){     
+    function addNewCountry(){     
         var countryName = prompt('Введите название страны');
         var capitalName = prompt('Введите название столицы');
+        alert('Новая страна добавлена!')
+    
 
         addCountry(countryName,capitalName)
     }
+
     function addCountry(countryName,capitalName){  
-        countrysH[countryName]=capitalName;
+        сountrysH[countryName]=capitalName;
     }
 
-    function deleteCountryData(countryName,capitalName){
+   function deleteCountryData(countryName,capitalName){
         var countryName =prompt('Введите название страны');
+        alert('Cтрана ' +countryName+ ' удалена!')
         
         deleteCountry(countryName)
-
+   }
     function deleteCountry(countryName){          
-        delete countrysH[countryName];
+        delete сountrysH[countryName];
     }
-
-    function getCountryData(countryName){
+    
+     function getCapital(){
         var countryName =prompt('Введите название страны');
-
+        if ( countryName in сountrysH ){
+        alert('страна: ' + countryName + ' столица: ' + сountrysH[countryName])
+        }
+        else{
+        alert('нет информации о стране ' + countryName + '!')    
+        } 
         getCountryInfo(countryName)
     }
-
+     
     function getCountryInfo(countryName) {          
-        if ( countryName in countrysH )
-            return 'страна: ' + countryName + ' столица: ' + countrysH[countryName] ;
+        if ( countryName in сountrysH)
+            return 'страна: ' + countryName + ' столица: ' + сountrysH[countryName] ;
         else
             return 'нет информации о стране ' + countryName + '!' ;
     }
 
-    function listCountrysData() {
-        var countries = confirm('Вывести перечень всех стран?');
-        if (countries){
-        console.log( 'страна: ' + сountryName + ' столица: ' + сountrysH[сountryName]);
-        }
-        else{
-        console.log ('Действие отменено')    
-        }
-        
-        listCountrys()
-
-    }
     function listCountrys() {                 
         var res="";
         for ( var key in countrysH )
             res+='\n'+getCountryInfo(key);
         return res;
+        console.log( "Cписок стран:" + listCountrys() );
     }
 
     </script>
