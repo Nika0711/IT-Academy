@@ -21,7 +21,7 @@
 <body>
     <input type="button" onclick="getCapital()" value="получение информации о стране">
     <input type="button" onclick="addNewCountry()" value="ввод информации о стране">
-    <input type="button" onclick="listCountrys()" value="перечень всех стран">
+    <input type="button" onclick="listCountrysData()" value="перечень всех стран">
     <input type="button" onclick="deleteCountryData()" value="удаление информации о стране">
     
     <script>
@@ -76,6 +76,9 @@
             return 'нет информации о стране ' + countryName + '!' ;
     }
 
+    function listCountrysData() {
+    var list= prompt('Вывести список всех стран')
+    }
     function listCountrys() {                 
         var res="";
         for ( var key in countrysH )
