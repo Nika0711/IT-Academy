@@ -7,31 +7,49 @@
     width:1140px;
     border:solid red 1px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 li{
     list-style-type: none;
 }
 a{
     text-decoration: none;
-    color:inherit;
 }
 body{
     font-family: 'Roboto', sans-serif;
+    color: #707070;
+    height:10000px; /* временно*/
 }
 /*  Header*/
 .header{
+    padding-top: 14px;
+    padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #707070;
 }
-.header-top{
+.header-top-left ul{
+    display:flex;   
 }
-.header-top ul{
+.header-top-left ul li:first-child{
+    margin-right:73px;
 }
-.header-top ul li{
+.header-top-right{
+    display:flex;
 }
-.header-top ul li a{
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 16px;
-text-transform: uppercase;
+
+.header-top-right img:first-child{
+    width:20px;
+    height:20px;
+    margin-right:8px;
+}
+.header-top-right span:first-child{
+    margin-right: 67px;   
+}
+.header-top-right img:last-child{
+    width: 17px;
+    height: 8px;
+    margin-right: 13px;
 }
