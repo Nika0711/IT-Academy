@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.container{
+    width:1298x;
+    border-color: burlywood;
+    margin: 0 auto;
+}
+li{
+    list-style-type: none;
+}

@@ -77,16 +77,16 @@
     }
 
     function listCountrysData() {
-    var list= prompt('Вывести список всех стран')
+    listCountrys()
+    console.log(listCountrys)
     }
     function listCountrys() {                 
         var res="";
         for ( var key in countrysH )
             res+='\n'+getCountryInfo(key);
         return res;
-        console.log( "Cписок стран:" + listCountrys() );
     }
-
+ 
     </script>
     
 </body>
