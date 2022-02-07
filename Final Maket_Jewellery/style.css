@@ -9,8 +9,8 @@
     clear: both;
 }
 .container{
-    border: 1px solid red;
-    width:1140px;
+   /* border: 1px solid red;
+*/    width:1140px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -83,6 +83,7 @@ body{
 }
 .header-top-right span:last-child{
     vertical-align:6px;
+    padding-right: 5px;
 }
 
 .logo{   
@@ -111,6 +112,9 @@ body{
     color: #707070; 
     border: 1px solid #F0F0F0;
 }
+.header-search .container{
+    position:relative;
+}
 .header-search ul{
     display:flex;
     font-size: 20px;
@@ -120,22 +124,43 @@ body{
 .header-search ul li{
     padding-top:24px;
     padding-bottom: 24px;
-    margin-right:36px;   
+    margin-right:52px;   
 } 
 .header-search ul li a:hover{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
 .header-search .icons{
     display:flex;
+    justify-content: flex-start;
 }
+
 .header-search .icons li img:first-child{
     width: 31px;
     height: 31px;
+    margin-top: -5px;
 }
 
 .header-search .icons li:last-child{
         width: 38px;
         height: 38px;
-        margin-left: 52px;
+        margin-right: 0px;
+        margin-top: -5px;
 }
-
+img.ellipse{
+    width: 16px;
+    height: 16px;
+    background: #F2BF63;
+    border-radius: 10px;
+    position:absolute;
+    top: 8px;
+    right: 2px;
+}
+.header-search span{
+    position:absolute;
+    top: 12px;
+    right: 8px;
+    font-size: 8px;
+    line-height: 9px;
+    text-align: center;
+    color:  #FFFFFF;
+}
