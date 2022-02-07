@@ -70,8 +70,6 @@ body{
     margin-right: 13px;
 }
 .logo{
-    display:flex;
-    justify-content: center;
     border-bottom: 1px solid #F0F0F0;
     margin-left: auto;
     margin-right:auto;
