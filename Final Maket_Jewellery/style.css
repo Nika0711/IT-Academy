@@ -20,6 +20,10 @@ a{
     color:inherit;
     text-decoration: none;
 }
+button{
+    border: none;
+    background-color: transparent;
+}
 body{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -88,7 +92,6 @@ body{
 }
 
 .logo{  
-    height:45px; 
     border-bottom: 1px solid #F0F0F0;  
 }
 .logo .container{
@@ -100,7 +103,6 @@ body{
     height: 66px;
     margin-top: 39px;
     margin-bottom: 30px;
-    margin-left:539px;  
 }
 .logo:hover{
  border-bottom: 2px solid rgba(33, 166, 243, 1);
@@ -110,8 +112,7 @@ body{
 }
 
 /*header-search*/
-.header-search{ 
-  
+.header-search{   
     color: #707070; 
     border: 1px solid #F0F0F0;
 }
@@ -136,6 +137,7 @@ body{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
 .header-search .icons{
+    position:relative;
     display:flex;
     justify-content: flex-start;
 }
@@ -143,16 +145,15 @@ body{
 .header-search .icons li:hover{
     border: 2px solid rgba(33, 166, 243, 1);
 }
-.header-search .icons li img:first-child{
+.header-search .icons button:first-child{
     width: 31px;
     height: 31px;
-    margin-top: -5px;
+    margin-top: 20px;
+    margin-right: 52px;
 }
-
-.header-search .icons li:last-child{
+.header-search .icons button:last-child{
         width: 38px;
         height: 38px;
-        margin-right: 0px;
         margin-top: -5px;
 }
 img.ellipse{
@@ -193,6 +194,33 @@ img.ellipse{
     height: 4px;
     vertical-align: 2px;
 }
-.sale{
+/* sale */
+.sale .container{
     display:flex;
+    height: 173px;
+    background: url(images/background.jpg);
+    margin-bottom: 41px;
+}
+.sale-block h1{
+    display: flex;
+    flex-direction:column;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.sale-block h1 span{
+    margin-left:585px;  
+    margin-bottom:12px; 
+}
+.sale-block h1 span:first-child{
+    margin-top: 50px;
+}
+.sale-block h1 span:hover{
+    display:inline-block;
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.sale .container:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
 }
