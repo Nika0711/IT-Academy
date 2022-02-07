@@ -224,3 +224,31 @@ img.ellipse{
 .sale .container:hover{
     border: 2px solid rgba(33, 166, 243, 1);
 }
+
+/*filter*/
+.filter p:first-child{
+    width: 338px;
+    height: 1612px;
+    border-radius: 15px;
+    border: 1px solid #EAEAEA;
+    background: #EAEAEA;
+    border-radius: 15px 15px 0px 0px;
+    width: 338px;
+    height: 64px;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    padding-top:23px;
+    padding-bottom:18px;
+    padding-left:130px;
+    padding-right:129px;
+
+}
+filter h5{
+    font-size: 18px;
+    line-height: 21px;
+}
+filter ul li{
+    font-size: 14px;
+    line-height: 16px;
+}
