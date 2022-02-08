@@ -233,7 +233,13 @@ img.ellipse{
     height: 1612px;
     border-radius: 15px;
 }
-.filter div:hover{
+.filter div{
+    border: 1px solid #EAEAEA;
+}
+.filter div:last-child{
+    border: none;
+}
+.filter div:not(:last-child):hover{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
 .filter h4{
@@ -265,10 +271,20 @@ img.ellipse{
     padding-left:15px;
     padding-right:16px;
     padding-top:32px;
+    padding-bottom: 20px;
+    position:relative;
 }
 .filter p.filter-type span{
 width: 70px;
 height: 21px;
+}
+.filter p.filter-type span:after{
+    content: url(images/arrowsvg.svg);
+    width: 12px;
+    height: 6px;
+    position:absolute;
+    top:30px;
+    left:120px;
 }
 .filter p.filter-type span:hover{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
@@ -290,11 +306,13 @@ p#size{
 .filter input[type="checkbox"]:hover{
     border: 2px solid rgba(33, 166, 243, 1);
 }
- input#check{
-    margin-top:20px;
-}
-.filter input[type="checkbox"]:last-child{
+
+.filter .price input[type="checkbox"]:last-child{
     margin-bottom:24px;
+}
+.price  p.filter-type label:first-child{
+    margin-left:15px;
+    margin-right:12px;
 }
 .filter input[type="text"]{
     background: #FFFFFF;
@@ -312,6 +330,8 @@ p#size{
 .filter label{
     font-size: 14px;
     line-height: 16px;
+    margin-left: 16px;
+    margin-right: 12px;
 }  
 .filter label:hover{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
@@ -350,7 +370,6 @@ p#size{
     background: #313131;
 }
 .filter div button span{
-    background-color: blueviolet;
     width: 73px;
     height: 16px;
     font-size: 14px;
@@ -361,6 +380,5 @@ p#size{
     padding-right:36px;
 }
 .filter div button span:hover{
-    display: block;
     border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
