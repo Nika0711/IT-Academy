@@ -382,3 +382,59 @@ p#size{
 .filter div button span:hover{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
+.catalog .container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.catalog .sorting-wrap{
+    width: 775px;
+    height: 1612px;
+    border: 1px solid blue;
+}
+.sorting{
+    height: 42px;
+    border: 1px solid green;
+    padding-top:2px;
+    padding-bottom:12px;
+}
+.sorting span{
+    font-size: 20px;
+    line-height: 23px;
+    margin-right: 22px;
+}
+.sorting select{
+    font-size: 18px;
+    line-height: 21px; 
+   border: 1px solid #707070;
+   border-radius: 10px;
+   height: 33px;
+   text-align: center;
+   color: #707070;
+}
+.sorting select{
+    margin-right:16px;
+}
+.sorting select:last-child{
+    margin-right:0px;
+}
+.catalog-items{
+    width: 775px;
+    height: 1570px;
+    display:flex;
+}
+.catalog-card{
+    width: 251px;
+    height: 307px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.catalog-card div{
+    height:170px;
+}
+.catalog-card div img{
+    margin-left: auto;
+    margin-right:auto;
+}
