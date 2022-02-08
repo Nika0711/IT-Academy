@@ -382,9 +382,9 @@ p#size{
 .filter div button span:hover{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
+/*catalog*/
 .catalog .container{
     display:flex;
-    flex-direction:row;
     justify-content: space-between;
 }
 .catalog .sorting-wrap{
@@ -418,10 +418,13 @@ p#size{
 .sorting select:last-child{
     margin-right:0px;
 }
-.catalog-items{
+.aorting-wrap .catalog-items{
     width: 775px;
     height: 1570px;
     display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
 }
 .catalog-card{
     width: 251px;
