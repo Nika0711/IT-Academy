@@ -84,67 +84,75 @@
     <div class="catalog">
         <div class="container">
             <div class="filter">
-               <p>фильтр</p>
-                <p class="filter-type">размер</p>
-                <ul>
-                    <li>13</li>
-                    <li>13.5</li>
-                    <li>14</li>
-                    <li>14.5</li>
-                    <li>15</li>
-                </ul>
-                    <p class="filter-type">цена</p>
-                    <div class="price">
+               <h4><span>фильтр</span></h4>
+            <div>
+                <p class="filter-type" id="size"><span>размер</span></p>
+                <label><input id="check" type="checkbox" name="size[] value='13">13 <br></label> 
+                <label><input type="checkbox" name="size[] value='13.5">13.5<br></label>
+                <label><input type="checkbox" name="size[] value='14">14<br></label>
+                <label><input type="checkbox" name="size[] value='14.5">14.5<br></label>
+                <label><input type="checkbox" name="size[] value='15">15<br></label>     
+             </div>      
+            <div class="price">
+                        <p class="filter-type"><span>цена</span></p>
                         <label for ="from">От</label>
                         <input id="from" type="text" name="from">
                         <label for ="to">До</label>
                         <input id="to" type="text" name="to">
-                    </div>
-                    
-                <p class="filter-type">Вид украшения</p>
-                <ul>
-                    <li>Кольцо модельное</li>
-                    <li>Кольцо обручальное</li>
-                    <li> Кольцо помолвочное</li>
-                </ul>
-                <p class="filter-type">Для кого</p>
-                <ul>
-                    <li>Для женщин</li>
-                    <li> Для мужчин</li>
-                    <li> Унисекс</li>
-                </ul>
-
-                <p class="filter-type">КОНСТРУКЦИЯ</p>
-                <ul>
-                    <li>кОЛЬЦО МОДЕЛЬНОЕ</li>
-                    <li> кОЛЬЦО СОЛИТЕР</li>
-                    <li> кОЛЬЦО КОМБИНИРОВАННОЕ</li>
-                    <li>кОЛЬЦО ОБОДОК</li>
-                </ul>
+            </div>
+             <div>
+                <p class="filter-type"><span>Вид украшения</span></p>
+                <label><input id="check" type="checkbox" name="typeofjewel[] value='modelring">Кольцо модельное <br></label> 
+                <label><input type="checkbox" name="typeofjewel[] value='engagementring">Кольцо обручальное<br></label>
+                <label><input type="checkbox" name="typeofjewel[] value='weddingring">Кольцо помолвочное<br></label>
+             </div>       
+            <div>
+                <p class="filter-type"><span>Для кого</span></p>
+                <label><input id="check" type="checkbox" name="sex[] value='woman">Для женщин <br></label> 
+                <label><input type="checkbox" name="sex[] value='man">Для мужчин<br></label>
+                <label><input type="checkbox" name="sex[] value='unisex">Унисекс<br></label>
+            </div>
+            <div>
+                <p class="filter-type"><span>КОНСТРУКЦИЯ</span></p>
+                <label><input id="check" type="checkbox" name="ringtype[] value='ringmodel">Кольцо модельное <br></label> 
+                <label><input type="checkbox" name="ringtype[] value='soliter">Кольцо солитер<br></label>
+                <label><input type="checkbox" name="ringtype[] value='combined">Кольцо комбинированное<br></label>
+                <label><input type="checkbox" name="ringtype[] value='obodok">Кольцо ободок<br></label>
+            </div>    
+            <div>
+                <p class="filter-type"><span>Вид вставки</span></p>
+                <label><input id="check" type="checkbox" name="stonetype[] value='nostone">Без вставки <br></label> 
+                <label><input type="checkbox" name="stonetype[] value='diamond">Бриллиант<br></label>
+                <label><input type="checkbox" name="stonetype[] value='zirconia">Фианит<br></label>
+                <label><input type="checkbox" name="stonetype[] value='sapphire">Сапфир<br></label>
+            </div>
+            <div>
+                <p class="filter-type"><span>вид металла</span></p>
+                <label><input id="check" type="checkbox" name="metaltype[] value='combined">Комбинированное золото<br></label> 
+                <label><input type="checkbox" name="metaltype[] value='whirtegold">Белое золото<br></label>
+                <label><input type="checkbox" name="metaltype[] value='gold">Золото<br></label>
+                <label><input type="checkbox" name="metaltype[] value='silver">Серебро<br></label>
+            </div>    
+            <div>
+                <p class="filter-type"><span>проба</span></p>
+                <label><input id="check" type="checkbox" name="standardtype[] value='585">585<br></label> 
+                <label><input type="checkbox" name="standardtype[] value='375">375<br></label>
+                <label><input type="checkbox" name="standardtype[] value='925">925<br></label>
+                <label><input type="checkbox" name="standardtype[] value='750">750<br></label>
+            </div>    
+            <div>
+                <button>
+                    <span>Показать</span>
+                </button>
+                <button>
+                    <span>Сбросить</span>
+                </button>
+            </div>  
+                
                 
               
-                <p class="filter-type">Вид вставки</p>
-                <ul>
-                    <li>без вставк</li>
-                    <li> бриллиант</li>
-                    <li> фианит</li>
-                    <li> сапфир</li>
-                </ul>
-                <p class="filter-type">вид металла</p>
-                <ul>
-                    <li>Комбинированное золото</li>
-                    <li> белое золото</li>
-                    <li>золото</li>
-                    <li> серебро</li>
-                </ul>
-                <p class="filter-type">проба</p>
-                <ul>
-                    <li>585</li>
-                    <li> 375</li>
-                    <li> 925</li>
-                    <li> 750/li>
-                </ul>
-            </div>
+              
+        </div>
             <div class="sorting">
 
             </div>

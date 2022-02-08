@@ -231,15 +231,19 @@ img.ellipse{
     border: 1px solid #EAEAEA;
     width: 338px;
     height: 1612px;
-    background-color: aqua;
+    border-radius: 15px;
 }
-.filter p:first-child{
+.filter div:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.filter h4{
     border-radius: 15px;
     border: 1px solid #EAEAEA;
     background: #EAEAEA;
     border-radius: 15px 15px 0px 0px;
     width: 338px;
     height: 64px;
+    font-weight: normal;
     font-size: 20px;
     line-height: 23px;
     text-transform: uppercase;
@@ -247,14 +251,14 @@ img.ellipse{
     padding-bottom:18px;
     padding-left:130px;
     padding-right:129px;
-    margin-bottom:35px;
-
 }
-.filter p:first-child:hover{
+.filter h4:hover{
     border: 2px solid rgba(33, 166, 243, 1);
 }
-.filter p.filter-type{
-    background-color: yellow;
+.filter h4 span:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.filter p.filter-type {
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
@@ -262,70 +266,101 @@ img.ellipse{
     padding-right:16px;
     padding-top:32px;
 }
-p.filter-type:after{
-    content:'';
-    background-image: url(images/arrowsvg.svg);
-    background-repeat: no-repeat;
-    width: 12px;
-    height:6px;
-    position:absolute;
+.filter p.filter-type span{
+width: 70px;
+height: 21px;
 }
-.filter ul {
-    margin-top: 20px; 
-    position:relative;   
-}
-.filter ul:hover{
+.filter p.filter-type span:hover{
     border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
-.filter ul li{
-    font-size: 14px;
-    line-height: 16px;
-    padding-bottom: 11px;
-    padding-left: 43px;
-    padding-bottom:23px;
+p#size{
+    padding-top:35px;
 }
-
-.filter ul li:before{
-    content: url(images/rectangle.svg);
+.filter input[type="checkbox"]{
     width: 15px;
     height: 15px;
-    position:absolute;
+    background: #FFFFFF;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom:12px;
+    margin-right: 12px;
+    margin-left: 16px;
+} 
+.filter input[type="checkbox"]:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
 }
-
- .filter p.filter-type:nth-child(2){
-    background-color: red;
-    padding-bottom: 27px;
-    padding-top: 32px;
+ input#check{
+    margin-top:20px;
 }
-.filter .price{
-    padding-bottom:24px;
-    margin-top: 26px;
+.filter input[type="checkbox"]:last-child{
+    margin-bottom:24px;
 }
-.filter .price:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
-.filter input{
+.filter input[type="text"]{
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 3px;
     width: 96px;
     height: 24px;
     margin-top:26px;
+    margin-right: 12px;   
+    margin-bottom: 24px;
+} 
+.filter input[type="text"]:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
 }
-.filter input:first-child{
-    margin-right: 20px;
-}     
 .filter label{
+    font-size: 14px;
+    line-height: 16px;
+}  
+.filter label:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.filter .div label{
     font-size: 18px;
     line-height: 21px;
 }   
-.filter label:first-of-type{
-    margin-left: 15px;
+.filter .div label:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.filter .div label:first-of-type{
     margin-right: 12px;
     margin-top:26px;
 }
-.filter label:last-of-type{
-    margin-left: 20px;
+.filter .div label:last-of-type{
     margin-right: 12px;
     margin-top:26px;
+}
+.filter div button{
+    width: 144px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top:32px;
+    margin-bottom:16px;
+}
+.filter div button:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
+}
+.filter div button:first-child{
+    background: #F2BF63;
+    margin-right: 18px;
+    margin-left:16px;
+}
+.filter div button:last-child{
+    background: #313131;
+}
+.filter div button span{
+    background-color: blueviolet;
+    width: 73px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: 36px;
+    padding-right:36px;
+}
+.filter div button span:hover{
+    display: block;
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
