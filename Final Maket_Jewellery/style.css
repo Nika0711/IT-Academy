@@ -518,10 +518,6 @@ p#size{
 .footer-bottom  ul.contact li:first-child{
     margin-bottom: 5px;
 }
-.footer-bottom span{
-    display: flex;
-
-}
 .footer-bottom span:first-child{
     background-image:url(images/instagram-logo.svg) ;
     width: 21px;
@@ -537,7 +533,28 @@ p#size{
     width: 13px;
     height: 21px;
 }
+.footer-bottom div{
+    margin-right:200px;
+}
 .footer-bottom .contact{
     display:flex;
     flex-direction:column;
+}
+.social{
+    display: flex;
+}
+.social span{
+    margin-right: 16px;
+}
+.social span:last-child{
+    margin-right:0px;
+}    
+.footer-bottom img{
+    margin-top:22px;
+}
+.footer-bottom img:first-child{
+    margin-right: 13px;
+}
+.footer-bottom p{
+    display:flex;
 }
