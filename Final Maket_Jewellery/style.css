@@ -476,7 +476,7 @@ p#size{
     margin-bottom: 116px;
     display: flex;
     flex-direction:row;
-    padding-left: 296px;
+    padding-left: 677px;
 }
 
 .pages li{
@@ -504,4 +504,40 @@ p#size{
     flex-direction:row;
     justify-content: space-between;
     background: #EAEAEA;;
+}
+.footer-bottom ul li:first-child{
+    text-transform: uppercase;
+    margin-bottom:24px;
+}
+.footer-bottom ul li{
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 9px;
+}
+.footer-bottom  ul.contact li:first-child{
+    margin-bottom: 5px;
+}
+.footer-bottom span{
+    display: flex;
+
+}
+.footer-bottom span:first-child{
+    background-image:url(images/instagram-logo.svg) ;
+    width: 21px;
+    height: 21px;
+}
+.footer-bottom span:nth-child(2){
+    background-image:url(images/vk.svg) ;
+    width: 21px;
+    height: 21px;
+}
+.footer-bottom span:last-child{
+    background-image:url(images/facebook.svg) ;
+    width: 13px;
+    height: 21px;
+}
+.footer-bottom .contact{
+    display:flex;
+    flex-direction:column;
 }
