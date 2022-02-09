@@ -418,13 +418,12 @@ p#size{
 .sorting select:last-child{
     margin-right:0px;
 }
-.aorting-wrap .catalog-items{
+.sorting-wrap .catalog-items{
     width: 775px;
     height: 1570px;
     display:flex;
     flex-wrap: wrap;
-    justify-content:space-around;
-
+    justify-content:space-between;
 }
 .catalog-card{
     width: 251px;
@@ -471,4 +470,37 @@ p#size{
     justify-content:space-between;
     padding-left: 22px;
     padding-right:22px;
+}
+.pages{
+    margin-top: 56px;
+    margin-bottom: 116px;
+    display: flex;
+    flex-direction:row;
+    padding-left: 296px;
+}
+
+.pages li{
+    font-size: 24px;
+    line-height: 28px;
+    color: #707070;
+    margin-right: 24px;
+    display:inine-block;
+    
+}
+.pages li:first-child{
+    text-align:center;
+    width: 35px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+ .footer .container{
+    display:flex;
+    flex-direction: column;
+}
+.footer-bottom{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
 }
