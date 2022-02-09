@@ -28,7 +28,7 @@ body{
     font-style: normal;
     font-weight: normal;
     color: #707070;
-    height:10000px; /* временно*/
+    height:20000px; /* временно*/
 }
 /*  Header*/
 .header{ 
@@ -84,6 +84,12 @@ body{
     height:23px;
     margin-right:8px;
     margin-left:44px;
+}
+.header-top-right li a{
+    vertical-align: 5px;
+}
+.header-top-right li a:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
 .header-top-right span:last-child{
     vertical-align:6px;
@@ -141,7 +147,7 @@ body{
     justify-content: flex-start;
 }
 
-.header-search .icons li:hover{
+.header-search .icons button:hover{
     border: 2px solid rgba(33, 166, 243, 1);
 }
 .header-search .icons button:first-child{
@@ -186,6 +192,9 @@ img.ellipse{
     margin-right:8px;
     margin-top:24px;
     margin-bottom:40px;
+}
+.breadcrumbs ul li:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
 .breadcrumbs ul img{
     margin-left:8px;
@@ -402,6 +411,9 @@ p#size{
     line-height: 23px;
     margin-right: 22px;
 }
+.sorting span:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
 .sorting select{
     font-size: 18px;
     line-height: 21px; 
@@ -410,9 +422,13 @@ p#size{
    height: 33px;
    text-align: center;
    color: #707070;
-}
-.sorting select{
     margin-right:16px;
+}
+.sorting select option:first-child:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.sorting select:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
 }
 .sorting select:last-child{
     margin-right:0px;
@@ -424,6 +440,8 @@ p#size{
     flex-wrap: wrap;
     justify-content:space-between;
 }
+/*catalog-card*/
+
 .catalog-card{
     width: 251px;
     height: 307px;
@@ -432,6 +450,10 @@ p#size{
     box-sizing: border-box;
     border-radius: 15px;
 }
+.catalog-card:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
+}
+
 .catalog-card div{
     height:170px;
     width: 251px;
@@ -443,6 +465,9 @@ p#size{
     text-align:center;
     padding-top: 24px; 
 }
+.catalog-card div img:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
+}
 .catalog-card p{
     font-size: 18px;
     line-height: 21px;
@@ -451,7 +476,9 @@ p#size{
     margin-top:36px;
     margin-bottom: 18px;
 }
-
+.catalog-card p:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
+}
 .catalog-card  span.newprice{
     font-size: 18px;
     line-height: 21px;
@@ -464,12 +491,12 @@ p#size{
     color: #707070;
     padding-top: 2px;
 }
- /* .catalog-items  div:nth-child(3) {
-    display:flex;
-    justify-content:space-between;
-    padding-left: 22px;
-    padding-right:22px;
-}*/
+.catalog-card div span:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+ .catalog-items{
+    padding-right:5px;
+}
 
 /*pages*/
 .pages{
@@ -485,8 +512,10 @@ p#size{
     line-height: 28px;
     color: #707070;
     margin-right: 24px;
-    display:inine-block;
-    
+    display:inine-block;   
+}
+.pages li a:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
 .pages li:first-child{
     text-align:center;
@@ -496,22 +525,31 @@ p#size{
     border: 1px solid #000000;
     border-radius: 3px;
 }
+.pages li:first-child:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
+}
 /*footer*/
-.footer .container{
+.footer{
     display:flex;
-    flex-direction: column;
-
+    flex-direction:column;
 }
 .footer-bottom{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background: #EAEAEA;
     height: 313px;
 }
+.footer-bottom:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
+}
 .footer-bottom ul li:first-child{
     text-transform: uppercase;
     margin-bottom:24px;
+    margin-top:40px;
+}
+.footer-bottom ul li:last-child {
+    padding-bottom: 52px;
 }
 .footer-bottom ul li{
     font-size: 18px;
@@ -519,8 +557,14 @@ p#size{
     color: #000000;
     margin-bottom: 9px;
 }
-.footer-bottom  ul.contact li:first-child{
+.footer-bottom ul li a:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.footer-bottom  div ul.contact li:first-child{
     margin-bottom: 5px;
+}
+.footer-bottom div ul.contact li:last-child {
+    margin-bottom: 13px;
 }
 .footer-bottom span:first-child{
     background-image:url(images/instagram-logo.svg) ;
@@ -537,12 +581,13 @@ p#size{
     width: 13px;
     height: 21px;
 }
-.footer-bottom div{
-    margin-right:200px;
+.footer-bottom span:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
 }
 .footer-bottom .contact{
     display:flex;
     flex-direction:column;
+    margin-right: 90px;
 }
 .social{
     display: flex;
@@ -556,9 +601,25 @@ p#size{
 .footer-bottom img{
     margin-top:22px;
 }
+.footer-bottom img:hover{
+    border: 2px solid rgba(33, 166, 243, 1);
+}
 .footer-bottom img:first-child{
     margin-right: 13px;
 }
-.footer-bottom p{
-    display:flex;
+.footer-bottom .container p {
+    height: 72px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer-bottom .container p:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
+}
+.footer-bottom .container:hover{
+    border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
