@@ -647,6 +647,7 @@ p#size{
     background: #F5F5F5;
     border-radius: 5px;
     margin-top: 20px;
+    margin-bottom:20px;
     }
     .shopinfo p:first-child{
     font-size: 18px;
@@ -700,7 +701,7 @@ p#size{
         width: 12px;
         height: 12px;
     }    
-    .shopinfo form input[type="button"]{
+    .shopinfo div form:last-of-type button{
         width: 290px;
         height: 46px;
         border: 1px solid #F2BF63;
