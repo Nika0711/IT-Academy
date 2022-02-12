@@ -85,6 +85,7 @@
         <div class="container">
             <div class="filter">
                <h4><span>фильтр</span></h4>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get">
             <div class="size">
                 <p class="filter-type" id="size"><span>размер</span></p>
                 <label><input type="checkbox" name="size[] value='13">13 <br></label> 
@@ -100,40 +101,40 @@
                         <label for ="to">До</label>
                         <input id="to" type="text" name="to">
             </div>
-             <div>
+             <div class="type">
                 <p class="filter-type"><span>Вид украшения</span></p>
                 <label><input type="checkbox" name="typeofjewel[] value='modelring">Кольцо модельное <br></label> 
                 <label><input type="checkbox" name="typeofjewel[] value='engagementring">Кольцо обручальное<br></label>
                 <label><input type="checkbox" name="typeofjewel[] value='weddingring">Кольцо помолвочное<br></label>
              </div>       
-            <div>
+            <div class="gender">
                 <p class="filter-type"><span>Для кого</span></p>
                 <label><input  type="checkbox" name="sex[] value='woman">Для женщин <br></label> 
                 <label><input type="checkbox" name="sex[] value='man">Для мужчин<br></label>
                 <label><input type="checkbox" name="sex[] value='unisex">Унисекс<br></label>
             </div>
-            <div>
+            <div class="model">
                 <p class="filter-type"><span>КОНСТРУКЦИЯ</span></p>
                 <label><input  type="checkbox" name="ringtype[] value='ringmodel">Кольцо модельное <br></label> 
                 <label><input type="checkbox" name="ringtype[] value='soliter">Кольцо солитер<br></label>
                 <label><input type="checkbox" name="ringtype[] value='combined">Кольцо комбинированное<br></label>
                 <label><input type="checkbox" name="ringtype[] value='obodok">Кольцо ободок<br></label>
             </div>    
-            <div>
+            <div class="stone">
                 <p class="filter-type"><span>Вид вставки</span></p>
                 <label><input  type="checkbox" name="stonetype[] value='nostone">Без вставки <br></label> 
                 <label><input type="checkbox" name="stonetype[] value='diamond">Бриллиант<br></label>
                 <label><input type="checkbox" name="stonetype[] value='zirconia">Фианит<br></label>
                 <label><input type="checkbox" name="stonetype[] value='sapphire">Сапфир<br></label>
             </div>
-            <div>
+            <div class="metal">
                 <p class="filter-type"><span>вид металла</span></p>
                 <label><input type="checkbox" name="metaltype[] value='combined">Комбинированное золото<br></label> 
                 <label><input type="checkbox" name="metaltype[] value='whirtegold">Белое золото<br></label>
                 <label><input type="checkbox" name="metaltype[] value='gold">Золото<br></label>
                 <label><input type="checkbox" name="metaltype[] value='silver">Серебро<br></label>
             </div>    
-            <div>
+            <div class="probe">
                 <p class="filter-type"><span>проба</span></p>
                 <label><input  type="checkbox" name="standardtype[] value='585">585<br></label> 
                 <label><input type="checkbox" name="standardtype[] value='375">375<br></label>
@@ -141,17 +142,13 @@
                 <label><input type="checkbox" name="standardtype[] value='750">750<br></label>
             </div>    
             <div>
-                <button>
-                    <span>Показать</span>
-                </button>
-                <button>
-                    <span>Сбросить</span>
-                </button>
+                <input type="submit" value="Показать">
+                <input type="reset" value="Сбросить">
             </div>      
-            </div>       
+            </div> 
+    </form>      
             <div class="sorting-wrap">
             <div class="sorting">    
-            <form action="">
               <span>Сортировка:</span>  
               <select name="price">
                   <option value="0">Цена</option>
@@ -172,7 +169,6 @@
                 <option value="70-100">Кольцо-вензель</option>
                 <option value="0-70">Разъемное кольцо</option>
             </select>
-            </form>
             </div>
 
             <div class="catalog-items">
@@ -423,8 +419,8 @@
                     <img src="images/apple.png" alt="apple-logo">
                 </div>       
              </div>
-         <div class="container">
-            <p>2020 “Jewelry.by”  Все права защищены.</p>
+         <div class="container-bottom">
+            <p>2022 “Jewelry.by”  Все права защищены.</p>
          </div>                 
     </div>
    </div>          
