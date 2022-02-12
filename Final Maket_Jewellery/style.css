@@ -18,7 +18,7 @@ a{
     color:inherit;
     text-decoration: none;
 }
-button{
+.icons button{
     border: none;
     background-color: transparent;
 }
@@ -701,7 +701,7 @@ p#size{
         width: 12px;
         height: 12px;
     }    
-    .shopinfo div form:last-of-type button{
+    .shopinfo button.btn{
         width: 290px;
         height: 46px;
         border: 1px solid #F2BF63;
