@@ -6,7 +6,6 @@
 }
 
 .container{
-    border: 1px solid red;
     width:1140px;
     margin: 0 auto;
     display:flex;
@@ -42,9 +41,7 @@ body{
    display:flex;
    justify-items: space-between;
 }
-.header:hover{
-  border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .header-top-left {  
     display:flex;
     padding-top: 11px;
@@ -56,22 +53,12 @@ body{
 .header-top-left li:first-child{
   margin-right: 44px;
 }
-.header-top-left li:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
-
 .header-top-right {
     display:flex;
     padding-top: 12px;
     padding-bottom: 12px;
     font-size: 18px;
     line-height: 21px;
-}
-.header-top-right span:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}    
-.header-top-right img:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
 }
 .header-top-right img:first-child{
     width:24px;
@@ -88,9 +75,7 @@ body{
 .header-top-right li a{
     vertical-align: 5px;
 }
-.header-top-right li a:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .header-top-right span:last-child{
     vertical-align:6px;
     padding-right: 5px;
@@ -108,9 +93,6 @@ body{
     height: 66px;
     margin-top: 39px;
     margin-bottom: 30px;
-}
-.logo:hover{
- border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
 .logo img:hover{
     border: 2px solid rgba(33, 166, 243, 1);
@@ -145,10 +127,6 @@ body{
     position:relative;
     display:flex;
     justify-content: flex-start;
-}
-
-.header-search .icons button:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
 }
 .header-search .icons button:first-child{
     width: 31px;
@@ -193,9 +171,7 @@ img.ellipse{
     margin-top:24px;
     margin-bottom:40px;
 }
-.breadcrumbs ul li:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .breadcrumbs ul img{
     margin-left:8px;
     width: 4px;
@@ -206,7 +182,7 @@ img.ellipse{
 .sale .container{
     display:flex;
     height: 173px;
-    background: url(images/background.jpg);
+    background: url(images/background.jpg) no-repeat;
     margin-bottom: 41px;
 }
 .sale-block h1{
@@ -225,13 +201,6 @@ img.ellipse{
 .sale-block h1 span:first-child{
     margin-top: 50px;
 }
-.sale-block h1 span:hover{
-    display:inline-block;
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
-.sale .container:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
 
 /*filter*/
 .filter{
@@ -247,9 +216,7 @@ img.ellipse{
 .filter div:last-child{
     border: none;
 }
-.filter div:not(:last-child):hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .filter h4{
     border-radius: 15px;
     border: 1px solid #EAEAEA;
@@ -266,12 +233,7 @@ img.ellipse{
     padding-left:130px;
     padding-right:129px;
 }
-.filter h4:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
-.filter h4 span:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .filter p.filter-type {
     font-size: 18px;
     line-height: 21px;
@@ -291,11 +253,31 @@ height: 21px;
     width: 12px;
     height: 6px;
     position:absolute;
-    top:30px;
-    left:120px;
+    top: 28px;
+}    
+.filter div.size p.filter-type span:after{
+    left: 100px;
 }
-.filter p.filter-type span:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
+.filter div.price p.filter-type span:after{
+    left: 80px; 
+}
+.filter div.type p.filter-type span:after{
+    left: 183px; 
+}
+.filter div.gender p.filter-type span:after{
+    left:116px; 
+}
+.filter div.model .filter-type span:after{
+    left:158px; 
+}
+.filter div.stone p.filter-type span:after{
+    left:150px; 
+}
+.filter div.metal p.filter-type span:after{
+    left:156px; 
+}
+.filter div.probe p.filter-type span:after{
+    left: 88px; 
 }
 p#size{
     padding-top:35px;
@@ -311,10 +293,6 @@ p#size{
     margin-right: 12px;
     margin-left: 16px;
 } 
-.filter input[type="checkbox"]:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
-
 .filter .price input[type="checkbox"]:last-child{
     margin-bottom:24px;
 }
@@ -332,25 +310,19 @@ p#size{
     margin-right: 12px;   
     margin-bottom: 24px;
 } 
-.filter input[type="text"]:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
+
 .filter label{
     font-size: 14px;
     line-height: 16px;
     margin-left: 16px;
     margin-right: 12px;
 }  
-.filter label:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .filter .div label{
     font-size: 18px;
     line-height: 21px;
 }   
-.filter .div label:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .filter .div label:first-of-type{
     margin-right: 12px;
     margin-top:26px;
@@ -359,36 +331,35 @@ p#size{
     margin-right: 12px;
     margin-top:26px;
 }
-.filter div button{
+
+.filter div input[type="submit"]{
+    background: #F2BF63;
+    margin-right: 18px;
+    margin-left:16px; 
     width: 144px;
     height: 40px;
     border-radius: 5px;
     margin-top:32px;
     margin-bottom:16px;
-}
-.filter div button:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
-.filter div button:first-child{
-    background: #F2BF63;
-    margin-right: 18px;
-    margin-left:16px;
-}
-.filter div button:last-child{
-    background: #313131;
-}
-.filter div button span{
-    width: 73px;
-    height: 16px;
+    border: transparent;
+    color: #FFFFFF;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    color: #FFFFFF;
-    padding-left: 36px;
-    padding-right:36px;
 }
-.filter div button span:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
+.filter div input[type="reset"]{
+    background: #313131;
+    border: transparent;
+    width: 144px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top:32px;
+    margin-bottom:16px;
+    border: transparent;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
 }
 /*catalog*/
 .catalog .container{
@@ -398,7 +369,6 @@ p#size{
 .catalog .sorting-wrap{
     width: 775px;
     height: 1612px;
-    border: 1px solid blue;
 }
 .sorting{
     height: 42px;
@@ -411,9 +381,6 @@ p#size{
     line-height: 23px;
     margin-right: 22px;
 }
-.sorting span:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
 .sorting select{
     font-size: 18px;
     line-height: 21px; 
@@ -423,12 +390,6 @@ p#size{
    text-align: center;
    color: #707070;
     margin-right:16px;
-}
-.sorting select option:first-child:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
-.sorting select:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
 }
 .sorting select:last-child{
     margin-right:0px;
@@ -465,9 +426,6 @@ p#size{
     text-align:center;
     padding-top: 24px; 
 }
-.catalog-card div img:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
 .catalog-card p{
     font-size: 18px;
     line-height: 21px;
@@ -475,9 +433,6 @@ p#size{
     color: #707070;
     margin-top:36px;
     margin-bottom: 18px;
-}
-.catalog-card p:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
 }
 .catalog-card  span.newprice{
     font-size: 18px;
@@ -490,9 +445,6 @@ p#size{
     text-decoration-line: line-through;
     color: #707070;
     padding-top: 2px;
-}
-.catalog-card div span:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
 }
  .catalog-items{
     padding-right:5px;
@@ -514,9 +466,6 @@ p#size{
     margin-right: 24px;
     display:inine-block;   
 }
-.pages li a:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
 .pages li:first-child{
     text-align:center;
     width: 35px;
@@ -524,9 +473,6 @@ p#size{
     background: #FFFFFF;
     border: 1px solid #000000;
     border-radius: 3px;
-}
-.pages li:first-child:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
 }
 /*footer*/
 .footer{
@@ -538,10 +484,7 @@ p#size{
     flex-direction: column;
     justify-content: space-between;
     background: #EAEAEA;
-    height: 313px;
-}
-.footer-bottom:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
+    height: 333px;
 }
 .footer-bottom ul li:first-child{
     text-transform: uppercase;
@@ -549,7 +492,7 @@ p#size{
     margin-top:40px;
 }
 .footer-bottom ul li:last-child {
-    padding-bottom: 52px;
+    padding-bottom: 30px;
 }
 .footer-bottom ul li{
     font-size: 18px;
@@ -557,9 +500,7 @@ p#size{
     color: #000000;
     margin-bottom: 9px;
 }
-.footer-bottom ul li a:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
 .footer-bottom  div ul.contact li:first-child{
     margin-bottom: 5px;
 }
@@ -581,9 +522,7 @@ p#size{
     width: 13px;
     height: 21px;
 }
-.footer-bottom span:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
+
 .footer-bottom .contact{
     display:flex;
     flex-direction:column;
@@ -601,13 +540,17 @@ p#size{
 .footer-bottom img{
     margin-top:22px;
 }
-.footer-bottom img:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
-}
 .footer-bottom img:first-child{
     margin-right: 13px;
 }
-.footer-bottom .container p {
+.footer-bottom .container-bottom{
+    border-top:1px solid #707070;
+    width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.footer-bottom .container-bottom p {
     height: 72px;
     color: rgb(0, 0, 0);
     font-size: 14px;
@@ -615,11 +558,7 @@ p#size{
     padding-bottom: 32px;
     padding-top: 32px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; 
+    padding-left:450px;
 }
-.footer-bottom .container p:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
-.footer-bottom .container:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
-}
+
