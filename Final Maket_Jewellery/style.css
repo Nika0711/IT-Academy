@@ -99,6 +99,7 @@ body{
 .header-search{   
     color: #707070; 
     border: 1px solid #F0F0F0;
+    margin-bottom: 24px;
 }
 .header-search .container{
     display:flex;  
@@ -808,6 +809,64 @@ p#size{
  .busket .container{
     display:flex;
     flex-direction: column;
-
 }
-
+.busket h2{
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 60px;
+    margin-bottom: 36px;
+}
+.busket .list{
+    width: 1140px;
+    height: 116px;
+    background: #EAEAEA;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 48px;
+}
+.busket .list span{
+    font-size: 18px;
+    line-height: 21px;
+    display:inline-box;
+    justify-items:space-around;
+    vertical-align: center;
+}
+.busket-item-wrap .busket-item{
+    display:flex;
+}
+.busket-item-wrap .busket-item div img{
+    padding-right:36px;
+}
+.busket .busket-item-wrap {
+    height: 107px;
+    margin-left: 20px;
+    margin-bottom: 63px;
+}
+.busket-item-wrap .item-art{
+   margin-right: 32px;; 
+}
+.busket-item-wrap .item-art p{
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 12px;
+}
+.busket-item-wrap .item-art p:first-child{   
+    color: #000000;
+}
+.busket-item-wrap .item-cost span:first-child{
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 28px;
+    color: #F2BF63;
+    }
+ .busket-item-wrap .item-cost span:last-child{
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: line-through;
+    color: #707070;
+ }   
