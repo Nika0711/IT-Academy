@@ -118,7 +118,7 @@ body{
     margin-right:52px;   
 } 
 .header-search ul li a:hover{
-    border-bottom: 2px solid rgba(33, 166, 243, 1);
+    border-bottom: 3px solid #F2BF63;
 }
 .header-search .icons{
     position:relative;
@@ -388,6 +388,9 @@ p#size{
    color: #707070;
     margin-right:16px;
 }
+.sorting select:hover{
+    border:2px solid #F2BF63;
+}
 .sorting select:last-child{
     margin-right:0px;
 }
@@ -409,7 +412,7 @@ p#size{
     border-radius: 15px;
 }
 .catalog-card:hover{
-    border: 2px solid rgba(33, 166, 243, 1);
+    border: 3px solid #F2BF63;
 }
 
 .catalog-card div{
@@ -712,6 +715,10 @@ p#size{
         color: #707070;
 
     }
+    .btn:hover{
+        background-color:#F2BF63;
+        color:white;
+    }
     .btn:nth-of-type(1), .btn:nth-of-type(3){
         margin-right:40px;
     }
@@ -739,9 +746,6 @@ p#size{
     height: 40px;  
     }
     /*owlslider*/
-
-
-
 .itemcard h4{
     font-size: 24px;
     line-height: 28px;
@@ -770,7 +774,7 @@ p#size{
     height:100%;
     margin-bottom: 40px;
 }
- .card .swiper-slide span:first-child{
+ .card .swiper-slide :first-child{
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 30px;
@@ -800,3 +804,10 @@ p#size{
     opacity:1;
     color: #F2BF63;
 }
+/*busket_page*/
+ .busket .container{
+    display:flex;
+    flex-direction: column;
+
+}
+
