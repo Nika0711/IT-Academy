@@ -738,10 +738,16 @@ p#size{
     width: 40px;
     height: 40px;  
     }
-    div#owlslide .container1{
-        justify-content:flex-start;
+    /*owlslider*/
+    
+    .containernew{
+    background-color: 1px solid red;
+    width:1140px;
+    margin: o auto;
     }
-    .optionalchoice#owlslide .container1 h3{
+    .containernew h3{
+    display: flex;
+    justify-content: center;
     font-size: 24px;
     line-height: 28px;
     font-weight: normal;
@@ -750,9 +756,18 @@ p#size{
     margin-right: auto;
     margin-top: 100px;
     }
-
-    .optionalchoice#owlslide  .owl-carousel .owl-theme{
-    display:flex;
-    flex-direction:row;
-
+    div#owlslide{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 132px;
+    }
+    .owl-carousel .owl-theme{
+        display:flex;
+        flex-direction:row;
+    }
+    .optitem{
+        display:flex;
+        flex-direction:column;
+        width:183px;
+        height:99px;
     }

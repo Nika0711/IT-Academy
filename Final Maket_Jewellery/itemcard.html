@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <title>Card of an item</title>
 </head>
 <body>
@@ -134,24 +136,47 @@
     </div>
          </div>
      </div>
-    
-     <div #owlslide>
-        <div class="container1">
-            <h3>может понравиться</h3>
+
+                <h3>может понравиться</h3>
             <div class="owl-carousel owl-theme">
                 <div class="optitem">
-                <img src="images/pin1.png" alt="pin1">
-                <span>Брошь 940011-9K</span>
-                <span>120.00 руб.</span>             
+                    <img src="images/pin1.png" alt="pin1">
+                    <span>Брошь 940011-9K</span>
+                    <span>120.00 руб.</span>             
                 </div>
-                <div class="optitem"><h4>2</h4></div>
-                <div class="optitem"><h4>3</h4></div>
-                <div class="optitem"><h4>4</h4></div>
-                <div class="optitem"><h4>5</div>
+                <div class="optitem">
+                    <img src="images/pin2.png" alt="pin1">
+                    <span>Брошь 940011-9K</span>
+                    <span>120.00 руб.</span> 
+                </div>
+                <div class="optitem">
+                    <img src="images/pin3.png" alt="pin1">
+                    <span>Брошь 940011-9K</span>
+                     <span>120.00 руб.</span> 
+                </div>
+                <div class="optitem">
+                    <img src="images/pin4.png" alt="pin1">
+                    <span>Брошь 940011-9K</span>
+                    <span>120.00 руб.</span> </div>
+                <div class="optitem">
+                    <img src="images/pin1.png" alt="pin1">
+                    <span>Брошь 940011-9K</span>
+                    <span>120.00 руб.</span> 
+                </div>
+                <div class="optitem">
+                    <img src="images/pin4.png" alt="pin1">
+                    <span>Брошь 940011-9K</span>
+                    <span>120.00 руб.</span> </div>
+                <div class="optitem">
+                    <img src="images/pin1.png" alt="pin1">
+                    <span>Брошь 940011-9K</span>
+                    <span>120.00 руб.</span> 
+                </div>
             <div>    
         </div>
         </div>
-     </div>   
+
+
     <div class="footer">       
         <div class="footer-bottom"> 
             <div class="container">
@@ -196,7 +221,8 @@
     </div>
    </div>          
 
-
+   <script src="jquery.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
    <script
    src="https://code.jquery.com/jquery-3.6.0.min.js"
    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -220,7 +246,9 @@
         }
     }
 })
-
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
 
 
 </script>
