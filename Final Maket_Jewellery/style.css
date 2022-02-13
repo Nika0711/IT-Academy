@@ -726,9 +726,9 @@ p#size{
     line-height: 16px;
     margin-bottom:24px;
    }
-   button.icon{
+   .itemcarddescr button:nth-of-type(5){
+    border:none;
+    background: transparent;
     width: 32px;
-    height: 32.13px;
-    background-image: url(images/heart.svg);
+    height: 32px;
    }
-
