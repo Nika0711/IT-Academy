@@ -54,7 +54,7 @@
                     
         </div>  
     </div>
-  <div class="breadcrumbs">
+    <div class="breadcrumbs">
         <div class="container">
             <ul>
                 <li><a href="">Главная страница</a>
@@ -70,8 +70,8 @@
             </ul>
         </div>   
     </div>     
-     <div class="itemcard">
-         <div class="container">
+    <div class="itemcard">
+    <div class="container">
            <div class="itemimg">
             <div><img src="images/ringxl1.png" alt="ring"></div> 
             <span>Характеристики изделия</span>
@@ -124,12 +124,14 @@
             представленная на сайте информация, касающаяся технических характеристик,<br>
             стоимости товаров, носит информационный характер и ни при каких условиях не <br>
             является публичной офертой.</p>
-    
-        <button><img src="images/heart.svg" alt="heart"></button>
-        
       
- 
-          </div>
+            <button id="img">
+             <img src="images/sharebutton.png" alt="sharebutton">   
+        </button>
+        <button id="img">
+            <img src="images/heart.svg" alt="heart">
+        </button>       
+                </div>
 
 
 
@@ -143,7 +145,7 @@
 
 
 
-           </div>
+      
 
 
 
@@ -170,10 +172,25 @@
 
 
          </div>
-
      </div>
-
-
+    
+     <div class="optionalchoice">
+        <div class="container">
+            <h3>может понравиться</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="optitem">
+                <img src="images/pin1" alt="pin1">
+                <span>Брошь 940011-9K</span>
+                <span>120.00 руб.</span>             
+                </div>
+                <div class="optitem"><h4>2</h4></div>
+                <div class="optitem"><h4>3</h4></div>
+                <div class="optitem"><h4>4</h4></div>
+                <div class="optitem"><h4>5</div>
+            <div>    
+        </div>
+        </div>
+     </div>   
 
    
 
@@ -231,7 +248,33 @@
    </div>          
 
 
+   <script
+   src="https://code.jquery.com/jquery-3.6.0.min.js"
+   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+   crossorigin="anonymous">
+    $(document).ready(function($){
 
+    });
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+
+
+</script>
     
 </body>
 </html>
