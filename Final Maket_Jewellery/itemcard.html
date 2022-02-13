@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
 <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
@@ -133,48 +134,93 @@
         <button id="img">
             <img src="images/heart.svg" alt="heart">
         </button>       
-    </div>
+            </div>
          </div>
+         <h4>может понравиться</h4>
+
+         <div class="swiper mySwiper slider">
+            <div class=" swiper-wrapper card">
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/pin1.png" alt="pin1">
+                    </div>
+                    <span>Брошь 940011-9K</span>
+                    <span>120.00 руб.</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/pin2.png" alt="pin1">
+                    </div>
+                    <span>Брошь 850015</span>
+                    <span>100.50 руб.</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/pin3.png" alt="pin1">
+                    </div>
+                    <span>Брошь 851615-4</span>
+                    <span>110.10 руб.</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/ring7.png" alt="pin1">
+                    </div>
+                    <span>0210175</span>
+                    <span>257.00 руб.</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/ring8.png" alt="pin1">
+                    </div>
+                    <span>Кольцо 0210175</span>
+                    <span>63.05 руб.м.</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/ring11.png" alt="pin1">
+                    </div>
+                    <span>Кольцо 210654</span>
+                    <span>290.00 руб.</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/ring12.png" alt="pin1">
+                    </div>
+                    <span>Кольцо 104006</span>
+                    <span>260.00 руб</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/ring15.png" alt="pin1">
+                    </div>
+                    <span>Кольцо 210614</span>
+                    <span>251.00 руб</span>
+                </div>
+                <div class="swiper-slide card-content">
+                    <div class="image">
+                        <img src="images/ring6.png" alt="pin1">
+                    </div>
+                    <span>Кольцо 01-0023</span>
+                    <span>53.00 руб</span>
+                </div>
+            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        </div>
+        
+    </div>
+
      </div>
 
-                <h3>может понравиться</h3>
-            <div class="owl-carousel owl-theme">
-                                <div>
-                    <img src="images/pin1.png" alt="pin1">
-                    <span>Брошь 940011-9K</span>
-                    <span>120.00 руб.</span>             
-                </div>
-                <div>
-                    <img src="images/ping2.png" alt="pin1">
-                    <span>Брошь 940011-9K</span>
-                    <span>120.00 руб.</span> 
-                </div>
-                <div>
-                    <img src="images/pin3.png" alt="pin1">
-                    <span>Брошь 940011-9K</span>
-                     <span>120.00 руб.</span> 
-                </div>
-                <div>
-                    <img src="images/pin4.png" alt="pin1">
-                    <span>Брошь 940011-9K</span>
-                    <span>120.00 руб.</span> </div>
-                <div class="optitem">
-                    <img src="images/pin3.png" alt="pin1">
-                    <span>Брошь 940011-9K</span>
-                    <span>120.00 руб.</span> 
-                </div>
-                <div>
-                    <img src="images/ping2.png" alt="pin1">
-                    <span>Брошь 940011-9K</span>
-                    <span>120.00 руб.</span> </div>
-                <div>
-                    <img src="images/pin1.png" alt="pin1">
-                    <span>Брошь 940011-9K</span>
-                    <span>120.00 руб.</span> 
-                </div>
-            <div>    
-        </div>
-        </div>
+
+
+
+
+
+        
+                             
+         
 
 
     <div class="footer">       
@@ -221,37 +267,25 @@
     </div>
    </div>          
 
-   <script src="jquery.min.js"></script>
-<script src="owlcarousel/owl.carousel.min.js"></script>
-   <script
-   src="https://code.jquery.com/jquery-3.6.0.min.js"
-   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-   crossorigin="anonymous">
-    $(document).ready(function($){
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    });
-    $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
-
-
-</script>
-    
+   <!-- Initialize Swiper -->
+   <script>
+     var swiper = new Swiper(".mySwiper", {
+       slidesPerView: 3,
+       spaceBetween: 30,
+       slidesPerGroup: 3,
+       loop: true,
+       loopFillGroupWithBlank: true,
+       pagination: {
+         el: ".swiper-pagination",
+         clickable: true,
+       },
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+       },
+     });
+   </script>   
 </body>
 </html>
