@@ -773,13 +773,13 @@ p#size{
 .swiper-slide .card-content .image{
     width: 100%;
     height:100%;
-    margin-bottom: 40px;
+    margin-bottom: 3px;
 }
  .card .swiper-slide :first-child{
     font-size: 18px;
     line-height: 21px;
-    margin-bottom: 30px;
-    margin-top:40px;
+    margin-bottom: 10px;
+    margin-top:5px;
 }
 .card .swiper-slide span:last-child{
     font-size: 18px;
@@ -806,6 +806,9 @@ p#size{
     color: #F2BF63;
 }
 /*busket_page*/
+.busket{
+margin-bottom:500px;
+}
  .busket .container{
     display:flex;
     flex-direction: column;
@@ -871,11 +874,13 @@ p#size{
     color: #707070;
  }   
  .coupon{
+     display:flex;
      margin-top: 63px;
      margin-bottom:44px;
- }
+ }     
  .coupon p{
     font-size: 18px;
+    font-weight: 500;
     line-height: 21px;   
     color: #000000;
     margin-bottom: 24px;
@@ -887,6 +892,7 @@ p#size{
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 5px;
+    margin-right: 24px;
  }
  .coupon button{
     background: #F2BF63;
@@ -901,6 +907,9 @@ p#size{
     color: #FFFFFF;
     text-transform: uppercase;
  }
+.deliverty{
+    display:flex;
+}
  .delivery p{
     font-size: 18px;
     line-height: 21px;
@@ -945,8 +954,8 @@ p#size{
     font-size: 14px;
     color: #FFFFFF;
  }
- 
 .orderplace button{
+    display:block;
     width: 379px;
     height: 69px;
     background: #F2BF63;
@@ -957,8 +966,63 @@ p#size{
     text-transform: uppercase;
     color: #FFFFFF;
     border:none;
+    margin-bottom: 16px ;
+}
+.orderplace input[type='checkbox']{
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+
 }
 .orderplace label{
     font-size: 13px;
     line-height: 15px;
+    margin-bottom:112px;
+
+}
+.total-wrap{
+    display:flex;
+    flex-direction:column;
+}
+.total{
+    display:flex;
+    flex-direction:column;
+    height:169px;
+    padding-left: 860px;
+    padding-right:16px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    }
+.total p:first-child{
+    margin-bottom:8px;
+    margin-top: 36px ;
+}
+.total p:nth-child(2){
+    margin-bottom:24px ;
+}
+.total p:nth-child(3) span:first-child{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    margin-right: 34px;
+}
+.total p:nth-child(3) span:last-child{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #F2BF63;
+}
+
+.total p span{
+    font-size: 18px;
+    line-height: 21px;
+}
+.total span:first-child{
+    margin-right: 68px;;
+}
+.total span:first-child{
+    margin-right: 16x;;
 }
