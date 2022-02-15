@@ -421,6 +421,7 @@ p#size{
     width: 251px;
     display:flex;
     justify-content: center;
+    position:relative;
 
 }
 .catalog-card div img{
@@ -432,6 +433,31 @@ p#size{
 .catalog-card div img:hover{
     width: 148px;
     height: 198px;
+}
+.fa-regular.fa-heart:before {
+    content: "\f004";
+    font-size: 26px;
+    position:absolute;
+    color:  #F2BF63;
+    opacity: 0.4;
+    top: 10px;
+    right: 18px;
+}
+.fa-regular.fa-heart:hover{
+    color:#F2BF63;
+    opacity: 1;
+}
+.fa-solid.fa-heart:before{
+ display:none;
+}
+.fa-solid.fa-heart:before:active{
+    content: "\f004";
+    cursor:pointer;
+    font-size: 26px;
+    position:absolute;
+    color:  #F2BF63;
+    top: 10px;
+    right: 18px;
 }
 .catalog-card p{
     font-size: 18px;
@@ -459,6 +485,13 @@ p#size{
 /*catalog-card-additional*/
 .catalog-card-additional{
     display:flex;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 250px;
+    height: 519px;
 }
 /*pages*/
 .pages{
@@ -929,8 +962,9 @@ margin-bottom:500px;
     color: #FFFFFF;
     text-transform: uppercase;
  }
-.deliverty{
+.delivery{
     display:flex;
+    flex-direction:column;
 }
  .delivery p{
     font-size: 18px;
