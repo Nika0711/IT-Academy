@@ -484,7 +484,6 @@ p#size{
 }
 /*catalog-card-additional*/
 .catalog-card-additional{
-    display:flex;
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
@@ -492,6 +491,42 @@ p#size{
     border-radius: 15px;
     width: 250px;
     height: 519px;
+}
+.catalog-card-additional button.card-busket{
+    width: 206px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    margin-left: 22px;
+    margin-bottom: 26px;
+    background: rgb(242, 191, 99);
+    border-radius: 5px;
+}
+.catalog-card-additional .rating-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+.catalog-card-additional .rating i {
+    font-size: 17px;
+    color: rgb(242, 191, 99);
+}
+.catalog-card-additional  .review p {
+    margin-top: 0px;
+    margin-right: 20px;
+    text-align: center;
+    color: rgb(112, 112, 112);
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: underline;
+}
+.catalog-card-additional{
+    display:none;
+}
+.catalog-card:hover +.catalog-card-additional{
+    display:block;
 }
 /*pages*/
 .pages{
