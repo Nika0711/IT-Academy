@@ -426,6 +426,12 @@ p#size{
 .catalog-card div img{
     text-align:center;
     padding-top: 24px; 
+    width: 114px;
+    height: 146px;
+}
+.catalog-card div img:hover{
+    width: 148px;
+    height: 198px;
 }
 .catalog-card p{
     font-size: 18px;
@@ -450,7 +456,10 @@ p#size{
  .catalog-items{
     padding-right:5px;
 }
-
+/*catalog-card-additional*/
+.catalog-card-additional{
+    display:flex;
+}
 /*pages*/
 .pages{
     margin-top: 56px;
