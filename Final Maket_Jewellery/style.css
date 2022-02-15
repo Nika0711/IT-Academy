@@ -370,7 +370,6 @@ p#size{
 }
 .sorting{
     height: 42px;
-    border: 1px solid green;
     padding-top:2px;
     padding-bottom:12px;
 }
@@ -411,13 +410,13 @@ p#size{
     border: 1px solid #EAEAEA;
     box-sizing: border-box;
     border-radius: 15px;
+    margin-bottom:8px;
 }
 .catalog-card:hover{
     border: 3px solid #F2BF63;
 }
 
 .catalog-card div{
-    height:170px;
     width: 251px;
     display:flex;
     justify-content: center;
@@ -429,10 +428,11 @@ p#size{
     padding-top: 24px; 
     width: 114px;
     height: 146px;
+    transition: 0.5s;
 }
 .catalog-card div img:hover{
-    width: 148px;
-    height: 198px;
+    width: 144x;
+    height: 180px;
 }
 .fa-regular.fa-heart:before {
     content: "\f004";
@@ -483,7 +483,7 @@ p#size{
     padding-right:5px;
 }
 /*catalog-card-additional*/
-.catalog-card-addional{
+.catalog-card-additional{
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
@@ -491,6 +491,32 @@ p#size{
     border-radius: 15px;
     width: 250px;
     height: 519px;
+}
+.catalog-card-additional div{
+    height: 170px;
+    width: 251px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.catalog-card-additional div img{
+    text-align:center;
+    padding-top: 24px; 
+    width: 148px;
+    height: 198px;
+}
+.catalog-card-additional p{
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #707070;
+    margin-top:36px;
+    margin-bottom: 18px;
+}
+.catalog-card-additional div.pricing{
+    justify-content: space-between;
+    padding: 18px;
+    margin-right: 22px;
 }
 .catalog-card-additional button.card-busket{
     width: 206px;
@@ -504,6 +530,7 @@ p#size{
     background: rgb(242, 191, 99);
     border-radius: 5px;
 }
+
 .catalog-card-additional .rating-wrap{
     display: flex;
     justify-content: space-between;
@@ -522,12 +549,24 @@ p#size{
     line-height: 16px;
     text-decoration-line: underline;
 }
-.catalog-card-additional{
+.catalog-card-additional  span.newprice{
+    font-size: 18px;
+    line-height: 21px;
+    color: #F2BF63;
+}
+.catalog-card-additional  span.oldprice{
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: line-through;
+    color: #707070;
+    padding-top: 2px;
+}
+/* .catalog-card-additional{
     display:none;
 }
 .catalog-card:hover +.catalog-card-additional{
     display:block;
-}
+} */
 /*pages*/
 .pages{
     margin-top: 56px;
