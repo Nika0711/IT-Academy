@@ -10,6 +10,7 @@
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
+    
 }
 li{
     list-style-type: none;
@@ -1232,8 +1233,17 @@ margin-bottom:500px;
 .banners .element{
     height: 466px;
     width:282px;
-    margin-right: 10px;
+    margin-right: 5px;
     position:relative;
+ 
+}
+.banners .element:hover{
+    transform: scale(1.02);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: 0.5s;
+    filter: saturate(120%);
+    max-width: 100%;
+    overflow: hidden;
 }
 .banners .element:first-child{
     background: url(images/rings-bg.jpg)center no-repeat ;
@@ -1281,4 +1291,14 @@ margin-bottom:500px;
 .container .text-wrap:last-child{
     bottom: 12px;
     right: 42px;
+}
+#upButton {
+    background: url(images/up.png) 0 0 no-repeat #0000;
+    position: fixed;
+    cursor: pointer;
+    bottom: 132px;
+    height: 73px;
+    width: 73px;
+    right: 24px;
+    z-index: 99;
 }
