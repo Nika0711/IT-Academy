@@ -92,7 +92,7 @@ body{
     text-shadow: 2px, 2px, #1f1b13;
     border-bottom: 1px solid #F0F0F0;  
     text-shadow: 2px 2px black;
-    animation:Anim_elem1a 2s linear alternate infinite;
+    animation: Anim_elem2  3s linear alternate infinite;
 }   
 .logo .container{
     display:flex;
@@ -104,14 +104,21 @@ body{
     margin-top: 39px;
     margin-bottom: 30px;
 }
-@keyframes Anim_elem1a 
+@keyframes Anim_elem1
 {
     from {transform: rotate(0deg)}
-    25%  {transform:rotate(-10deg)}
-    50%  {transform:rotate(0deg)}
-    100% {transform:rotate(+10deg)}
+    25%  {transform:rotate(-2deg)}
+    50%  {transform:rotate(+2deg)}
+    100% {transform:rotate(0deg)}
 }    
- 
+@keyframes Anim_elem2
+{
+    from { color: #F2BF63;}
+    25% { color:#fab83e }
+    50% { color: #f09f0a;}
+    75% {color:rgb(255, 217, 0)}
+    to { color:#F2BF63;}
+} 
 /*header-search*/
 .header-search{   
     color: #707070; 
