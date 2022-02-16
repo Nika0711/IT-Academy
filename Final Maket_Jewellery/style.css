@@ -1181,3 +1181,43 @@ margin-bottom:500px;
     margin-right: 16x;;
 }
 /*carousel*/
+
+/*promo*/
+.promo{
+    height:100px;
+    margin-top: 20px;
+    background: #F5F5F5;
+    border-radius: 5px;
+}
+.promo .container ul{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    padding-top:20px;
+    margin-top:10px;
+    margin-right: 20px;
+    margin-left: -25px;
+
+}
+.promo ul:first-child{
+    border-right: 3px solid black;
+}
+.promo ul li a span:first-child{
+    margin-right: 10px;
+    font-size:40px;
+    color:black;
+    font-weight:500;
+}
+.promo ul li a span:nth-child(2){
+    margin-right: 10px;
+    font-size:40px;
+    color:#f09f0a;
+    font-weight:500;
+}
+.promo ul li a span:last-child{
+    margin-right: 20px;
+    font-size:40px;
+    color: grey;
+    font-weight:500;
+
+}
