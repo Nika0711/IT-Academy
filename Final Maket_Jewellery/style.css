@@ -1231,6 +1231,8 @@ margin-bottom:500px;
 .banners .element{
     height: 466px;
     width:282px;
+    margin-right: 10px;
+    position:relative;
 }
 .banners .element:first-child{
     background: url(images/rings-bg.jpg)center no-repeat ;
@@ -1259,8 +1261,23 @@ margin-bottom:500px;
 .banners .element-wrap .element:first-child{
     background: url(images/watch1.jpg) center no-repeat ;
     background-size:cover;
+    margin-bottom: 13px;
 }
 .banners .element-wrap .element:last-child{
     background: url(images/chains.jpg)center no-repeat ;
     background-size:cover;
+}
+.text-wrap{
+    text-align:center;
+    font-size:20px;
+    font-weight:500;
+    text-transform: uppercase;
+    color:#f8e1c3; 
+    position:absolute;
+    bottom: 12px;
+    left: 48px;
+}
+.container .text-wrap:last-child{
+    bottom: 12px;
+    left: 68x;
 }
