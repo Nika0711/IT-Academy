@@ -115,7 +115,7 @@ body{
 {
     from { color: #F2BF63;}
     25% { color:#fab83e }
-    50% { color: #f09f0a;}
+    50% { color: #9e7427;}
     75% {color:rgb(255, 217, 0)}
     to { color:#F2BF63;}
 } 
@@ -143,6 +143,7 @@ body{
     margin-right:52px;   
 } 
 .header-search ul li a:hover{
+    color: #F2BF63;
     border-bottom: 3px solid #F2BF63;
 }
 .header-search .icons{
@@ -1279,5 +1280,5 @@ margin-bottom:500px;
 }
 .container .text-wrap:last-child{
     bottom: 12px;
-    left: 68x;
+    right: 42px;
 }
