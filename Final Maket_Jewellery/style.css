@@ -82,8 +82,18 @@ body{
 }
 
 .logo{  
-    border-bottom: 1px solid #F0F0F0;  
+   
+    margin-top: 39px;
+    margin-bottom: 30px;
 }
+.logo .container p{
+    font-size:90px;
+    color:#F2BF63;
+    text-shadow: 2px, 2px, #1f1b13;
+    border-bottom: 1px solid #F0F0F0;  
+    text-shadow: 2px 2px black;
+    animation:Anim_elem1a 2s linear alternate infinite;
+}   
 .logo .container{
     display:flex;
     justify-content:center;
@@ -94,7 +104,14 @@ body{
     margin-top: 39px;
     margin-bottom: 30px;
 }
-
+@keyframes Anim_elem1a 
+{
+    from {transform: rotate(0deg)}
+    25%  {transform:rotate(-10deg)}
+    50%  {transform:rotate(0deg)}
+    100% {transform:rotate(+10deg)}
+}    
+ 
 /*header-search*/
 .header-search{   
     color: #707070; 
