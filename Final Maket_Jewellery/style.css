@@ -1188,11 +1188,14 @@ margin-bottom:500px;
     margin-top: 20px;
     background: #F5F5F5;
     border-radius: 5px;
+    mARGIN-BOTTOM:20PX;
 }
-.promo .container ul{
+.promo .container {
     display:flex;
     flex-direction:row;
-    justify-content:center;
+    justify-content:center !important;
+}
+.promo .container ul{  
     padding-top:20px;
     margin-top:10px;
     margin-right: 20px;
@@ -1219,5 +1222,17 @@ margin-bottom:500px;
     font-size:40px;
     color: grey;
     font-weight:500;
-
+}
+.banners .container{
+    display:flex;
+    justify-content:space-around;
+}
+.banners .element{
+    width:282px;
+}
+.banners .element:first-child{
+    background: url(images/watch.jpg);
+}
+.banners .element:nth-child(2){
+    background: url(images/rings-bg.jpg);
 }
