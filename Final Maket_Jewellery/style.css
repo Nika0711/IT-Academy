@@ -1223,16 +1223,44 @@ margin-bottom:500px;
     color: grey;
     font-weight:500;
 }
+/* banners */
 .banners .container{
     display:flex;
-    justify-content:space-around;
+    justify-content:space-around !important;
 }
 .banners .element{
+    height: 466px;
     width:282px;
 }
 .banners .element:first-child{
-    background: url(images/watch.jpg);
+    background: url(images/rings-bg.jpg)center no-repeat ;
+    background-size:cover;
 }
 .banners .element:nth-child(2){
-    background: url(images/rings-bg.jpg);
+    background: url(images/earings.jpg)center no-repeat ;
+    background-size:cover;
+}
+.banners .element:nth-child(3){
+    background: url(images/necklace.jpg)center no-repeat ;
+    background-size:cover;
+}
+.banners .element:nth-child(4){
+    background: url(images/braclet.jpg)center no-repeat ;
+    background-size:cover;
+}
+.banners .element-wrap{
+    display:flex;
+    flex-direction:column;
+}
+.banners .element-wrap .element{
+   height: 226px;
+    
+}
+.banners .element-wrap .element:first-child{
+    background: url(images/watch1.jpg) center no-repeat ;
+    background-size:cover;
+}
+.banners .element-wrap .element:last-child{
+    background: url(images/chains.jpg)center no-repeat ;
+    background-size:cover;
 }
