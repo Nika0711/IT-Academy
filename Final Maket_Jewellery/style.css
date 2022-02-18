@@ -464,25 +464,31 @@ p#size{
 .catalog-card div img:hover{
    transform: scale (1.2);
 }
-i .fa-regular .fa-star{
+i.fa-regular .fa-star{
     color:#ffa500;
     width: 17px;
     height: 16.19px;
 
 }
-i .fa-regular .fa-heart{
+.fa-regular, .far {
+    font-weight: 400;
+    font-size: 26px;
+    color: #ffa500;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+}
+.fa-solid, .far{
+    color: #ffa500;
     font-size: 26px;
     position: absolute;
-    color: #F2BF63;
     top: 10px;
-    right: 18px; 
+    right: 18px;
+}
+.fa-solid, .far:hover{
+    cursor:pointer;
 }
 
-i .fa-solid .fa-regular{
-    color: #ffa500;
-    width: 17px;
-    height: 16.19px;
-}
 .catalog-card p{
     font-size: 18px;
     line-height: 21px;
@@ -508,15 +514,6 @@ i .fa-solid .fa-regular{
  .catalog-items{
     padding-right:5px;
 }
-/*catalog-card-additional*/
-
-.catalog-card-additional div{
-    height: 170px;
-    width: 251px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
 .catalog-card div img{
     text-align:center;
     padding-top: 24px; 
@@ -526,8 +523,9 @@ i .fa-solid .fa-regular{
 
 .catalog-card div.pricing{
     justify-content: space-between;
-    padding: 18px;
     margin-right: 22px;
+    padding-left: 22px;
+    padding-right: 26px;
 }
 .catalog-card button.card-busket{
     width: 206px;
