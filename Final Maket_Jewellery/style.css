@@ -1178,6 +1178,7 @@ margin-bottom:500px;
  }
  .orderplace{
      display:flex;
+     flex-direction:column;
  }
 .orderplace button{
     display:block;
@@ -1192,6 +1193,9 @@ margin-bottom:500px;
     color: #FFFFFF;
     border:none;
     margin-bottom: 16px ;
+}
+.accept{
+    display:flex;
 }
 .orderplace input[type='checkbox']{
     width: 15px;
