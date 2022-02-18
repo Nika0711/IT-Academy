@@ -437,9 +437,15 @@ p#size{
     box-sizing: border-box;
     border-radius: 15px;
     margin-bottom:8px;
+    overflow:hidden;
 }
 .catalog-card:hover{
     border: 3px solid #F2BF63;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    height: 519px;
 }
 
 .catalog-card div{
@@ -454,36 +460,28 @@ p#size{
     padding-top: 24px; 
     width: 114px;
     height: 146px;
-    transition: 0.5s;
 }
 .catalog-card div img:hover{
-    width: 144x;
-    height: 180px;
+   transform: scale (1.2);
 }
-.fa-regular.fa-heart:before {
-    content: "\f004";
+i .fa-regular .fa-star{
+    color:#ffa500;
+    width: 17px;
+    height: 16.19px;
+
+}
+i .fa-regular .fa-heart{
     font-size: 26px;
-    position:absolute;
-    color:  #F2BF63;
-    opacity: 0.4;
+    position: absolute;
+    color: #F2BF63;
     top: 10px;
-    right: 18px;
+    right: 18px; 
 }
-.fa-regular.fa-heart:hover{
-    color:#F2BF63;
-    opacity: 1;
-}
-.fa-solid.fa-heart:before{
- display:none;
-}
-.fa-solid.fa-heart:before:active{
-    content: "\f004";
-    cursor:pointer;
-    font-size: 26px;
-    position:absolute;
-    color:  #F2BF63;
-    top: 10px;
-    right: 18px;
+
+i .fa-solid .fa-regular{
+    color: #ffa500;
+    width: 17px;
+    height: 16.19px;
 }
 .catalog-card p{
     font-size: 18px;
@@ -497,6 +495,7 @@ p#size{
     font-size: 18px;
     line-height: 21px;
     color: #F2BF63;
+    margin-bottom: 43px;
 }
 .catalog-card  span.oldprice{
     font-size: 14px;
@@ -505,19 +504,12 @@ p#size{
     color: #707070;
     padding-top: 2px;
 }
+
  .catalog-items{
     padding-right:5px;
 }
 /*catalog-card-additional*/
-.catalog-card-additional{
-    background: #FFFFFF;
-    border: 1px solid #E5E5E5;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    width: 250px;
-    height: 519px;
-}
+
 .catalog-card-additional div{
     height: 170px;
     width: 251px;
@@ -525,13 +517,13 @@ p#size{
     justify-content: center;
     position: relative;
 }
-.catalog-card-additional div img{
+.catalog-card div img{
     text-align:center;
     padding-top: 24px; 
     width: 148px;
     height: 198px;
 }
-.catalog-card-additional p{
+.catalog-card p{
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -539,12 +531,12 @@ p#size{
     margin-top:36px;
     margin-bottom: 18px;
 }
-.catalog-card-additional div.pricing{
+.catalog-card div.pricing{
     justify-content: space-between;
     padding: 18px;
     margin-right: 22px;
 }
-.catalog-card-additional button.card-busket{
+.catalog-card button.card-busket{
     width: 206px;
     height: 48px;
     font-size: 18px;
@@ -555,18 +547,18 @@ p#size{
     margin-bottom: 26px;
     background: rgb(242, 191, 99);
     border-radius: 5px;
+    border:none;
 }
-
-.catalog-card-additional .rating-wrap{
+.catalog-card .rating-wrap{
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
 }
-.catalog-card-additional .rating i {
+.catalog-card .rating i {
     font-size: 17px;
     color: rgb(242, 191, 99);
 }
-.catalog-card-additional  .review p {
+.catalog-card  .review p {
     margin-top: 0px;
     margin-right: 20px;
     text-align: center;
@@ -575,24 +567,19 @@ p#size{
     line-height: 16px;
     text-decoration-line: underline;
 }
-.catalog-card-additional  span.newprice{
+.catalog-card span.newprice{
     font-size: 18px;
     line-height: 21px;
     color: #F2BF63;
 }
-.catalog-card-additional  span.oldprice{
+.catalog-card  span.oldprice{
     font-size: 14px;
     line-height: 16px;
     text-decoration-line: line-through;
     color: #707070;
     padding-top: 2px;
 }
-/* .catalog-card-additional{
-    display:none;
-}
-.catalog-card:hover +.catalog-card-additional{
-    display:block;
-} */
+
 /*pages*/
 .pages{
     margin-top: 56px;
