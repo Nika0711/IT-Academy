@@ -489,7 +489,7 @@ i .fa-solid .fa-regular{
     text-align: center;
     color: #707070;
     margin-top:36px;
-    margin-bottom: 18px;
+    margin-bottom: 6px;
 }
 .catalog-card  span.newprice{
     font-size: 18px;
@@ -523,14 +523,7 @@ i .fa-solid .fa-regular{
     width: 148px;
     height: 198px;
 }
-.catalog-card p{
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    color: #707070;
-    margin-top:36px;
-    margin-bottom: 18px;
-}
+
 .catalog-card div.pricing{
     justify-content: space-between;
     padding: 18px;
