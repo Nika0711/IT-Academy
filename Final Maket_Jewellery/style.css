@@ -589,7 +589,10 @@ i.fa-regular .fa-star{
 .catalog-card .size-wrap .ring-size ul li{
     list-style-type: none;
     display: inline-block;
-    
+    argin-right: 2px;
+    margin-left: 2px;
+    border: 1px solid orange;
+
 }
 
 /*pages*/
