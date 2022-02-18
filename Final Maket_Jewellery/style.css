@@ -581,8 +581,10 @@ i.fa-regular .fa-star{
     margin-top: 20px;
     padding-left: 20px;
 }
-.size-wrap .ring-size ul li a{
+.catalog-card .size-wrap .ring-size ul{
+    list-style:none;
    flex-direction:row;
+   justify-content:flex-start;
 }
 /*pages*/
 .pages{
