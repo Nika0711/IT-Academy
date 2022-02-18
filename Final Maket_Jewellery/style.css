@@ -120,6 +120,12 @@ body{
     75% {color:rgb(255, 217, 0)}
     to { color:#F2BF63;}
 } 
+@keyframes Anim_elem3
+{
+    from {transform: rotate(0deg)}
+    50%  {transform:rotate(-50deg)}
+    100%  {transform:rotate(0deg)}
+}
 /*header-search*/
 .header-search{   
     color: #707070; 
@@ -278,7 +284,13 @@ height: 21px;
     height: 6px;
     position:absolute;
     top: 28px;
-}    
+}  
+.filter p.filter-type span:after:hover{
+    cursor:pointer;
+    transform:rotate(-75deg);
+    animation: Anim_elem3;
+    transition: 0.5s;
+}
 .filter div.size p.filter-type span:after{
     left: 100px;
 }
@@ -464,13 +476,13 @@ p#size{
 .catalog-card div img:hover{
    transform: scale (1.2);
 }
-i.fa-regular .fa-star{
+i.fa-regular.fa-star{
     color:#ffa500;
     width: 17px;
     height: 16.19px;
 
 }
-.fa-regular, .far {
+.fa-regular.fa-heart {
     font-weight: 400;
     font-size: 26px;
     color: #ffa500;
@@ -478,16 +490,18 @@ i.fa-regular .fa-star{
     top: 10px;
     right: 18px;
 }
-.fa-solid, .far{
-
+.fa-solid.fa-heart{
+    display:none;
     color: #ffa500;
     font-size: 26px;
     position: absolute;
     top: 10px;
     right: 18px;
 }
-.fa-solid, .far:hover{
+.fa-regular.fa-heart:hover{  
+    color:red;
     cursor:pointer;
+
 }
 
 .catalog-card p{
@@ -545,6 +559,7 @@ i.fa-regular .fa-star{
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
+    margin-bottom:-8px;
 }
 .catalog-card .rating i {
     font-size: 17px;
@@ -576,25 +591,42 @@ i.fa-regular .fa-star{
     flex-direction:column;
 }
 .catalog-card .size-wrap p{
+    font-size: 14px;
+    line-height: 16px;
     margin-top:20px;
     text-align: start;
     margin-top: 20px;
     padding-left: 20px;
 }
+.catalog-card .size-wrap .ring-size{
+    margin-bottom: -2px;
+}
 .catalog-card .size-wrap .ring-size ul{
     list-style:none;
    flex-direction:row;
    justify-content:flex-start;
+
 }
 .catalog-card .size-wrap .ring-size ul li{
     list-style-type: none;
     display: inline-block;
-    argin-right: 2px;
+    margin-right: 2px;
     margin-left: 2px;
-    border: 1px solid orange;
-
+    padding-left: 3px;
+    padding-top: 7px;
+    width: 28px;
+    font-size: 12px;
+    height: 28px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    border: 1px solid #EAEAEA;
 }
-
+.catalog-card .size-wrap .ring-size ul li:nth-child(even){
+    padding-left:1px;
+}
+.catalog-card .size-wrap .ring-size ul li:hover{
+    border: 1px solid #F2BF63;
+}
 /*pages*/
 .pages{
     margin-top: 56px;
