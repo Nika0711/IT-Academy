@@ -30,6 +30,27 @@ body{
     color: #707070;
     height:20000px; /* временно*/
 }
+
+@keyframes Anim_elem1
+{
+    from {transform: rotate(0deg)}
+    25%  {transform:rotate(-2deg)}
+    50%  {transform:rotate(+2deg)}
+    100% {transform:rotate(0deg)}
+}    
+@keyframes Anim_elem2
+{
+    from { color: #F2BF63;}
+    25% { color:#fab83e }
+    50% { color: #9e7427;}
+    75% {color:rgb(255, 217, 0)}
+    to { color:#F2BF63;}
+} 
+@keyframes Anim_elem3
+{
+    from {transform: rotate(0deg);}
+    to {transform: rotate (360deg);}
+}
 /*  Header*/
 .header{ 
     height:45px;    
@@ -105,27 +126,7 @@ body{
     margin-top: 39px;
     margin-bottom: 30px;
 }
-@keyframes Anim_elem1
-{
-    from {transform: rotate(0deg)}
-    25%  {transform:rotate(-2deg)}
-    50%  {transform:rotate(+2deg)}
-    100% {transform:rotate(0deg)}
-}    
-@keyframes Anim_elem2
-{
-    from { color: #F2BF63;}
-    25% { color:#fab83e }
-    50% { color: #9e7427;}
-    75% {color:rgb(255, 217, 0)}
-    to { color:#F2BF63;}
-} 
-@keyframes Anim_elem3
-{
-    from {transform: rotate(0deg)}
-    50%  {transform:rotate(-50deg)}
-    100%  {transform:rotate(0deg)}
-}
+
 /*header-search*/
 .header-search{   
     color: #707070; 
@@ -505,15 +506,14 @@ i.fa-regular.fa-star{
 }
 .catalog-card .discount img{
     width: 42px;
+    height: 62px;
     position: absolute;
     left: 20px;
-    top: -60px;
+    top: -18px;
+    animation: Anim_elem3 2s infinite;
+  
 }
-.catalog-card .discount img:hover{
-    transform:rotate(180deg);
-    cursor:pointer;
-    animation: Anim_elem2;
-}
+
 .catalog-card p{
     font-size: 18px;
     line-height: 21px;
