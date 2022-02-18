@@ -479,6 +479,7 @@ i.fa-regular .fa-star{
     right: 18px;
 }
 .fa-solid, .far{
+
     color: #ffa500;
     font-size: 26px;
     position: absolute;
@@ -570,7 +571,19 @@ i.fa-regular .fa-star{
     color: #707070;
     padding-top: 2px;
 }
-
+.catalog-card .size-wrap{
+    display:flex;
+    flex-direction:column;
+}
+.catalog-card .size-wrap p{
+    margin-top:20px;
+    text-align: start;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.size-wrap .ring-size ul li a{
+   flex-direction:row;
+}
 /*pages*/
 .pages{
     margin-top: 56px;
