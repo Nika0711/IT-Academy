@@ -474,7 +474,7 @@ p#size{
     height: 146px;
 }
 .catalog-card div img:hover{
-   transform: scale (1.2);
+   transform: scale(1.2);
 }
 i.fa-regular.fa-star{
     color:#ffa500;
@@ -510,7 +510,7 @@ i.fa-regular.fa-star{
     text-align: center;
     color: #707070;
     margin-top:36px;
-    margin-bottom: 6px;
+    margin-bottom: 28px;
 }
 .catalog-card  span.newprice{
     font-size: 18px;
@@ -532,8 +532,8 @@ i.fa-regular.fa-star{
 .catalog-card div img{
     text-align:center;
     padding-top: 24px; 
-    width: 148px;
-    height: 198px;
+    width: 113px;
+    height: 146px;
 }
 
 .catalog-card div.pricing{
@@ -594,6 +594,7 @@ i.fa-regular.fa-star{
     font-size: 14px;
     line-height: 16px;
     margin-top:20px;
+    margin-bottom: 10px;
     text-align: start;
     margin-top: 20px;
     padding-left: 20px;
@@ -635,21 +636,26 @@ i.fa-regular.fa-star{
     flex-direction:row;
     padding-left: 677px;
 }
+.catalog-card:hover .pages li{
+    display:none;
+}
 
 .pages li{
     font-size: 24px;
     line-height: 28px;
     color: #707070;
     margin-right: 24px;
-    display:inine-block;   
-}
-.pages li:first-child{
-    text-align:center;
+    display:inine-block; 
     width: 35px;
-    height: 35px;
+    height: 35px;  
+    text-align:center;
     background: #FFFFFF;
-    border: 1px solid #000000;
     border-radius: 3px;
+}
+
+.pages li:hover{
+    cursor:pointer;
+    border:1px solid orange;
 }
 /*footer*/
 .footer{
