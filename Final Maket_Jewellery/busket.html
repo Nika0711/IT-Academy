@@ -72,10 +72,11 @@
                      <p><span>Артикул:</span>
                      <span>105008</span></p>
                     </div>
+                    <!-- item counter -->
                       <div class="add-item">
-                         <img src="images/minu.png" alt="minus">
-                        <span>1</span>
-                        <img src="images/plus.png" alt="plus">
+                         <button id="minus">-</button> 
+                         <p id="result"></p>
+                         <button id="plus">+</button> 
                          </div>   
                      <div class="item-cost">
                      <span class="newprice"> 368.60 руб.</span><br> 
@@ -166,8 +167,39 @@
             <p>2022 “Jewelry.by”  Все права защищены.</p>
          </div>                 
     </div>
-   </div>    
-       
+   </div>  
+   
+   <!-- JS for the counter -->
+
+<script>
+ var minus = document.getElementById("minus");
+ var plus = document.getElementById("plus");
+ var result = document.getElementById("result");
+
+ let count = 0;
+
+ minus.addEventListener('click', function() {
+ 
+  if(count <= 0){
+      return;
+  }
+  count --;
+  render()
+ });
+
+ plus.addEventListener('click', function()  {
+  count ++;
+  render()
+ });
+
+render (); 
+
+function render() {
+    result.innerText = count.toString();
+}
+
+</script>
+
 
 
 </body>
