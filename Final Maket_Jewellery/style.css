@@ -865,12 +865,13 @@ i.fa-regular.fa-star{
         margin-top: 1px;
     }
     .shopinfo input[type="radio"] {
-        margin-left: 29px;
+        display:none;
     }    
     .shopinfo label {
-        display: inline-block;
         cursor: pointer;
-        position: relative;
+        display:inline-block;
+        border-radius: 50%;
+       border:1 px solid #F2BF63;
         padding-left: 16px;
         margin-bottom: 24px;
         font-size: 18px;
@@ -879,25 +880,26 @@ i.fa-regular.fa-star{
         vertical-align: -2px;
         margin-right: 0;
         line-height: 18px;
-        user-select: none;
+        margin-left:60px;
+        position:relative;
+      
+
     }
-    .shopinfo label:before {
-        content: "";
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        position: absolute;
-        top: 4px;
-        left: -18px;
-        bottom: 4px;
-        background: url(images/radio.png) 0 0 no-repeat;
-    }
+    
     /* Checked */
-    .shopinfo input[type="radio"]:checked + label:before {
-        background: url(images/radiocheck.png) 0 0 no-repeat;
-        width: 12px;
-        height: 12px;
+    .shopinfo input[type="radio"]:checked + label {
+        border: 1px solid orange;
     }    
+    .shopinfo input[type="radio"]:checked + label:before {
+        content:"";
+        width:5px;
+        height:5px;
+        background-color: orange;
+        position:absolute;
+        top: 20px;
+        left:20px;
+        border-radius:50%;
+    }
     .btn{
         width: 290px;
         height: 46px;
@@ -1379,7 +1381,7 @@ margin-bottom:500px;
 
 .info-title{
     margin-bottom: 30px;
-    margin-top: 20px;
+    margin-top: 60px;
     margin-left: auto;
     margin-bottom: 30;
     text-align: center;
@@ -1389,11 +1391,13 @@ margin-bottom:500px;
     width:1140px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     transition: 2s;
     margin-left:auto;
     margin-right:auto;
+    margin-bottom:50px;
+    margin-top:50px;
 }
 .info-items a{
     width: 23.6%;
@@ -1405,6 +1409,11 @@ margin-bottom:500px;
 .info-items img{
     max-width: 100%;
     transition: 2s;
+    height:100%;
+}
+.info-items a:hover  img{
+    transform: scale(1.1);
+    filter: brightness(0.5);
 }
 .info-text{
     position: absolute;
