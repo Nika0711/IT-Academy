@@ -503,7 +503,17 @@ i.fa-regular.fa-star{
     cursor:pointer;
 
 }
-
+.catalog-card .discount img{
+    width: 42px;
+    position: absolute;
+    left: 20px;
+    top: -60px;
+}
+.catalog-card .discount img:hover{
+    transform:rotate(180deg);
+    cursor:pointer;
+    animation: Anim_elem2;
+}
 .catalog-card p{
     font-size: 18px;
     line-height: 21px;
