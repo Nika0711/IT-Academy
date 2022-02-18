@@ -586,6 +586,12 @@ i.fa-regular .fa-star{
    flex-direction:row;
    justify-content:flex-start;
 }
+.catalog-card .size-wrap .ring-size ul li{
+    list-style-type: none;
+    display: inline-block;
+    
+}
+
 /*pages*/
 .pages{
     margin-top: 56px;
@@ -621,6 +627,7 @@ i.fa-regular .fa-star{
     justify-content: space-between;
     background: #EAEAEA;
     height: 333px;
+    margin-top:10px;
 }
 .footer-bottom ul li:first-child{
     text-transform: uppercase;
