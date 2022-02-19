@@ -29,7 +29,7 @@
                     <a href="tel:+375297290391"> +375(29)729-03-91</a></li>
                 <li>
                    <img src="images/man.png" alt="man">
-                   <span>Регистрация/Вход</span> 
+                   <button id="register">Регистрация/Вход</button>
                 </li>
             </ul>                      
         </div>          
@@ -40,6 +40,24 @@
            <p>JEWELLERY</p>  
         </div>                
     </div>       
+<!-- Modal Section -->
+<div class="bg-modal">
+<div class="modal-content"> 
+    <p class="modal-title">КАБИНЕТ JEWELLERY</p>
+    <div class="close">+</div>
+    <img  class="modal-user" src="images/model-user.png" alt="woman-user-icon">
+    <form action="">
+        <input class="modal_input" type="text" placeholder="Имя">
+        <input class="modal_input" type="text" placeholder="Номер карты/Телефон">
+        <input class="modal_input" type="text" placeholder="Пароль">
+        <button class="modal_btn">Войти</button>
+        <a href="">Забыли свой пароль?  </a>
+
+
+    </form>
+</div>
+
+</div>
 
   <div class="header-search">
         <div class="container">
@@ -254,6 +272,18 @@
 
       
 
+
+
+
+<script>
+    document.getElementById('register').addEventListener('click', function(){
+        document.querySelector('.bg-modal').style.display = 'flex';
+    });
+
+    document.querySelector('.close').addEventListener('click', function() {
+        document.querySelector('.bg-modal').style.display = 'none';
+    });
+</script>
    <!--jquery  -->
 
 
