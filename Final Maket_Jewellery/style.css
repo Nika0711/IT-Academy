@@ -442,7 +442,13 @@ p#size{
 }
 /*catalog-card*/
 
+.catalog-card-wrap{
+    position:relative;
+    height: 307px;
+}
 .catalog-card{
+    position:absolute;
+    top: 5px;
     width: 251px;
     height: 307px;
     background: #FFFFFF;
@@ -457,7 +463,7 @@ p#size{
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+    border-radius: 15px; 
     height: 519px;
 }
 
@@ -646,10 +652,6 @@ i.fa-regular.fa-star{
     flex-direction:row;
     padding-left: 677px;
 }
-.catalog-card:hover .pages li{
-    display:none;
-}
-
 .pages li{
     font-size: 24px;
     line-height: 28px;
