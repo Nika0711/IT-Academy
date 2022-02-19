@@ -19,6 +19,9 @@ a{
     color:inherit;
     text-decoration: none;
 }
+a:hover{
+    color:orange;
+}
 .icons button{
     border: none;
     background-color: transparent;
@@ -1563,8 +1566,14 @@ i.fa-regular.fa-star{
     text-decoration: orange;
     
 }
-.register{
+ button#register{
     border:none;
     background-color:transparent;
     color:#707070;
+}
+button#register:hover{
+    color:#e39228;
+}
+a#tel:hover{
+    color:#e39228;
 }
