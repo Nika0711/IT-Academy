@@ -1523,9 +1523,12 @@ i.fa-regular.fa-star{
     z-index: 9;
 }
 .modal_input{
-    width:50%;
+    width:80%;
     display:block;
     margin:15px auto;
+    border: none;
+    height:30px;
+    font-size:14px;
 }
 .close{
     position:absolute;
@@ -1535,8 +1538,33 @@ i.fa-regular.fa-star{
     transform:rotate(45deg);
     cursor:pointer;
 }
-.modal content .modal-user{
+.modal-user{
     width:60px;
     height:60px;
-    text-align:center;
+    margin-left: 135px;
+    background: url(images/model-user.png) no-repeat;
+    background-size:contain;
+
+}
+.modal_btn{
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    background-color: #e39228;
+    height: 30px;
+    color: #fff;
+}
+.pass-restore{
+    text-decoration: underline;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.pass-restore:hover{
+    text-decoration: orange;
+    
+}
+.register{
+    border:none;
+    background-color:transparent;
+    color:#707070;
 }
