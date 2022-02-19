@@ -867,88 +867,7 @@ i.fa-regular.fa-star{
         margin-top: 1px;
     }
     /* radio buttons */
-    /* .form_radio {
-        margin-bottom: 23px;
-    }
-    .form_radio input[type=radio] {
-        display: none;
-    }
-    .form_radio label {
-        display: inline-block;
-        cursor: pointer;
-        position: relative;
-        padding-left: 25px;
-        margin-right: 0;
-        line-height: 18px;
-        user-select: none;
-        border: 1px solid orange;
-    }
-    .form_radio label:before {
-        content: "";
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        position: absolute;
-        left: 1px;
-        bottom: 5px;
-        background: 1px solid orange;
-        border-radius: 50%;
-    }
-     
-    /* Checked */
-    /* .form_radio input[type=radio]:checked + label:before{
-        background: 1px solid orange;
-        width: 14px;
-        height:14px;
-        border-radius: 50%;
-        position:absolute;
-        top: 10px;
-        left:5px;
-    }
-     
-    /* Hover */
-/* .form_radio label:hover:before {
-	filter: brightness(120%);
-} */ *
-
-     /* .shopinfo input[type="radio"] {
-        display:none;
-    }    
-    .shopinfo label {
-        cursor: pointer;
-        display:inline-block;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        border:1 px solid #F2BF63;
-        padding-left: 16px;
-        margin-bottom: 24px;
-        font-size: 18px;
-        line-height: 21px;
-        margin-right: 16px;  
-        vertical-align: -2px;
-        margin-right: 0;
-        line-height: 18px;
-        margin-left:60px;
-        position:relative;
-       */
-
     
-    /* Checked */
-    /* .shopinfo input[type="radio"]:checked +label {
-        border: 1px solid orange;
-       
-    }    
-    .shopinfo input[type="radio"]:checked + label:before {
-        content:"";
-        width:5px;
-        height: 5px;
-        background-color: orange;
-        position:absolute;
-        top: 5px;
-        left:5px;
-        border-radius:50%;
-    }  */
     .radiobox{
         position:relative;
         margin-bottom: 23px;
@@ -1002,7 +921,61 @@ i.fa-regular.fa-star{
     }
    
    
-   
+   /* checkbox buttons */
+    
+.checkbox{
+    position:relative;
+
+}
+
+
+.checkbox_input{
+    -webkit-appearance: none;
+    appearance:none;
+    position:absolute;
+}
+.checkbox_label{
+    font-size:14px;
+    padding-left: 25px;
+    cursor:pointer;
+
+}
+.checkbox_label:before{
+    content:"";
+    display:block;
+    width:15px;
+    height:15px;
+    border: 1px solid orange;
+    border-radius:3px;
+    position:absolute; 
+    top:2px;
+    left:5px;
+    z-index:1;
+}
+.checkbox_label:after{
+    content:"";
+    display:block;
+    width:12px;
+    height:12px;
+    background: url('images/check.svg') no-repeat;
+    background:cover;
+    background-size: 12px 12px;
+    overflow:hidden;
+    position:absolute;
+    top:4px;
+    left:8px;
+    color:orange;
+    z-index:2;
+    opacity:0;
+}
+.checkbox_input:checked + .checkbox_label:before{
+    border-color:orange;
+    background-color:#F2BF63;
+
+}
+.checkbox_input:checked + .checkbox_label:after{
+    opacity:1;
+}
 
     .btn{
         width: 290px;
