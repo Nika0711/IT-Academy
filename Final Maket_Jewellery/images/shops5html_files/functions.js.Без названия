@@ -1,0 +1,13 @@
+function loadGifImage(x){
+    "use strict";
+    try{
+        if(!x.parentNode.className.match(/\bcoolist-gif-container\b/)){
+            var wrapper = document.createElement('div'); 
+            wrapper.className = 'coolist-gif-container';
+            wrapper.style.backgroundImage = "url('"+x.src+"')";
+            x.setAttribute('rel:animated_src',x.dataset.animated_src);
+            wrapper.appendChild(x.cloneNode(true));
+            x.parentNode.replaceChild(wrapper, x);
+        }
+    }catch(e){}
+}

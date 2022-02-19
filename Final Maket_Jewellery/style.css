@@ -1577,3 +1577,29 @@ button#register:hover{
 a#tel:hover{
     color:#e39228;
 }
+/* carousel-slide */
+.carousel.slide{
+    width: 900px;
+    height:700px;
+    margin-left:  90px;
+    margin-top:50px;
+}
+.info-title-shops{
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+}
+/* maps */
+.map-wrap{
+    width:1140;
+    margin-right: 0 auto;
+    margin-left: 0 auto;
+    margin-top:40px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-left:20px;
+}
+.map{
+    margin-right:10px;
+}

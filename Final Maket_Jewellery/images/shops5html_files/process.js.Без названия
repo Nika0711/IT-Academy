@@ -1,0 +1,111 @@
+jQuery(window).on('load', function(){
+    if( jQuery(window).width() >= 992){
+        heightimgbook = jQuery('.imgblock').innerHeight();
+        jQuery('.formblock').css('min-height', heightimgbook);
+    }
+});
+
+jQuery(document).ready(function(){
+
+    var url = getUrl();
+
+    jQuery('.formtop100 input[name="btnsubmit"]').click(function(e){
+
+      e.preventDefault();
+
+      var error = false;
+
+      var fname = jQuery('.formtop100 input[name="firstname"]').val();
+      var lname = jQuery('.formtop100 input[name="lastname"]').val();
+      var email = jQuery('.formtop100 input[name="email"]').val();
+      var policy = jQuery('.formtop100 input[name="policy"]').val();
+      var userLang        = navigator.language || navigator.userLanguage;
+      var name_ebook = jQuery('.formtop100 input[name="name_ebook"]').val();
+      var notinterest = jQuery('.formtop100 input[name="notinterest"]').val();
+
+
+    function validateTextareas(message) {
+        var re = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i;
+        return re.test(String(message).toLowerCase());
+    }
+
+    if (userLang == null || notinterest != '' || userLang == 0)
+        {
+            var error = true;
+            window.location.replace('http://www.google.com');
+        }
+
+    if(fname.length == 0){
+
+        var error = true;
+
+        jQuery('.error_firstname.error').fadeIn(500);
+        jQuery('.formtop100 input[name="firstname"]').css('border', '1px solid red');
+
+    } else {
+
+        jQuery('.error_firstname.error').fadeOut(500);
+        jQuery('.formtop100 input[name="firstname"]').css('border', '1px solid transparent');
+
+    }
+    if(lname.length == 0){
+
+      var error = true;
+
+      jQuery('.error_lastname.error').fadeIn(500);
+      jQuery('.formtop100 input[name="lastname"]').css('border', '1px solid red');
+
+  } else {
+
+      jQuery('.error_lastname.error').fadeOut(500);
+      jQuery('.formtop100 input[name="lastname"]').css('border', '1px solid transparent');
+
+  }
+
+    if(email.length == 0 || email.indexOf('@') == '-1'){
+
+        var error = true;
+
+        jQuery('.error_email.error').fadeIn(500);
+        jQuery('.formtop100 input[name="email"]').css('border', '1px solid red');
+
+      } else {
+
+        jQuery('.error_email.error').fadeOut(500);
+        jQuery('.formtop100 input[name="email"]').css('border', '1px solid transparent');
+
+      }
+
+      if (jQuery('.formtop100 input[name="policy"]').is(':checked')) {
+            jQuery('.formtop100 input[name="policy"]').parent().css('border' , '1px solid transparent');
+      } else {
+         var error = true;
+          jQuery('.formtop100 input[name="policy"]').parent().css('border' , '1px solid red');
+      }
+
+      if(error == false){
+
+        jQuery('.formtop100 input[name="btnsubmit"]').attr({'disabled' : 'true', 'value' : 'Sending...' });
+
+        jQuery.post("//www.bocadolobo.com/en/inspiration-and-ideas/send_email_ebook.php", jQuery(".formtop100").serialize()+ "&url_origin="+url.url_origin+"&referrer="+url.referrer+"&lead_path="+url.flow, function(result){
+
+          if(result == 'sent'){
+          
+            delUrl();
+
+            window.open("//www.bocadolobo.com/en/inspiration-and-ideas/thank-you-page-download/", "_self");
+                  
+              jQuery('.success_message.success').fadeIn(500);
+
+          } else {
+
+            jQuery('.formtop100 input[name="btnsubmit"]').removeAttr('disabled').attr('value', 'Send Message');
+
+          }
+
+        });
+
+      }
+
+    });
+});
