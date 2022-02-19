@@ -1005,9 +1005,7 @@ i.fa-regular.fa-star{
     color: #F2BF63;
 }
 /*busket_page*/
-.busket{
-margin-bottom:500px;
-}
+
  .busket .container{
     display:flex;
     flex-direction: column;
@@ -1045,7 +1043,6 @@ margin-bottom:500px;
     padding-right:36px;
 }
 .busket .busket-item-wrap {
-    height: 107px;
     margin-left: 20px;
     margin-bottom: 63px;
 }
@@ -1212,8 +1209,6 @@ margin-bottom:500px;
 .orderplace label{
     font-size: 13px;
     line-height: 15px;
-    margin-bottom:112px;
-
 }
 .total-wrap{
     display:flex;
