@@ -983,20 +983,21 @@ i.fa-regular.fa-star{
     .radio_label:after{
         content:"";
         display:block;
-        width:5px;
-        height:5px;
+        width:6px;
+        height:6px;
         background-color:orange;
         border-radius: 50%;
         position:absolute;
-        top:0;
-        left:0;
+        top:7px;
+        left:10px;
         z-index:2;
         opacity:0;
     }
     .radio_input:checked + .radio_label:before{
-        background-color: orange;
+        border-color: orange;
+    
     }
-    .radio_input:checked + .checkbox_label:after{
+    .radio_input:checked + .radio_label:after{
         opacity:1;
     }
    
