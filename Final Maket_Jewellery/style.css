@@ -864,6 +864,7 @@ i.fa-regular.fa-star{
         margin-bottom:26px;
         margin-top: 1px;
     }
+    /* radio buttons */
     .shopinfo input[type="radio"] {
         display:none;
     }    
@@ -871,7 +872,7 @@ i.fa-regular.fa-star{
         cursor: pointer;
         display:inline-block;
         border-radius: 50%;
-       border:1 px solid #F2BF63;
+        border:1 px solid #F2BF63;
         padding-left: 16px;
         margin-bottom: 24px;
         font-size: 18px;
@@ -885,19 +886,20 @@ i.fa-regular.fa-star{
       
 
     }
-    
     /* Checked */
-    .shopinfo input[type="radio"]:checked + label {
+    .shopinfo input[type="radio"]:checked +label {
         border: 1px solid orange;
+        width: 14px;
+        height: 14px;
     }    
     .shopinfo input[type="radio"]:checked + label:before {
         content:"";
         width:5px;
-        height:5px;
+        height: 5px;
         background-color: orange;
         position:absolute;
-        top: 20px;
-        left:20px;
+        top: 200px;
+        left:200px;
         border-radius:50%;
     }
     .btn{
