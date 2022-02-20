@@ -1661,6 +1661,16 @@ a#tel:hover{
     transform:translateY(-50%) rotate(0.5turn);
   }
 .acc-section{
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:25px;
+    margin-bottom:25px;
 }  
+.content-item{
+   height: 125px;
+   border: 1 px solid #F2BF63;
+   margin-left:20px;
+    
+}
+.content-item:hover{
+    border: 1 px solid #ebb44e;;
+     
+ }
