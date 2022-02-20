@@ -1647,18 +1647,20 @@ a#tel:hover{
     transition: transform 0.4s;
    
 }
-.accordeon_content{
-    background: #fff;
+.accordion_content{
+    background: rgba(255, 255, 255, 0.151);
     display:none;
 }
 .accordion_input{
     display:none;
-
 }
 .accordion_input:checked ~ .accordion_content{
   display: block;
 }
-.accordion_input:checked ~ .accordion_labe:after{
+.accordion_input:checked ~ .accordion_label:after{
     transform:translateY(-50%) rotate(0.5turn);
   }
-  
+.acc-section{
+    margin-top:10px;
+    margin-bottom:10px;
+}  
