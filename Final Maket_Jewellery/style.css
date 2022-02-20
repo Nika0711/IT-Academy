@@ -1648,7 +1648,7 @@ a#tel:hover{
    
 }
 .accordion_content{
-    background: rgba(255, 255, 255, 0.151);
+    background: #EAEAEA;;
     display:none;
 }
 .accordion_input{
