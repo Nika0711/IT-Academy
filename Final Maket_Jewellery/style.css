@@ -448,6 +448,7 @@ p#size{
 .catalog-card-wrap{
     position:relative;
     height: 307px;
+    width: 251px;
 }
 .catalog-card{
     position:absolute;
