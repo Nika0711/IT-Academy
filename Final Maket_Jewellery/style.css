@@ -1666,12 +1666,12 @@ a#tel:hover{
 }  
 .content-item{
    height: 125px;
-   border-bottom: 1 px solid #F2BF63;
+   border-bottom: 1px solid grey;
    margin-left:20px;
    margin-top:20px;
     
 }
 .content-item:hover{
-    border: 1 px solid #ebb44e;
+    border-bottom: 1px solid #ebb44e;
      
  }
