@@ -1,13 +1,45 @@
+/* catalog-page */
 @media all and (max-width: 1180px){
     .container{
-        width: 900px;
+        width:900px;
     }
-
-
-
-
+    .header-search-wrap{
+        width:900px;
+    }
+    .search-box-wrap{
+        width:900px;
+    } 
+    .header-search ul li{
+        margin-right:40px;
+    }
+    #up{
+        right: 85px;
+   }
+   .filter{
+       width:285px;
+   }
+    .filter h4{
+        width:285px;
+        padding-left: 105px;
+    }
+   .sorting span{
+       margin-right:0;
+   }
+   .sorting select{
+       margin-right: 5px;
+   }
+   .catalog .sorting-wrap{
+       width:600px;
+   }
 
 
 
 
 }
+
+
+
+
+
+
+
