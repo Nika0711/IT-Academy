@@ -32,7 +32,6 @@ body{
     font-style: normal;
     font-weight: normal;
     color: #707070;
-    height:20000px; /* временно*/
     background-color: rgb(233, 187, 103, 0.13);
 }
 
@@ -379,7 +378,7 @@ p#size{
 } 
 .filter .price input[type="checkbox"]:last-child{
     margin-bottom:24px;
-}
+} */
 .price  p.filter-type label:first-child{
     margin-left:15px;
     margin-right:12px;
