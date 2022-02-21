@@ -33,6 +33,8 @@ body{
     font-weight: normal;
     color: #707070;
     background-color: rgb(233, 187, 103, 0.13);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 @keyframes Anim_elem1
@@ -513,6 +515,7 @@ p#size{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
     border-radius: 15px; 
     height: 519px;
+    z-index:2;
 }
 
 .catalog-card div{
