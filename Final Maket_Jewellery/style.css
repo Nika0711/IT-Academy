@@ -134,17 +134,21 @@ body{
 }
 
 /*header-search*/
+.header-search-wrap{
+    width:1140px;
+    margin: 0 auto;
+}
 .header-search{   
     color: #707070; 
     border: 1px solid #F0F0F0;
     margin-bottom: 24px;
 }
-.header-search .container{
+/* .header-search .container{
     display:flex;  
     justify-content: space-between; 
     position:relative;
     border:1 px solid red;
-}
+} */
 .header-search ul{
     display:flex;
     font-size: 20px;
