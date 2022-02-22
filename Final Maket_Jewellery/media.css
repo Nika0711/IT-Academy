@@ -746,6 +746,30 @@ flex-direction:column;
 
 }
 /* mmain_page */
+@media all and (max-width: 1180px){
+.promo {
+    height: 150px;
+}
+.info-items {
+    width: 900px;
+}
+}
+@media all and (max-width: 930px){
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
