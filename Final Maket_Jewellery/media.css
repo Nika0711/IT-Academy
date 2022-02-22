@@ -3,6 +3,7 @@
     .container{
         width:900px;
         margin:0 auto;
+        overflow:hidden;
     }
     .header-search-wrap{
         width:900px;
@@ -687,11 +688,26 @@ flex-direction:column;
 }
 .map-wrap{
     width:900px;
+    margin: 0 auto;
+}
+.accordion-wrap {
+    width: 900px;
+    margin: 0 auto;
+}
+.info-title-shops {
+    margin-top: 30px;
 }
 
+}
+@media all and (max-width: 930px){
 
 
 
 
 
+
+
+
+
+    
 }
