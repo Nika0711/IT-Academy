@@ -65,6 +65,28 @@
 </div>
 
 </div>
+ <!-- Modal Section -->
+<div class="bg-modal">
+    <div class="modal-content"> 
+        <p class="modal-title">КАБИНЕТ JEWELLERY</p>
+        <div class="close">+</div>
+        <div class="modal-user">
+        </div>
+        
+        <form action="">
+            <input class="modal_input" type="text" placeholder="Имя">
+            <input class="modal_input" type="text" placeholder="Номер карты/Телефон">
+            <input class="modal_input" type="text" placeholder="Пароль">
+            <button class="modal_btn">Войти</button>
+            <a id="pass-restore" href="#">Забыли свой пароль?  </a>
+    
+    
+        </form>
+    </div>
+    
+    </div>
+
+
 
 <!-- breadcrumbs -->
   <div class="breadcrumbs">
@@ -1038,6 +1060,16 @@
         $('html, body').animate({scrollTop: 0}, 3000);
     })
    })      
-   </script>       
+   </script>  
+   <!-- JS for modal block -->
+   <script>
+    document.getElementById('register').addEventListener('click', function(){
+        document.querySelector('.bg-modal').style.display = 'flex';
+    });
+
+    document.querySelector('.close').addEventListener('click', function() {
+        document.querySelector('.bg-modal').style.display = 'none';
+    });
+</script>     
 </body>
 </html>
