@@ -41,7 +41,27 @@
            <p>JEWELLERY</p>  
         </div>                
     </div>    
-
+ 
+   <!-- Modal Section -->
+<div class="bg-modal">
+    <div class="modal-content"> 
+        <p class="modal-title">КАБИНЕТ JEWELLERY</p>
+        <div class="close">+</div>
+        <div class="modal-user">
+        </div>
+        
+        <form action="">
+            <input class="modal_input" type="text" placeholder="Имя">
+            <input class="modal_input" type="text" placeholder="Номер карты/Телефон">
+            <input class="modal_input" type="text" placeholder="Пароль">
+            <button class="modal_btn">Войти</button>
+            <a id="pass-restore" href="#">Забыли свой пароль?  </a>
+    
+    
+        </form>
+    </div>
+    
+    </div>
   <div class="header-search">
         <div class="header-search-wrap">
             <ul>
@@ -237,15 +257,7 @@
         
     </div>
 
-     </div>
-
-
-
-
-
-
-        
-                             
+</div>                           
          
         <!-- Up Button -->
         <span id="up">
@@ -295,7 +307,22 @@
     </div>
    </div>          
 
+
+
+
+
+   
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <!-- JS for modal block -->
+<script>
+    document.getElementById('register').addEventListener('click', function(){
+        document.querySelector('.bg-modal').style.display = 'flex';
+    });
+
+    document.querySelector('.close').addEventListener('click', function() {
+        document.querySelector('.bg-modal').style.display = 'none';
+    });
+</script>
 
    <!-- Initialize Swiper -->
    <script>
@@ -327,6 +354,23 @@
           $('html, body').animate({scrollTop: 0}, 3000);
       })
      })      
-     </script>   
+     </script>  
+
+   <!--jquery  -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+
+ 
+
+
+
+
+
 </body>
 </html>

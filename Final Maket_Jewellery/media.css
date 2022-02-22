@@ -595,8 +595,81 @@ flex-direction:column;
     width:247px;
     justify-content:felx-start;
 }
-
-
+.total {
+    padding-left: 469px;
+}
+.footer-bottom .container ul:first-child{
+    margin-right:10px;
+}
+}
+@media all and (max-width: 760px){
+.busket .list {
+    width: 540px;
+}
+.add-item {
+    margin-right: 130px;
+    width: 267px;
+}
+.delivery button {
+    width: 262px;
+}
+.total {
+    padding-left: 259px;
 }
 
 
+}
+@media all and (max-width: 560px){
+.logo .container p {
+        font-size: 50px;
+        margin-top: 20px;
+    }        
+.busket .list {
+        width: 300px;
+    }
+.busket .list span {
+        font-size: 16px;
+}
+.item-cost{
+    margin-top:20px;
+}
+.busket-item-wrap .busket-item {
+    display: flex;
+    flex-direction:column;
+}
+.item-cost{
+    display:flex;
+}
+.busket-item-wrap .item-cost span:first-child {
+    margin-right:30px;
+}
+.coupon {
+    flex-direction:column;
+}
+.coupon p {
+    font-size: 16px;
+}    
+.coupon input {
+    width: 290px;
+    margin-bottom: 15px;
+}
+.delivery button {
+    margin-bottom: 10px;
+}
+.address{
+    flex-direction:column;
+    margin-bottom:20px;
+}
+.address p {
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+.total {
+    padding-left: 28px;
+}
+.orderplace button {
+    width: 303px;
+}
+
+}
+/* shops */
