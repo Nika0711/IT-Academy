@@ -567,9 +567,16 @@ flex-direction:column;
 }
 /* busket_page */
 @media all and (max-width: 1180px){
-    
+    .busket .list {
+        width: 900px;
+    }
+    .busket .busket-item-wrap {
+        margin-left: 0px;
+ 
+    }
+
+
+
+
+
 }
-
-
-
-
