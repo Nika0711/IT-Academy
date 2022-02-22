@@ -673,3 +673,25 @@ flex-direction:column;
 
 }
 /* shops */
+@media all and (max-width: 1180px){
+.search-box-wrap {
+    width: 900px;
+    margin: 0 auto;
+    }
+.carousel.slide {
+    width: 900px;
+    height: 505px;
+    margin-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.map-wrap{
+    width:900px;
+}
+
+
+
+
+
+
+}
