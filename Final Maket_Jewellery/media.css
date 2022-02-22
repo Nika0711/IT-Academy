@@ -574,9 +574,29 @@ flex-direction:column;
         margin-left: 0px;
  
     }
+.total{
+    padding-left:600px;
+}
 
-
-
+.total span:first-child{
+    margin-right:61px;
+}
+   
+}
+@media all and (max-width: 930px){
+.busket .list {
+    width: 720px;
+    }
+.busket .busket-item-wrap {
+    margin-left: 0px;
+}  
+.add-item{
+    margin-right:245px;
+    width:247px;
+    justify-content:felx-start;
+}
 
 
 }
+
+
