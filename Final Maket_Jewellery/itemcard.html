@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2293f14872.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    
     <title>Item_page</title>
 </head>
 <body>
@@ -38,7 +43,7 @@
     </div>       
 
   <div class="header-search">
-        <div class="container">
+        <div class="header-search-wrap">
             <ul>
                 <li><a href="#">Кольца</a></li>
                 <li><a href="#"> серьги</a></li>
@@ -48,15 +53,24 @@
                 <li><a href="#">  колье</a></li>
                 <li><a href="#"> другое</a></li>       
             </ul>
-            <div class="icons">
-                <button><img src="images/search.png" alt="search"></a></button>
-                <button><img src="images/shopping-cart.png" alt="shopping-cart"></button>
-                <img  class="circle" src="images/circle.png" alt="ellipse"> 
-                <span>1</span>                           
-            </div>
-                    
+                   
         </div>  
     </div>
+    <!-- search-box and busket -->
+    <div class="header-search-box">
+        <div class="search-box-wrap">
+           <div class="search-box">
+               <input class="search-txt" type="text" name="" placeholder="Поиск по каталогу магазина">
+               <i class="fa-solid fa-magnifying-glass"></i>
+           </div>
+           <div class="busket-box">
+               <a class="busket-btn" href="busket.html" title="Busket_page">  <i class="fa-solid fa-basket-shopping"></i></a>   
+           </div>                       
+       </div>
+       
+       </div>
+
+
     <div class="breadcrumbs">
         <div class="container">
             <ul>
@@ -65,9 +79,7 @@
                 </li>
                 <li><a href="">Кольца</a>
                     <img src="images/dot.svg"  alt="ellipse"></li>
-                <li><a href="#" class="active">Акции</a>
-                    <img src="images/dot.svg" alt="ellipse">
-                </li>
+
                 <li><a href="#" class="active">Кольцо из розового золота с фианитом </a>
                </li>
             </ul>
@@ -235,7 +247,9 @@
         
                              
          
-
+        <!-- Up Button -->
+        <span id="up">
+        </span>
 
     <div class="footer">       
         <div class="footer-bottom"> 
@@ -301,5 +315,18 @@
        },
      });
    </script>   
+     <script
+     src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+     crossorigin="anonymous"></script>
+     
+     <!-- init UP button -->
+     <script>
+     $(document).ready(function (){
+      $('#up').on('click',function (){
+          $('html, body').animate({scrollTop: 0}, 3000);
+      })
+     })      
+     </script>   
 </body>
 </html>

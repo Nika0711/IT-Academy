@@ -193,7 +193,7 @@
         font-size: 20px;
     }
     #up{
-        right: 222px;
+        right: 268px;
    }
    .footer-bottom .container{
     justify-content: wrap;
@@ -412,3 +412,162 @@ flex-direction:column;
 
 
 }
+/* itemcard-page */
+@media all and (max-width: 1180px){
+    .itemcard .container {
+        width:900px;
+        margin:0 auto;
+    }
+    .itemimg div img {
+        width: 300px;
+        height: 400px;
+        margin-bottom: 122px;
+    }
+    .itemimg div{
+    width: 300px;
+    height: 400px;
+}
+.itemcarddescr {
+    width: 560px;
+}
+.shopinfo {
+    width: 570px;
+}
+.btn:nth-of-type(1), .btn:nth-of-type(2) {
+    margin-bottom: 10px;
+}
+.btn {
+    width: 250px;
+}
+.itemcard h4 {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+/* owl-slider */
+
+
+
+
+
+}
+@media all and (max-width: 930px){
+    .itemcard .container {
+        width: 720px;
+        margin: 0 auto;
+    }
+    .itemimg div img {
+        width: 268px;
+        height: 330px;
+        margin-bottom: 0px;
+    }
+    .itemcarddescr {
+        width: 440px;
+    }
+    .shopinfo {
+        width: 477px;
+    }
+    .tel span {
+        font-size: 13px;
+    }
+    .itemimg span {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .btn {
+        width: 190px;
+    }
+
+
+}
+@media all and (max-width: 760px){
+    .itemcard .container {
+        width: 540px;
+        margin: 0 auto;
+    }
+    .itemimg div  {
+        width: 204px;
+        height: 237px;
+        margin-bottom:20px;
+    }
+    .itemimg div img {
+        width: 204px;
+        height: 237px;
+        margin-bottom: 0px;
+    }
+    .itemcarddescr {
+        width: 300px;
+    }
+    .shopinfo {
+        width: 300px;
+        height: 446px;
+    }
+    .itemcarddescr h3 {
+        font-size: 21px;
+    }
+    .itemcarddescr p:first-of-type span:first-child {
+        margin-right: 28px;
+    }
+    .itemcarddescr p:nth-of-type(2) span:first-child {
+        margin-right: 14px;
+        font-size: 23px;
+    }
+    .itemcarddescr p:nth-of-type(2) span:last-child {
+        font-size: 18px;
+    }
+    .shopinfo p:first-child {
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 25px;
+        margin-left: 17px;
+        padding-top: 18px;
+    }
+    .radiobox {
+        margin-left: 11px;
+    }
+    .shopinfo div.tel {
+        margin-top: 85px;
+        margin-bottom: 24px;
+        margin-right: 44px;
+    }
+    .btn {
+        width: 128px;
+        font-size: 16px;
+    }
+
+
+
+}
+@media all and (max-width: 560px){
+    .breadcrumbs ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .breadcrumbs ul li {
+        margin-bottom: 0px;
+    }
+    .breadcrumbs .container{
+        margin-bottom: 20px;
+    }
+    .itemcard .container {
+        width: 300px;
+        margin: 0 auto;
+        flex-direction:column;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
