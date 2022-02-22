@@ -565,8 +565,10 @@ flex-direction:column;
 
 
 }
-
-
+/* busket_page */
+@media all and (max-width: 1180px){
+    
+}
 
 
 
