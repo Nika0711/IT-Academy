@@ -755,12 +755,39 @@ flex-direction:column;
 }
 }
 @media all and (max-width: 930px){
+.promo {
+    height: 230px;
+}
+.text-wrap{
+    left:0px;
+    font-size: 18px;
+}
+.info-items {
+    width: 720px;
+}
 
 
 
 
 }
+@media all and (max-width: 760px){
+.promo .container {
+    display: flex;
+    flex-direction: column;
+}
+.promo ul li a span{
+    font-size:33px;
+}
+.promo ul li a span:nth-child(2) {
+    font-size: 33px;
+}
+.promo ul li a span:first-child {
+    font-size: 33px;
+}
 
+
+
+}
 
 
 
