@@ -1536,7 +1536,7 @@ i.fa-regular.fa-star{
     text-align: center;
     font-size: 25px;
 }
-.info-items{
+.info-items .container{
     width:1140px;
     display: flex;
     flex-wrap: wrap;
