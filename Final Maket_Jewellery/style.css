@@ -171,11 +171,11 @@ body{
 #hamburger{
     display:none;
     position:fixed;
-    right: 0; 
-    top: 0;
+    top: 12px;
+    left: 10px;
     width: 100px;
-    height:30px;
-    padding-top: 5px;
+    height: 44px;
+    padding-top: 13px;
     background: #F2BF63;
     color:white;
     font-size:16px;
@@ -188,12 +188,14 @@ body{
 }
 #menu{
     display:flex;
-    flex-direction:column;
-    position:fixed;
-    top: 0;
-    right: 0;
+    top: 60px;
+    left:10px;
     transition:0.5s;
 
+}
+#menu ul li a:hover{
+    color:orange;
+    cursor:pointer;
 }
 /* header-search-box */
 .header-search-box{

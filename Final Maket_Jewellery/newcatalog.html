@@ -37,11 +37,23 @@
         <div class="container">       
            <p>JEWELLERY</p>  
         </div>                
-    </div>           
+    </div> 
+<!--hamburger  -->
+<div  class="hamburger">
+    <div class="container">
+        <div id="hamburger">
+            <span id="open">Меню</span>
+            <span id="close">Закрыть</span>
+        </div>    
+    </div> 
+</div>
+        
+
+
 <!-- header-search -->
   <div class="header-search">
-        <div class="header-search-wrap">
-            <ul>
+        <div class="container">
+            <ul id="menu">
                 <li><a href="#">Кольца</a></li>
                 <li><a href="#"> серьги</a></li>
                 <li><a href="#">  цепи</a></li>
@@ -52,7 +64,7 @@
             </ul>                             
         </div>  
     </div>
-    <!-- search-box and busket -->
+<!-- search-box and busket -->
 <div class="header-search-box">
  <div class="search-box-wrap">
     <div class="search-box">
@@ -72,21 +84,15 @@
         <div class="close">+</div>
         <div class="modal-user">
         </div>
-        
         <form action="">
             <input class="modal_input" type="text" placeholder="Имя">
             <input class="modal_input" type="text" placeholder="Номер карты/Телефон">
             <input class="modal_input" type="text" placeholder="Пароль">
             <button class="modal_btn">Войти</button>
-            <a id="pass-restore" href="#">Забыли свой пароль?  </a>
-    
-    
+        <a id="pass-restore" href="#">Забыли свой пароль?  </a>
         </form>
     </div>
-    
-    </div>
-
-
+</div>
 
 <!-- breadcrumbs -->
   <div class="breadcrumbs">
@@ -155,10 +161,10 @@
             </div>    
             <div class="checkbox1">
                 <p class="filter-type"><span>Вид вставки</span></p>
-                <input id="stone1"  class="checkbox_input1" type="checkbox" name="stonetype[] value='nostone"><label for="stone1" class="checkbox_label1">Без вставки </label> 
-                <input id="stone2"  class="checkbox_input1" type="checkbox" name="stonetype[] value='diamond"><label for="stone2" class="checkbox_label1">Бриллиант</label>
-                <input id="stone3"  class="checkbox_input1" type="checkbox" name="stonetype[] value='zirconia"><label for="stone3" class="checkbox_label1">Фианит</label>
-                <input id="stone4"  class="checkbox_input1" type="checkbox" name="stonetype[] value='sapphire"><label for="stone4" class="checkbox_label1">Сапфир</label>
+                <input id="stone1"  class="checkbox_input1" type="checkbox" name="stonetype[] value='nostone"><label for="stone1" class="checkbox_label1">Без вставки </label><br> 
+                <input id="stone2"  class="checkbox_input1" type="checkbox" name="stonetype[] value='diamond"><label for="stone2" class="checkbox_label1">Бриллиант</label><br>
+                <input id="stone3"  class="checkbox_input1" type="checkbox" name="stonetype[] value='zirconia"><label for="stone3" class="checkbox_label1">Фианит</label><br>
+                <input id="stone4"  class="checkbox_input1" type="checkbox" name="stonetype[] value='sapphire"><label for="stone4" class="checkbox_label1">Сапфир</label><br>
             </div>
             <div class="checkbox1">
                 <p class="filter-type"><span>вид металла</span></p>
@@ -204,22 +210,22 @@
             </select>
             </div> 
 
-    <div class="catalog-items">
-                <!-- card1 -->
-                <div class="catalog-card-wrap">
-                    <div class="catalog-card">
-                        <div class="discount">
-                            <img src="images/sale-icon.svg" alt="sale-icon">
-                        </div>
+<div class="catalog-items">
+    <!-- card1 -->
+        <div class="catalog-card-wrap">
+            <div class="catalog-card">
+                <div class="discount">
+                    <img src="images/sale-icon.svg" alt="sale-icon">
+                </div>
                         <div>
                             <i class="fa-regular fa-heart"></i>
                             <i class="fa-solid fa-heart"></i>
                             <img src="images/ring1.png" alt="ring">
                         </div>
-                        <p>
-                            Кольцо обручальное из<br>
-                            розового золота 104006  
-                        </p>
+            <p>
+                Кольцо обручальное из<br>
+                розового золота 104006  
+            </p>
                         <div class="pricing">
                             <span class="newprice"> 349.20 руб.</span>
                             <span class="oldprice"> 360.00 руб.</span>
@@ -255,8 +261,8 @@
                     </div>    
                 </div>
                
-                <!-- card2 -->
-                <div class="catalog-card-wrap">
+<!-- card2 -->
+    <div class="catalog-card-wrap">
                     <div class="catalog-card">
                         <div class="discount">
                             <img src="images/sale-icon.svg" alt="sale-icon">
@@ -1070,6 +1076,26 @@
     document.querySelector('.close').addEventListener('click', function() {
         document.querySelector('.bg-modal').style.display = 'none';
     });
-</script>     
+</script>  
+<!-- JS for hamburger -->
+<script>
+    $(document).ready(function(){
+        $('#menu').on('click','a', function (e){});
+
+        $('#open').click(function () {
+            $('#menu').css('transform', 'translate(0)')
+            $(this).hide();
+            $('#close').show();
+       });
+       $('#close').click(function () {
+            $('#menu').css('transform', 'translate(100%)')
+            $(this).hide();
+            $('#open').show();
+       });
+    })
+
+
+</script>
+
 </body>
 </html>
