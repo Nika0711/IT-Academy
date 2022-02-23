@@ -1650,12 +1650,6 @@ a#tel:hover{
     color:#e39228;
 }
 /* carousel-slide */
-.carousel.slide{
-    width: 900px;
-    height:700px;
-    margin-left:  90px;
-    margin-top:50px;
-}
 .info-title-shops{
     text-align: center;
     font-size: 25px;
