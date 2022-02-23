@@ -187,7 +187,7 @@ body{
     cursor:pointer;
 }
 #menu{
-    transition:1s;
+    transition: 1.5s;
 }
 #menu ul li a:hover{
     color:orange;
