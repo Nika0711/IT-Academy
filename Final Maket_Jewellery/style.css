@@ -1721,3 +1721,27 @@ a#tel:hover{
     border-bottom: 1px solid #ebb44e;
      
  }
+ /* checkbox in the form */
+
+.checkbox1{
+    position:relative;
+}
+ .checkbox_input1{
+    display: none;
+    position: absolute; 
+ }
+.checkbox_label1:before{
+    content:"";
+    display:block;
+    width:15px;
+    height:15px;
+
+    border:1px solid #ccc;
+    background-color:#fff;
+
+    position:absolute;
+    top:0; 
+    left:0; 
+    z-index:1;
+
+} 
