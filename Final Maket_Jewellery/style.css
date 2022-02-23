@@ -281,6 +281,12 @@ body{
     background: url(images/background.jpg) no-repeat;
     margin-bottom: 41px;
 }
+.sale1 .container{
+    display:flex;
+    height: 173px;
+    background: url(images/background2.jpg) no-repeat;
+    margin-bottom: 41px;
+}
 .sale-block h1{
     display: flex;
     flex-direction:column;
