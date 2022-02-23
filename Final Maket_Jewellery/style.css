@@ -211,7 +211,7 @@ body{
      height:50px;
      border-radius: 50px;
     background-color: #e9bb6700;
-     transition:0.5s;
+     transition:1.5s;
 }
 .search-box input.search-txt{
     position:relative;
@@ -750,7 +750,6 @@ i.fa-regular.fa-star{
     flex-direction: column;
     justify-content: space-between;
     background: #EAEAEA;
-    height: 333px;
     margin-top:10px;
 }
 .footer-bottom ul li:first-child{
