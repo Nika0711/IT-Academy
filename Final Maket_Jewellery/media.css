@@ -353,8 +353,10 @@
     display: block;
 }
 #menu{
+    position:fixed;
     flex-direction: column;
-    top:20px;
+    top: 60px;
+    left:20px;
     transform: translate(160%);
 }
 #menu li{

@@ -1080,7 +1080,6 @@
 <!-- JS for hamburger -->
 <script>
     $(document).ready(function(){
-        $('#menu').on('click','a', function (e){});
 
         $('#open').click(function () {
             $('#menu').css('transform', 'translate(0)')
@@ -1088,7 +1087,7 @@
             $('#close').show();
        });
        $('#close').click(function () {
-            $('#menu').css('transform', 'translate(100%)')
+            $('#menu').css('transform', 'translate(200%)')
             $(this).hide();
             $('#open').show();
        });
