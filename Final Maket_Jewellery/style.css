@@ -360,29 +360,28 @@ height: 21px;
     animation: Anim_elem3;
     transition: 0.5s;
 }
-.filter  span:after{
+ div#size p.filter-type span:after{
     left: 100px;
 }
-div#price span:after{
-    top:30px;
-    left: 94px; 
+.filter div.price p.filter-type span:after{
+    left: 80px; 
 }
-.filter div.type p.filter-type span:after{
+div#type p.filter-type span:after{
     left: 183px; 
 }
-.filter div.gender p.filter-type span:after{
+ div#gender p.filter-type span:after{
     left:116px; 
 }
-.filter div.model .filter-type span:after{
+div#model .filter-type span:after{
     left:158px; 
 }
-.filter div.stone p.filter-type span:after{
+div#stone p.filter-type span:after{
     left:150px; 
 }
-.filter div.metal p.filter-type span:after{
+div#metal p.filter-type span:after{
     left:156px; 
 }
-.filter div.probe p.filter-type span:after{
+div#probe p.filter-type span:after{
     left: 88px; 
 }
 p#size{
