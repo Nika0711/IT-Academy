@@ -1723,8 +1723,8 @@ a#tel:hover{
  }
  /* checkbox in the form */
 
-.checkbox1{
-    position:relative;
+.type .checkbox1{
+    position: relative;
 }
  .checkbox_input1{
     display: none;
@@ -1740,8 +1740,25 @@ a#tel:hover{
     background-color:#fff;
 
     position:absolute;
-    top:0; 
-    left:0; 
+    top: 0;
+    left: 0;
     z-index:1;
 
 } 
+.checkbox_label1{
+    padding-left: 39px;
+}
+.checkbox_label1:after{
+    content:"";
+    display:block;
+    width:15px;
+    height:15px;
+    background: url('images/check.svg') no-repeat;
+    background-size: 15px 15px ;
+    background-color:#ebb44e;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:2;
+}
