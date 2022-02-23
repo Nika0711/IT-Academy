@@ -188,9 +188,7 @@ body{
 }
 #menu{
     display:flex;
-    top: 60px;
-    left:10px;
-    transition:0.5s;
+    transition:1s;
 
 }
 #menu ul li a:hover{

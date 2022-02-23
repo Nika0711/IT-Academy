@@ -355,7 +355,7 @@
 #menu{
     flex-direction: column;
     top:20px;
-    transform: translate(100%);
+    transform: translate(160%);
 }
 #menu li{
     margin-left:0;
