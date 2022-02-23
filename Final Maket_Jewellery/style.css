@@ -58,7 +58,8 @@ body{
 }
 /*  Header*/
 .header{ 
-    height:45px;    
+    line-height: 21px;
+    font-size: 18px;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
@@ -104,6 +105,8 @@ body{
 }
 .header-top-right li a{
     vertical-align: 5px;
+    line-height: 21px;
+    font-size: 18px;
 }
 
 .header-top-right span:last-child{
@@ -1642,6 +1645,8 @@ i.fa-regular.fa-star{
     border:none;
     background-color:transparent;
     color:#707070;
+    font-size: 18px;
+    line-height: 21px;
 }
 button#register:hover{
     color:#e39228;
