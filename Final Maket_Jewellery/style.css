@@ -1742,6 +1742,7 @@ a#tel:hover{
     background-color:#fff;
 
     position:absolute;
+    left:15px;
     z-index:1;
 
 } 
@@ -1758,31 +1759,42 @@ a#tel:hover{
  
     opacity: 0;
     position: absolute;
+    left:15px;
     z-index:2;
 }
 .checkbox_label1:first-of-type:before{
-    top: 70px;
-    left: 15px;
+    top: 75px;
+
 }
 .checkbox_label1:first-of-type:after{
-    top: 70px;
-    left: 15px;
+    top: 75px;
+
 }
 .checkbox_label1:nth-of-type(2):before{
-    top: 90px;
-    left: 15px;
+    top: 95px;   
 }
 .checkbox_label1:nth-of-type(2):after{
-    top: 90px;
-    left: 15px;
+    top: 95px; 
 }
 .checkbox_label1:nth-of-type(3):before{
-    top: 108px;
-    left: 15px;
+    top: 115px;
 }
 .checkbox_label1:nth-of-type(3):after{
-    top: 108px;
-    left: 15px;
+    top: 115px;   
+}
+
+.checkbox_label1:nth-of-type(4):before{
+    top: 135px;
+}
+.checkbox_label1:nth-of-type(4):after{
+    top: 135px;
+}
+  
+.checkbox_label1:nth-of-type(5):before{
+    top: 155px;
+}
+.checkbox_label1:nth-of-type(5):after{
+    top: 155px;
 }
 .checkbox_input1:checked + .checkbox_label1:before{
  background-color:#ebb44e;
