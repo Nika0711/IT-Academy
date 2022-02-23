@@ -381,12 +381,12 @@ p#size{
 } 
 .filter .price input[type="checkbox"]:last-child{
     margin-bottom:24px;
-} */
+} 
 .price  p.filter-type label:first-child{
     margin-left:15px;
     margin-right:12px;
 }
-.filter input[type="text"]{
+ .filter input[type="text"]{
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 3px;
@@ -432,7 +432,7 @@ p#size{
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-}
+} 
 .filter div input[type="reset"]{
     background: #313131;
     border: transparent;
@@ -446,6 +446,7 @@ p#size{
     line-height: 16px;
     text-transform: uppercase;
 }
+
 /*catalog*/
 .catalog .container{
     display:flex;
@@ -1748,6 +1749,8 @@ a#tel:hover{
 } 
 .checkbox_label1{
     padding-left: 39px;
+    font-size: 16px;
+    line-height: 21px;
 }
 .checkbox_label1:after{
     content:"";
