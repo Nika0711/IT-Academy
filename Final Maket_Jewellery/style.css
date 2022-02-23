@@ -186,9 +186,7 @@ body{
     z-index:9;
     cursor:pointer;
 }
-#menu{
-    transition: 1.5s;
-}
+
 #menu ul li a:hover{
     color:orange;
     cursor:pointer;
@@ -553,6 +551,7 @@ p#size{
 }
 .catalog-card div img:hover{
    transform: scale(1.2);
+   transition: 0.5s;
 }
 i.fa-regular.fa-star{
     color:#ffa500;

@@ -358,6 +358,7 @@
     top: 60px;
     left:20px;
     transform: translate(800%);
+    transition:1.5s;
 }
 #menu li{
     margin-left:0;
@@ -400,8 +401,11 @@
 .search-box:hover {
     width: 215px;
 }
-.filter label {
-    display: none;
+.filter{
+    height:auto;
+}
+.filter h4{
+    width:100%;
 }
 .catalog .container {
 flex-direction:column;
@@ -410,8 +414,11 @@ flex-direction:column;
     display:none;
 }    
 .filter {
-    height: 790px;
+    width:100%;
 }
+.breadcrumbs ul li {
+    margin-top:11px;
+}    
 .pages {
     padding-left: 0px;
     margin-top: 132px;
