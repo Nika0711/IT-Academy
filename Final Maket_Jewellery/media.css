@@ -123,9 +123,12 @@
         margin-right: 20px;
     }
     .header-top-right img:first-child {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
         margin-left: 17px;
     }
-    
+
     .logo {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -215,10 +218,11 @@
 .header-top-left li:first-child {
     margin-right: 10px;
 }
-.header-top-right img:first-child {
+.header-top-right img:first-child{
     margin-right: 0px;
     margin-left: 0px;
 }
+
 .header {
     height: 62px;
 }
@@ -226,8 +230,10 @@
     display:none;
 }
 .header-top-right img:first-child {
-    margin-left: 15px;
-    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-left: 17px;
 }
 .header-top-right img:first-child {
     width: 22px;
