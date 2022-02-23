@@ -291,6 +291,7 @@ margin:0 auto;
 }
 .filter div{
     border: 1px solid #EAEAEA;
+    padding-bottom:15px;
 }
 .filter div:last-child{
     border: none;
@@ -438,8 +439,7 @@ p#size{
     width: 144px;
     height: 40px;
     border-radius: 5px;
-    margin-top:32px;
-    margin-bottom:16px;
+    margin-top:13px;
     border: transparent;
     color: #FFFFFF;
     font-size: 14px;
@@ -1723,25 +1723,25 @@ a#tel:hover{
  }
  /* checkbox in the form */
 
-.type .checkbox1{
+ .checkbox1{
     position: relative;
 }
  .checkbox_input1{
     display: none;
-    position: absolute; 
+    position: absolute;
+    margin-bottom:15px; 
  }
 .checkbox_label1:before{
     content:"";
-    display:block;
+    display: block;
     width:15px;
     height:15px;
 
     border:1px solid #ccc;
+    border-radius:5px;
     background-color:#fff;
 
     position:absolute;
-    top: 0;
-    left: 0;
     z-index:1;
 
 } 
@@ -1750,15 +1750,47 @@ a#tel:hover{
 }
 .checkbox_label1:after{
     content:"";
-    display:block;
-    width:15px;
-    height:15px;
+    display: block;
+    width: 15px;
+    height: 15px;
     background: url('images/check.svg') no-repeat;
     background-size: 15px 15px ;
-    background-color:#ebb44e;
-
+ 
+    opacity: 0;
     position: absolute;
-    top: 0;
-    left: 0;
     z-index:2;
+}
+.checkbox_label1:first-of-type:before{
+    top: 70px;
+    left: 15px;
+}
+.checkbox_label1:first-of-type:after{
+    top: 70px;
+    left: 15px;
+}
+.checkbox_label1:nth-of-type(2):before{
+    top: 90px;
+    left: 15px;
+}
+.checkbox_label1:nth-of-type(2):after{
+    top: 90px;
+    left: 15px;
+}
+.checkbox_label1:nth-of-type(3):before{
+    top: 108px;
+    left: 15px;
+}
+.checkbox_label1:nth-of-type(3):after{
+    top: 108px;
+    left: 15px;
+}
+.checkbox_input1:checked + .checkbox_label1:before{
+ background-color:#ebb44e;
+ border-color: orange;
+}
+.checkbox_input1:checked + .checkbox_label1:after{
+  opacity: 1;
+}    
+.checkbox_label1:nth-of-type(3){
+    margin-bottom:10px;
 }
