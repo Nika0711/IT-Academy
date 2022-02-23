@@ -1411,11 +1411,10 @@ i.fa-regular.fa-star{
 
 /*promo*/
 .promo{
-    height:100px;
     margin-top: 20px;
     background: #F5F5F5;
     border-radius: 5px;
-    mARGIN-BOTTOM:20PX;
+    margin-bottom:20px;
 }
 .promo .container {
     display:flex;
