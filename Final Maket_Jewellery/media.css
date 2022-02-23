@@ -218,6 +218,12 @@
 .header-top-left li:first-child {
     margin-right: 10px;
 }
+.header-top-left li:last-child a{
+    display:none;
+}
+.header-top-left li:first-child a{
+    display:none;
+}
 .header-top-right img:first-child{
     margin-right: 0px;
     margin-left: 0px;
@@ -329,9 +335,7 @@
 .footer-bottom .contact {
     margin-right: 120px;
 }
-.footer-bottom .container-bottom p {
-    padding-left: 200px;
-}
+
 #up {
     right: 75px;
 }
@@ -341,8 +345,9 @@
 .footer-bottom .container-bottom {
     width: 540px;
 }
-.footer-bottom .container-bottom {
-    width: 540px;
+
+.container-bottom .container{
+    width:540px;
 }
 }
 
@@ -438,7 +443,9 @@ flex-direction:column;
 .footer-bottom .container-bottom p {
     padding-left: 0px;
 }
-
+.container-bottom .container{
+    width: 300px;
+}
 
 }
 /* itemcard-page */
