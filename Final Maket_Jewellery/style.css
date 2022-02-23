@@ -817,11 +817,8 @@ i.fa-regular.fa-star{
 .footer-bottom img:first-child{
     margin-right: 13px;
 }
-.footer-bottom .container-bottom{
+ .container-bottom .container{
     border-top:1px solid #707070;
-    width: 1140px;
-    margin-right: auto;
-    margin-left: auto;
 
 }
 .footer-bottom .container-bottom p {
@@ -833,7 +830,6 @@ i.fa-regular.fa-star{
     padding-top: 32px;
     margin-right: auto;
     margin-left: auto; 
-    padding-left:450px;
 }
 
 /*page 2-item card*/

@@ -341,6 +341,9 @@
 .footer-bottom .container-bottom {
     width: 540px;
 }
+.footer-bottom .container-bottom {
+    width: 540px;
+}
 }
 
 @media all and (max-width: 560px){
