@@ -360,11 +360,12 @@ height: 21px;
     animation: Anim_elem3;
     transition: 0.5s;
 }
-.filter div.size p.filter-type span:after{
+.filter  span:after{
     left: 100px;
 }
-.filter div.price p.filter-type span:after{
-    left: 80px; 
+div#price span:after{
+    top:30px;
+    left: 94px; 
 }
 .filter div.type p.filter-type span:after{
     left: 183px; 
