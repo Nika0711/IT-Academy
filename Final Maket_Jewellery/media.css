@@ -348,6 +348,23 @@
     width:300px;
     margin: 0 auto;
 }
+/* hamburger */
+#hamburger{
+    display: block;
+}
+#menu{
+    flex-direction: column;
+    top:20px;
+    transform: translate(100%);
+}
+#menu li{
+    margin-left:0;
+    margin-right:0;
+}
+#close{
+    display: none;
+}
+
 .header .container{
     width:300px;
     margin: 0 auto;
