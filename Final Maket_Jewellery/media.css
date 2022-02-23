@@ -810,9 +810,11 @@ flex-direction:column;
 }
 }
 @media all and (max-width: 760px){
+
 .promo .container {
     display: flex;
     flex-direction: column;
+    margin-top:60px;
 }
 .promo ul li a span{
     font-size:33px;
@@ -827,7 +829,11 @@ flex-direction:column;
     padding-left: 0;
     flex-direction: column;
 }
-
+.element{
+    width: 250px;
+    height:0px;
+    
+}
 
 }
 
