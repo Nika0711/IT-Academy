@@ -853,12 +853,16 @@ flex-direction:column;
     flex-direction:row;
     margin-top:6px;
 }
+.banners .element-wrap .element:first-child {
+    margin-right: 59px;
+}
 .info-items .container {
     width: 540px;
 }
 .promo .container{
     width:540px;
 }
+
 }
 @media all and (max-width: 560px){
 .banners .element-wrap{
@@ -872,8 +876,24 @@ flex-direction:column;
     width:300px;
 }
 
-
-
+.header-top-left li:last-child{
+    display:none;
+}
+.header-top-right{
+    flex-direction:row;
+}
+.header-top-right li:first-child a{
+    display:none;
+}
+.header-top-right li:last-child button{
+    display:none;
+}
+.banners .element-wrap .element:first-child {
+    margin-right:0;
+}
+.info-items a{
+    width:48%;
+}
 }
 
 
