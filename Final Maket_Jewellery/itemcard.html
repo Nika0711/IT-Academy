@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2293f14872.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">    
@@ -193,6 +195,44 @@
             </div>
          </div>
          <h4>может понравиться</h4>
+         <!-- owl swiper -->
+        <!-- <div class="swiper">
+            <div class="swiper mySwiper container">
+                <!-- 1 -->
+               <!-- <div class="swiper-wrapper swiper-content">
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                          <div class="card-image">
+                          <img src="images/pin1.png" alt="pin1">
+                          <span>Брошь 940011-9K</span>
+                          <span>120.00 руб.</span>
+                           </div>
+                        </div>
+                     </div>
+                 </div>
+
+                 <div class="swiper-wrapper swiper-content">
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                          <div class="card-image">
+                          <img src="images/pin2png" alt="pin1">
+                          <span>Брошь 940011-9K</span>
+                          <span>120.00 руб.</span>
+                           </div>
+                        </div>
+                     </div>
+                 </div>
+                 
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div> 
+
+ -->
+
+
+
          <!-- OWL carousel  -->
          <div class="swiper mySwiper slider">
             <div class=" swiper-wrapper card">
@@ -254,7 +294,7 @@
                 </div>
                 <div class="swiper-slide card-content">
                     <div class="image">
-                        <img src="images/ring6.png" alt="pin1">
+                        <img src="images/ring12.png" alt="pin1">
                     </div>
                     <span>Кольцо 01-0023</span>
                     <span>53.00 руб</span>
@@ -266,7 +306,7 @@
         </div>
         
     </div>                          
-         
+          -->
         <!-- Up Button -->
         <span id="up">
         </span>
@@ -320,29 +360,7 @@
 
 
 
- <!-- Initialize Swiper -->
- <script>
- $(document).ready(function(){
-   $(".owl-carousel").owlCarousel();
-    });
-
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>   
-   
+ 
   
    <!-- JS for modal block -->
 <script>
@@ -372,8 +390,27 @@
 src="https://code.jquery.com/jquery-3.6.0.min.js"
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
- 
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
 
 
