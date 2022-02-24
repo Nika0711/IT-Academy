@@ -753,9 +753,8 @@ i.fa-regular.fa-star{
     display:flex;
     justify-content:space-around;
 }
-.footer-bottom{
+.footer-bottom .container{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     background: #EAEAEA;
     margin-top:10px;
@@ -1662,8 +1661,8 @@ a#tel:hover{
     margin-top:40px;
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
-    margin-left:20px;
+    justify-content:space-around;
+
 }
 .map{
     margin-right:10px;
@@ -1672,17 +1671,16 @@ a#tel:hover{
     width:100%;
 }
 /* accordion */
-.accordion-wrap{
-    width:1140px;
-    margin: 0 auto;
-}
+
 
 .accordion .container{
-    width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     background: rgba(238, 166, 34, 0);
     margin-top:30px;
+}
+.acc-section{
+    width:100%;
 }
 .accordion_label,
 .accordion_content{
