@@ -41,7 +41,16 @@
         <!-- Up Button -->
         <span id="up">
         </span>
-   
+   <!--hamburger  -->
+<div  class="hamburger">
+    <div class="container">
+        <div id="hamburger">
+            <span id="open">Меню</span>
+            <span id="close">Закрыть</span>
+        </div>    
+    </div> 
+</div>
+
   <div class="header-search">
         <div class="container">
             <ul>
@@ -223,6 +232,7 @@
      })
     })      
     </script>  
+
    <!-- JS for the counter -->
 
 <script>
@@ -253,6 +263,31 @@ function render() {
 }
 
 </script>
+
+<!-- JS for hamburger -->
+<script>
+    $(document).ready(function(){
+
+        $('#open').click(function () {
+            $('#menu').css('transform', 'translate(0)')
+            $(this).hide();
+            $('#close').show();
+       });
+       $('#close').click(function () {
+            $('#menu').css('transform', 'translate(800%)')
+            $(this).hide();
+            $('#open').show();
+       });
+    });
+
+
+</script>
+
+
+
+
+
+<!-- JS for modal block -->
 <script>
     document.getElementById('register').addEventListener('click', function(){
         document.querySelector('.bg-modal').style.display = 'flex';
