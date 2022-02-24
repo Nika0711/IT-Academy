@@ -1658,10 +1658,7 @@ a#tel:hover{
     margin-left: auto;
 }
 /* maps */
-.map-wrap{
-    width: 1140px;
-    margin-right: 0 auto;
-    margin-left: 0 auto;
+.map-wrap .container{
     margin-top:40px;
     display:flex;
     flex-wrap:wrap;
@@ -1671,18 +1668,20 @@ a#tel:hover{
 .map{
     margin-right:10px;
 }
+.map iframe{
+    width:100%;
+}
 /* accordion */
 .accordion-wrap{
     width:1140px;
     margin: 0 auto;
 }
-.accordion{
-    max-width: 800px;
+
+.accordion .container{
+    width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     background: rgba(238, 166, 34, 0);
-    margin-left: 160px;
-    margin-right: 125px;
     margin-top:30px;
 }
 .accordion_label,
