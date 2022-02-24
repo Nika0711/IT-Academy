@@ -504,13 +504,13 @@ flex-direction:column;
 .swiper{
     width:720px;
 }
-.card .image{
-  
+.card-content .image{
+    width:100%;
     margin-bottom:10px;
 }    
 
 .card .swiper-slide{
- font-size:14px;
+    font-size:14px;
 }
 .card-content{
     width: 300px;
@@ -602,16 +602,9 @@ flex-direction:column;
         flex-direction:column;
     }
 .swiper{
-    width:300px;
+    display: flex;
+    flex-direction:column;
 }
-
-
-
-
-
-
-
-
 
 }
 /* busket_page */
