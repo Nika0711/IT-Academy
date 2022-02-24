@@ -1448,7 +1448,7 @@ i.fa-regular.fa-star{
 /* banners */
 .banners .container{
     display:flex;
-    justify-content:space-around !important;
+    justify-content:space-around;
 }
 .banners .element{
     height: 466px;
