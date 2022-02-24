@@ -843,9 +843,9 @@ flex-direction:column;
     flex-direction: column;
 }
 .banners .container{
-    flex-flow:wrap;
+    flex-flow:wrap  !important;
 }
-.banners .element{
+.banners .element{ 
     width: 200px;
     height:250px;
 }
