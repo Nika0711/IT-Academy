@@ -474,9 +474,6 @@ flex-direction:column;
     width:900px;
 }
 
-
-
-
 }
 @media all and (max-width: 930px){
     .itemcard .container {
@@ -504,9 +501,24 @@ flex-direction:column;
     .btn {
         width: 190px;
     }
-    .swiper{
+.swiper{
     width:720px;
 }
+.card .image{
+  
+    margin-bottom:10px;
+}    
+
+.card .swiper-slide{
+ font-size:14px;
+}
+.card-content{
+    width: 300px;
+    margin-right:70px;
+}
+
+
+
 
 }
 @media all and (max-width: 760px){
@@ -566,6 +578,11 @@ flex-direction:column;
 .swiper{
     width:540px;
 }
+.card .card-image{
+    width: 160px;
+    margin-bottom:10px;
+}    
+
 
 }
 @media all and (max-width: 560px){
