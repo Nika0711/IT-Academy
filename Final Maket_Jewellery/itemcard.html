@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
     
-    <title>Item_page</title>
+    <title>Itemcard_page</title>
 </head>
 <body>
     <div class="header">
@@ -198,7 +198,7 @@
          <!-- owl swiper -->
         <!-- <div class="swiper">
             <div class="swiper mySwiper container">
-                <!-- 1 -->
+                 1 -->
                <!-- <div class="swiper-wrapper swiper-content">
                     <div class="swiper-slide card">
                         <div class="card-content">
@@ -306,7 +306,7 @@
         </div>
         
     </div>                          
-          -->
+         
         <!-- Up Button -->
         <span id="up">
         </span>
@@ -361,6 +361,28 @@
 
 
  
+<!-- JS for hamburger -->
+<script>
+    $(document).ready(function(){
+
+        $('#open').click(function () {
+            $('#menu').css('transform', 'translate(0)')
+            $(this).hide();
+            $('#close').show();
+       });
+       $('#close').click(function () {
+            $('#menu').css('transform', 'translate(800%)')
+            $(this).hide();
+            $('#open').show();
+       });
+    });
+</script>
+
+
+
+
+
+
   
    <!-- JS for modal block -->
 <script>
@@ -383,7 +405,10 @@
      })      
      </script>  
 
-   <!--jquery  -->
+
+
+
+<!--jquery  -->
 
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script
