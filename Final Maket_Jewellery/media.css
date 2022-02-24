@@ -468,8 +468,11 @@ flex-direction:column;
     margin-bottom: 0px;
 }
 
-/* owl-slider */
 
+/* owl-slider */
+.swiper{
+    width:900px;
+}
 
 
 
@@ -501,7 +504,9 @@ flex-direction:column;
     .btn {
         width: 190px;
     }
-
+    .swiper{
+    width:720px;
+}
 
 }
 @media all and (max-width: 760px){
@@ -558,8 +563,9 @@ flex-direction:column;
         width: 128px;
         font-size: 16px;
     }
-
-
+.swiper{
+    width:540px;
+}
 
 }
 @media all and (max-width: 560px){
@@ -578,7 +584,9 @@ flex-direction:column;
         margin: 0 auto;
         flex-direction:column;
     }
-
+.swiper{
+    width:300px;
+}
 
 
 

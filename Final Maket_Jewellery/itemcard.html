@@ -429,7 +429,24 @@ crossorigin="anonymous"></script>
   });
 </script>
 
+<!-- JS for hamburger -->
+<script>
+    $(document).ready(function(){
 
+        $('#open').click(function () {
+            $('#menu').css('transform', 'translate(0)')
+            $(this).hide();
+            $('#close').show();
+       });
+       $('#close').click(function () {
+            $('#menu').css('transform', 'translate(800%)')
+            $(this).hide();
+            $('#open').show();
+       });
+    });
+
+
+</script>
 
 
 
