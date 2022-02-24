@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
         <script src="https://kit.fontawesome.com/2293f14872.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="media.css">
@@ -27,7 +28,7 @@
                     <a href="tel:+375297290391"> +375(29)729-03-91</a></li>
                 <li>
                    <img src="images/man.png" alt="man">
-                   <span>Регистрация/Вход</span> 
+                   <button id="register">Регистрация/Вход</button>
                 </li>
             </ul>                      
         </div>          
@@ -37,7 +38,10 @@
            <p>JEWELLERY</p>  
         </div>                
     </div>           
-
+        <!-- Up Button -->
+        <span id="up">
+        </span>
+   
   <div class="header-search">
         <div class="container">
             <ul>
@@ -53,7 +57,7 @@
     </div>   
     <!-- search-box and busket -->
 <div class="header-search-box">
-    <div class="search-box-wrap">
+    <div class="container">
        <div class="search-box">
            <input class="search-txt" type="text" name="" placeholder="Поиск по каталогу магазина">
            <i class="fa-solid fa-magnifying-glass"></i>
@@ -207,7 +211,18 @@
             </div>                   
     </div>
    </div>  
-   
+
+
+
+
+   <!-- init UP button -->
+   <script>
+    $(document).ready(function (){
+     $('#up').on('click',function (){
+         $('html, body').animate({scrollTop: 0}, 3000);
+     })
+    })      
+    </script>  
    <!-- JS for the counter -->
 
 <script>
@@ -257,14 +272,7 @@ src="https://code.jquery.com/jquery-3.6.0.min.js"
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
 
-<!-- init UP button -->
-<script>
-$(document).ready(function (){
- $('#up').on('click',function (){
-     $('html, body').animate({scrollTop: 0}, 3000);
- })
-})
-</script>
+
 
 
 </body>
