@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        "use strict"
+        
+            var surname=prompt("Введите Вашу фамилию");   
+             while ( surname === '' || surname === "null" || typeof surname === 'number'){
+             alert ("Это некорректное значение! Введите фамилию снова!");
+            var surname=prompt("Введите Вашу фамилию");  
+          }
+        
+        //  Вариант 2 
+        //  Можно делать циклом do...while или while)
+        //  Контроль коректности на пустоту и отмену (null)
+
+        // ! - это логическое "не", что приводит пустую строку (=false) и null (=false) к true.
+        //    do{
+        //    var surname= prompt("Введите Вашу фамилию"); 
+        //    }
+        //      while ( !surname  );  
+
+        //  Вариант 3
+        // do{
+        //    var surname= prompt("Введите Вашу фамилию"); 
+        //    }
+        //      while ( !surname && prompt("Введите Вашу фамилию") ); 
+
+
+            var name =prompt("Введите Ваше имя");
+             while ( name === '' || name === "null" || typeof name === 'number'){
+            alert ("Это некорректное значение! Введите имя снова!");
+            var name=prompt("Введите Ваше имя");  
+          }
+        
+           var patronymic=prompt("Введите Ваше отчество");
+           while ( patronymic === '' || patronymic === "null" || typeof patronymic === 'number'){
+            alert ("Это некорректное значение! Введите отчество снова!");
+            var patronymic=prompt("Введите Ваше отчество");
+          }
+        
+          var age=parseInt(prompt ('Введите Ваш возраст'));
+          while (isNaN(age) || age > 110){
+          alert ('Вы ввели некорректное значение! Введите возраст снова!');
+          var age=parseInt(prompt ('Введите Ваш возраст'));
+         }
+        
+        
+         var gender=confirm('Вы мужчина?');
+         if 
+         (gender){
+         gender = 'мужчина';
+         console.log('мужчина');
+        } else { 
+         gender= 'женщина';
+         console.log('женщина');
+        }
+        
+        var pension= "нет";
+         if (gender)
+         if (age>= 63) pension="да";
+         else
+          if (age>=58) pension="да";
+         console.log (pension)
+        
+         alert ('Ваше ФИО: ' + ' '+ surname + ' '+' '+ name+' ' +' ' + ' '+ patronymic +"\n"
+               + "Ваш возраст в годах: " +  age  + "\n"  
+                + "Ваш возраст в днях: " +  (age*365)  + "\n" 
+                 + "Через 5 лет Вам будет: " + (age+5) + "\n" 
+                + "Ваш пол: " + gender  + '\n'+ 
+                'Вы на пенсии: ' + pension)
+        </script>
+        
+</body>
+</html>
