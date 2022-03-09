@@ -14,8 +14,8 @@
 "use strict"
 
     var surname=prompt("Введите Вашу фамилию");   
-  while (surname==='' || surname==="null"){
-  alert ("Это некорректное значение! Введите фамилию снова!");
+    while (surname==='' || surname=== "null" || typeof(surname) === 'number' ){
+     alert ("Это некорректное значение! Введите фамилию снова!");
     var surname=prompt("Введите Вашу фамилию");  
   }
 
