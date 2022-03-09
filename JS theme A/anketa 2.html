@@ -32,6 +32,11 @@
         //    var surname= prompt("Введите Вашу фамилию"); 
         //    }
         //      while ( !surname && prompt("Введите Вашу фамилию") ); 
+      
+            // if (flag) alert (...)
+            // flag && alert (...) тождественые варианты
+
+
 
 
             var name =prompt("Введите Ваше имя");
@@ -46,6 +51,19 @@
             var patronymic=prompt("Введите Ваше отчество");
           }
         
+
+
+
+        //   лучше использовать функцию isNan, но если Number добавить еще условие
+        // если "" Number даст 0,а parseInt даст NaN
+        // !ageS - с этим условием будут работать и parseInt и Number 
+        // parseInt более надежный вариант! 
+        //   do{
+        //   var ageS= prompt("Введите Ваш возраст"); 
+        //   var age= parseint(ageS);
+        //   } while ( !ageS||isNan(age));
+          
+
           var age=parseInt(prompt ('Введите Ваш возраст'));
           while (isNaN(age) || age > 110){
           alert ('Вы ввели некорректное значение! Введите возраст снова!');
@@ -63,6 +81,11 @@
          console.log('женщина');
         }
         
+        // Для расчета возраста лучше использовать доп переменную.
+        //  var limit = gender?60:55;
+        //  var pension =(age>limit)?"да": "нет";
+
+
         var pension= "нет";
          if (gender)
          if (age>= 63) pension="да";
