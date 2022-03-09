@@ -13,28 +13,23 @@
 
 "use strict"
 
-var surname=prompt("Введите Вашу фамилию");
+    var surname=prompt("Введите Вашу фамилию");   
+  while (surname==='' || surname==="null"){
+  alert ("Это некорректное значение! Введите фамилию снова!");
+    var surname=prompt("Введите Вашу фамилию");  
+  }
 
- do {
-    alert ("Это некорректное значение! Введите фамилию снова!");
-    var surname=prompt("Введите Вашу фамилию"); 
-}
-  while ( surname === '' || surname === ' ' || typeof(surname) === 'number' ); 
-
-
-var name=prompt ("Bведите Ваше имя");
 do {
-    alert ("Это некорректное значение! Введите имя снова!");
     var name=prompt("Введите Ваше имя");
 }
-  while ( name === '' || name === ' ' || typeof(surname) === 'number'); 
+  while ( name === '' || name === "null" || typeof(surname) === 'number'); 
 
-var patronymic=prompt ("Bведите Ваше отчество");
+
 do {
     alert ("Это некорректное значение! Введите отчество снова!");
     var patronymic=prompt("Введите Ваше отчество");
 }
-  while ( patronymic === '' || patronymic === ' ' || typeof(surname) === 'number'); 
+  while ( patronymic === '' || patronymic === "null" || typeof(surname) === 'number'); 
 
 
  var age=parseInt(prompt ('Введите Ваш возраст'));
