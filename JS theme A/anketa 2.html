@@ -85,13 +85,11 @@
         //  var limit = gender?60:55;
         //  var pension =(age>limit)?"да": "нет";
 
-
-        var pension= "нет";
-         if (gender)
-         if (age>= 63) pension="да";
-         else
-          if (age>=58) pension="да";
-         console.log (pension)
+        if (gender === 'мужчина' && age<=63 || gender === 'женщина' && age <= 58){
+        var pension="нет"}
+        else {
+       var pension="да";
+         }
         
          alert ('Ваше ФИО: ' + ' '+ surname + ' '+' '+ name+' ' +' ' + ' '+ patronymic +"\n"
                + "Ваш возраст в годах: " +  age  + "\n"  
