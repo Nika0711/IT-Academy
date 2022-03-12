@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  Функция с использованием цикла (она всегода быстрее, чем рекурсия)
+
+       function toSum(n){
+           var sum = 0;
+          
+// // Функцию надо положить в переменную. Начинаем цикл с 1, на каждой итерации цикла увеличиваем элемент на 1, до тех пор пока элемент <= n
+
+         for (var i = 1; i<=n ;i++){  
+             sum += i;
+           }
+         return sum;
+        }
+
+    //  Рекурсивная функция
+    function toSum(n){
+
+        if (n == 1) {
+        return n;
+    }
+       else {
+        return n + toSum(n-1)  
+       }
+    
+    }
+
+
+
+
+    for (let i = 0; i < 10; i++) {
+
+   if (i % 2) {
+  alert( i );
+   }
+
+    }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

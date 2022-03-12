@@ -11,18 +11,20 @@
     "use strict"
 
     // проверка , является ли элемент числом
-    
+
  function treeSum(arr) {
     var sum = 0;
-    for ( var i=0; i<arr.length; i++);
+    for ( var i=0; i<arr.length; i++){
     if ( typeof arr[i] === "number"){
-        sum+=arr[i]
-    }   
+        sum+=arr[i];
+    }    
      else {
     sum+=treeSum(arr[i]);
    }
    return sum; 
    }
+}
+
 
 // 2 вариант, если делаем проверку , является , ли элемент массивом
 //    function treeSum(arr) {
