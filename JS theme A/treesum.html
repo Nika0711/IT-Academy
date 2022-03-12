@@ -14,28 +14,28 @@
 
  function treeSum(arr) {
     var sum = 0;
-    for ( var i=0; i<arr.length; i++){
-    if ( typeof arr[i] === "number"){
-        sum+=arr[i];
-    }    
-     else {
-    sum+=treeSum(arr[i]);
-   }
+    for (var i=0; i<arr.length; i++){
+    
+        if ( typeof arr[i] === "number")
+            sum+=arr[i];
+        
+     else 
+        sum+=treeSum(arr[i]);
+    }
    return sum; 
-   }
+
 }
 
 
 // 2 вариант, если делаем проверку , является , ли элемент массивом
 //    function treeSum(arr) {
 //     var sum = 0;
-//     for ( var i=0; i<arr.length; i++);
-//     if ( typeof arr[i] === "object"){
-//     sum+=treeSum(arr[i]);
-//     }   
-//      else {
+//     for ( var i=0; i<arr.length; i++){
+//     if ( typeof arr[i] === "object")
+//     sum+=treeSum(arr[i]);  
+//      else 
 //     sum+=(arr[i]);
-//    }
+//     }
 //    return sum; 
 //    }
 
@@ -47,7 +47,7 @@
          1, 8
      ] 
    
-   console.log (' Сумма массива ' +  treeSum(arr))  
+
    alert (treeSum(arr));
 
 
