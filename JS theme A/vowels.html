@@ -17,8 +17,7 @@
     function vowelCount() {
     var count = 0; 
     var vowels=["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"];
-    var line =prompt ('Введите строку на русском языке');
-    
+   
     // цикл перебора элементов строки
 
     for (var i = 0; i<line.length; i++) 
@@ -31,7 +30,8 @@
      return count;
 
     }
-     alert (vowelCount())
+    var line =prompt ('Введите строку на русском языке');
+     alert (vowelCount(line))
 
     </script>
 
