@@ -14,18 +14,18 @@
 //  Функция подсчета количества гласных в строке
 
 
-    function vowelCount() {
-    var count = 0; 
+    function vowelCount(str) {
     var vowels=["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"];
-    for (var i = 0; i<line.length; i++) 
-    if (line[i] instanceof vowels[k]){
-       count++;
-        break;
+    var count=0;
 
-   }
+    for (var i = 0; i<str.length; i++){
+    var symb = str[i];
+    if (vowels.includes (symb))
+       count++;
+    }
         return count;
-       
-   }
+    }    
+    
     // цикл перебора элементов строки -не эффективное решение
 
     // for (var i = 0; i<line.length; i++) 
@@ -37,12 +37,12 @@
     // }
     //  return count;
 
-    // 
 
 
 
-    var line =prompt ('Введите строку на русском языке');
-     alert (vowelCount(line))
+
+    var str =prompt ('Введите строку на русском языке');
+     alert (vowelCount(str))
 
     </script>
 
