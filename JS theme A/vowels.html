@@ -11,7 +11,7 @@
 <script>
 "use strict"
 
-//  Функция подсчета количества гласных в строке
+// вариант 1. Функция подсчета количества гласных в строке, если гласные лежат в массиве черенз метод .includes
 
 
     function vowelCount(str) {
@@ -26,6 +26,29 @@
         return count;
     }    
     
+// вариант 2. Подсчет гласных через регулярные выражения Regex
+
+// function vowelCount(str) { 
+
+// // find the count of vowels
+// const count = str.match(/["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"]/gi).length;
+
+// // return number of vowels
+// return count;
+// }
+
+// var str =prompt ('Введите строку на русском языке');
+// alert (vowelCount(str))
+
+
+
+
+
+
+
+
+
+
     // цикл перебора элементов строки -не эффективное решение
 
     // for (var i = 0; i<line.length; i++) 
