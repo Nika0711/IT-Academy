@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood_Colors</title>
+</head>
+<body>
+    <!-- Функция выбирает рандомно 3 цвета. Цвета могут повторяться -->
+    <script>
+
+        "use strict";
+    
+    //     function randomDiap(n,m) {
+    //             return Math.floor(Math.random()*(m-n+1))+n;
+    //     }
+    // //    подсчет не с нуля, а с 1. 0 элемент замененен ""
+    //     function mood(colorsCount) {
+    //         var colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
+    
+    //         console.log( 'цветов: ' + colorsCount );
+    //         for ( var i=1; i<=colorsCount; i++ ) {
+    //             var n=randomDiap(1,7);
+    //             var colorName=colors[n];
+    //             console.log( colorName );
+    //         }
+    //     }
+    
+    //     mood(3);
+    
+        //Вариант 1. Функция выводит случайные цвета, но они не повторяются. Контроль повторения через хэш
+   
+        function randomDiap(n,m) {
+                return Math.floor(Math.random()*(m-n+1))+n;
+        }
+       
+        function mood(colorsCount) {
+            var colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
+    
+            console.log( 'цветов: ' + colorsCount );
+           
+        //    ключ хэша - номер цвета, который уже встречался
+            var used={}; 
+
+            for ( var i=1; i<=colorsCount; i++ ) {
+                do{
+                var n=randomDiap(1,7);
+                }
+                while (n in used);
+            
+                var colorName=colors[n];
+                console.log( colorName );
+            }   
+        }
+        mood(3);
+    
+// Вариант 2. Хэш запоминает название цвета
+
+//         function randomDiap(n,m) {
+//                 return Math.floor(Math.random()*(m-n+1))+n;
+//         }
+       
+//         function mood(colorsCount) {
+//             var colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
+    
+//             console.log( 'цветов: ' + colorsCount );
+           
+//    //    ключ хэша - название цвета, которое уже встречался
+//      var used={}; 
+
+//      for ( var i=1; i<=colorsCount; i++ ) {
+//      do{
+//     var n=randomDiap(1,7);
+//     var colorName=colors[n];
+//      }
+//     while (colorName in used);
+    
+//     console.log( colorName );
+// }
+// }
+
+// mood(3);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
