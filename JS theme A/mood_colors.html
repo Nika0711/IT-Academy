@@ -41,20 +41,21 @@
             console.log( 'цветов: ' + colorsCount );
            
         //    ключ хэша - номер цвета, который уже встречался
-            var used={}; 
+            var used = {}; 
 
             for ( var i=1; i<=colorsCount; i++ ) {
-                do{
+                do {
                 var n=randomDiap(1,7);
                 }
-                while (n in used);
+                while ((n) in (used));
             
                 var colorName=colors[n];
                 console.log( colorName );
             }   
         }
         mood(3);
-    
+
+
 // Вариант 2. Хэш запоминает название цвета
 
 //         function randomDiap(n,m) {
