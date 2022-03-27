@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks_Hash_Func</title>
+</head>
+<body>
+    <script>
+
+// класс HashStorageFunc в функциональном стиле (т.е. функцию-конструктор) для хранения в приватном хэше произвольных пар ключ-значение.
+// Ключ может быть любой строкой; значение может иметь любой тип, в том числе векторный (хэш, массив и т.д.)
+
+
+"use strict"
+
+ function HashStorageFunc(){
+ var self=this;
+
+ self.key=null;
+ self.value=null;
+
+
+ self.addValue= function(){self.key=_key, self.value=_value};
+
+ self.getValue= function(){
+  for (var k in HashStorageFunc)
+   console.log (k)
+ };
+
+ self.deleteValue= function(){
+ for (var k in HashStorageFunc)
+ delete HashStorage[k];
+ }
+
+ self.getKeys =function(){}
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
