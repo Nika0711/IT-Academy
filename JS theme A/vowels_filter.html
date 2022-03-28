@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VowelsCount_.filter</title>
+</head>
+<body>
+    
+    <script>
+        "use strict"
+        
+        // function vowelCount(str) {
+        //     var vowels=["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"];
+        //     var count=0;
+        
+        //     for (var i = 0; i<str.length; i++){
+        //     var symb = str[i];
+        //     if (vowels.includes (symb))
+        //        count++;
+        //     }
+        //         return count;
+        //     }    
+        //     var s =prompt ('Введите строку на русском языке');
+        //      alert (vowelCount(s))
+        
+        
+    //  .filter
+
+
+    // 1 способ- функция-стрелка
+        
+    //     function vowelCount2(str) {
+    //         var vowels=["а",  "е",  "ё",  "и",  "о",  "у", "ы",  "э",  "ю",  "я", ];
+    //         str=str.toLowerCase();
+   
+    //         var count= [...str].filter(i=> vowels.includes (i)).length;
+    //         return count; 
+    //     }
+
+    //     var s =prompt ('Введите строку на русском языке');
+    //    alert (vowelCount2(s))
+        
+   // 2 способ- функция-стрелка
+
+   function vowelCount2(str) {
+            var vowels=["а",  "е",  "ё",  "и",  "о",  "у", "ы",  "э",  "ю",  "я", ];
+            str=str.toLowerCase();
+            var m=str.split('');
+
+            var count=0;
+            
+            m.filter(f)
+            function f (symb){
+            if (vowels.includes (symb))
+            count++;
+            }   
+            return count; 
+        }
+
+        var s =prompt ('Введите строку на русском языке');
+        alert (vowelCount2(s))
+        
+
+</script>
+</body>
+</html>
