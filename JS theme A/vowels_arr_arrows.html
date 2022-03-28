@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels_arr
+    </title>
+</head>
+<body>
+    <!-- VOWELS (подсчёт гласных букв в строке) без использования циклов, тремя способами:
+с использованием метода массива forEach,
+с использованием метода массива filter,
+с использованием метода массива reduce. -->
+
+
+<script>
+"use strict"
+
+// function vowelCount(str) {
+//     var vowels=["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"];
+//     var count=0;
+
+//     for (var i = 0; i<str.length; i++){
+//     var symb = str[i];
+//     if (vowels.includes (symb))
+//        count++;
+//     }
+//         return count;
+//     }    
+//     var s =prompt ('Введите строку на русском языке');
+//      alert (vowelCount(s))
+
+// 1 способ- метод forEach
+
+function vowelCount1(str) {
+    var vowels=["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"];
+    var count=0;
+
+    [...str].forEach(symb => { 
+        if (vowels.includes (symb))
+       count++;
+    });
+        return count;
+    }    
+
+
+// 2 способ- метод filter
+
+function vowelCount2(str) {
+    var vowels=["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"];
+   
+    var count= [...str].filter(i=> vowels.includes (i)).length;
+    return count; 
+}
+
+
+// 3 способ- метод reduce
+
+function vowelCount3(str) {
+    var vowels=["а", "А", "е", "Е", "ё", "Ё", "и", "И", "о", "О", "у", "У", "ы", "Ы", "э", "Э", "ю", "Ю", "я", "Я"];
+   
+    var count= [...str].reduce((a,b)=> vowels.includes (b) ? a+1 : a,0);
+    return count; 
+}
+
+    var s =prompt ('Введите строку на русском языке');
+     alert (vowelCount1(s));
+     alert (vowelCount2(s));
+     alert (vowelCount3(s));
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

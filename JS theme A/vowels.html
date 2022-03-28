@@ -23,9 +23,13 @@
     if (vowels.includes (symb))
        count++;
     }
-        return count;
+        return count; 
     }    
+    var s =prompt ('Введите строку на русском языке');
+     alert (vowelCount(s))
     
+
+
 // вариант 2. Подсчет гласных через регулярные выражения Regex
 
 // function vowelCount(str) { 
@@ -39,9 +43,39 @@
 
 // var s =prompt ('Введите строку на русском языке');
 // alert (vowelCount(s))
+// var s =prompt ('Введите строку на русском языке');
+//      alert (vowelCount(s))
 
 
-    // цикл перебора элементов строки -не эффективное решение
+// вариант 3. Подсчет гласных, если гласные лежат в хэше/ самый быстрый
+
+
+function vowelCount(str) {
+    var vowels= {'a':true, 'ю':true,'е':true, 'ё':true,'и':true, 'о':true,'ы':true, 'у':true,'э':true, 'я':true,}
+
+    // var vowels ='а,я,ю,у' запись в виде строки
+    // var vowels=["а",  "е",  "ё",  "и",  "о",  "у",  "ы",  "э",  "ю",  "я", ];
+
+    str=str.toLowerCase();  // переводим строку к нижнему регистру, тогда в массиве будут только 10 букв
+    var count=0;
+
+   
+    for (var i = 0; i<str.length; i++){   // цикл по строке. у строки тоже есть length. 
+    var symb = str[i];
+    // if (vowels.indexOf(str) !==-1)  // если indexOf не равно -1, значит буква найдена, для массива
+      
+    if (symb in vowels)
+    count++;
+    }
+        return count; 
+    }    
+
+    var s =prompt ('Введите строку на русском языке');
+     alert (vowelCount(s))
+
+
+
+// вариант 4. цикл перебора элементов строки -не эффективное решение
 
     // for (var i = 0; i<line.length; i++) 
     //  for (var k = 0; k<vowels.length; k++){
