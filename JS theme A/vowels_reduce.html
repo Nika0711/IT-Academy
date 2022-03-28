@@ -8,5 +8,51 @@
 </head>
 <body>
     
+<script>
+"use strict"
+
+// .reduce
+
+
+
+// 1 способ- Функция- стрелка
+
+// function vowelCount3(str) {
+//     var vowels=["а",  "е",  "ё",  "и",  "о",  "у",  "ы",  "э", , "ю",  "я", ];
+//     str=str.toLowerCase();
+
+//     var count= [...str].reduce((a,b)=> vowels.includes (b) ? a+1 : a,0);
+//     return count; 
+// }
+
+//     var s =prompt ('Введите строку на русском языке');
+//      alert (vowelCount3(s));
+
+
+// 2 способ- Функция-описание
+
+function vowelCount3(str) {
+    var vowels=["а",  "е",  "ё",  "и",  "о",  "у",  "ы",  "э", , "ю",  "я", ];
+    str=str.toLowerCase();
+    var m=str.split('');
+
+
+    m.reduce(f,0)
+    function f (a,b){
+   
+    return count; 
+}
+
+    var s =prompt ('Введите строку на русском языке');
+     alert (vowelCount3(s));
+
+
+
+
+</script>
+
+
+
+
 </body>
 </html>
