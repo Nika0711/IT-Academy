@@ -49,6 +49,11 @@
                 }
                 while ((n) in (used));
 
+            
+                if ( n in used)   // встречалоь ли значение, если да- берем следующее, нет-запоминаем)
+                continue;
+                used[n]=true;
+
                 var colorName=colors[n];
                 console.log( colorName );
             }   
