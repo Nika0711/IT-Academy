@@ -42,7 +42,7 @@
     //     var s =prompt ('Введите строку на русском языке');
     //    alert (vowelCount2(s))
         
-   // 2 способ- функция-стрелка
+   // 2 способ- функция-описание
 
    function vowelCount2(str) {
             var vowels=["а",  "е",  "ё",  "и",  "о",  "у", "ы",  "э",  "ю",  "я", ];
@@ -51,13 +51,18 @@
 
             var count=0;
             
-            m.filter(f)
+            var vow=m.filter(f) 
+
             function f (symb){
             if (vowels.includes (symb))
-            count++;
-            }   
-            return count; 
+             return true;
+            else {
+             return false;
+            }
         }
+        //    возвращаем длину отфильтрованного массива
+           return vow.length
+   }
 
         var s =prompt ('Введите строку на русском языке');
         alert (vowelCount2(s))
