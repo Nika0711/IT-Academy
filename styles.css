@@ -27,3 +27,6 @@ li{color: blue;
   display:flex;
   justify-content: space-evenly; 
 }
+b{
+  color:rgb(35, 5, 63);
+}
