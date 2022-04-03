@@ -28,5 +28,9 @@ li{color: blue;
   justify-content: space-evenly; 
 }
 b{
-  color:rgb(35, 5, 63);
+  color:rgb(84, 5, 158);
+  
+}
+b:before{
+  background: url(Final\ Maket_Jewellery/images/check.svg);
 }
