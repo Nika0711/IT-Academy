@@ -36,15 +36,16 @@ function vowelCount3(str) {
     str=str.toLowerCase();
     var m=str.split('');
  
-    m.reduce(
+   var result= m.reduce(
         function f (sum,symb){
     if (vowels.includes (symb)){
-    return sum++;}
+    return ++sum;}      // sum++ сначала возвращает сумму, потом увеличивает, нужно наоборот.
      else{
     return sum;} 
     }
    ,0)
- }
+   return result;
+ } 
     
     var s =prompt ('Введите строку на русском языке');
      alert (vowelCount3(s));
