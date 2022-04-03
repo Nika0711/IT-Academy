@@ -6,41 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinks_Hash_Func</title>
 </head>
+<style>
+
+    input{
+        margin-bottom: 10px;
+        height:40px;
+        border-radius: 10px;
+
+    }    
+    input:first-child{
+        color:red;
+    }
+    input:nth-child(2){
+        color: green;
+    }
+    input:nth-child(3){
+        color: blue;
+    }
+    input:last-child{
+        color:orangered;
+    }
+    
+
+
+
+    </style>
+
 <body>
+    
+    <!-- 3. -->
+
+    <input type="button" onclick="getDrinkInfo()" value="получение информации о напитке"> <br>
+    <input type="button" onclick="addNewDrink()" value="ввод информации о напитке"> <br>
+    <input type="button" onclick="deleteDrinkInfo()" value="удаление информации о напитке"> <br>
+    <input type="button" onclick="listDrinksData()" value="перечень всех напитков"> <br>
+
+
+
     <script>
 
-// класс HashStorageFunc в функциональном стиле (т.е. функцию-конструктор) для хранения в приватном хэше произвольных пар ключ-значение.
+//1. класс HashStorageFunc в функциональном стиле (т.е. функцию-конструктор) для хранения в приватном хэше произвольных пар ключ-значение.
 // Ключ может быть любой строкой; значение может иметь любой тип, в том числе векторный (хэш, массив и т.д.)
 
 
 "use strict"
 
  function HashStorageFunc(){
- var self=this;
 
- self.key=null;
- self.value=null;
+ var storage= {};
+ 
+this.addValue = function(key, value){    //  addValue(key,value) — сохраняет указанное значение под указанным ключом;
+   storage[key]= value;                  
+                                        //  если под этим ключом уже сохранено какое-то значение — оно должно быть перезаписано;
+ }
 
-
- self.addValue= function(){self.key=_key, self.value=_value};
-
- self.getValue= function(){
-  for (var k in HashStorageFunc)
-   console.log (k)
+ this.getValue= function(key){ //  getValue(key) возвращает значение по указанному ключу либо undefined;
+   return storage[key];
  };
 
- self.deleteValue= function(){
- for (var k in HashStorageFunc)
- delete HashStorage[k];
+ this.deleteValue= function(key){  //  deleteValue(key) — удаляет значение с указанным ключом,
+                                    //  возвращает true если значение было удалено и 
+                                    //  false если такого значения не было в хранилище;
+   if (key in storage){ 
+ delete storage[key];
+ return true;
+ } else {
+    return false;
+ }
+}
+
+ this.getKeys =function(){    // getKeys() — возвращает массив, состоящий из одних ключей.
+     return Object.keys(storage);  // Object.keys() - возвращает массив, состоящий из ключей обЪекта.
  }
 
- self.getKeys =function(){}
-
  }
+// 2. Создать объект drinkStorage класса HashStorageFunc для хранения рецептов напитков.
+// Ключом является название напитка; значением — информация о напитке (алкогольный напиток или нет, строка с рецептом приготовления и т.д. по желанию).
 
+ var drinkStorage= new HashStorageFunc();
+ drinkStorage.addValue(nam, info);
 
+// 3.  «ввод информации о напитке» — последовательно спрашивает название напитка, алкогольный он или нет, рецепт его приготовления; сохраняет информацию о напитке в хранилище.
+// «получение информации о напитке» — спрашивает название напитка и выдаёт (на страницу, в консоль или в alert) либо информацию о нём (по примеру, приведённому ниже), либо сообщение об отсутствии такого напитка в хранилище.
+// «удаление информации о напитке» — спрашивает название напитка и удаляет его из хранилища (если он там есть) с выдачей соответствующего сообщения в информационное окно.
+// «перечень всех напитков» — выдаёт в информационное окно перечень всех напитков из хранилища (только названия).
 
+// Пример информации о напитке:
 
+// напиток Маргарита
+// алкогольный: да
+// рецепт приготовления:
+// продукт, продукт... смешать...
 
 
 
