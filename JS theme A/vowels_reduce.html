@@ -35,13 +35,15 @@ function vowelCount3(str) {
     var vowels=["а",  "е",  "ё",  "и",  "о",  "у",  "ы",  "э", , "ю",  "я", ];
     str=str.toLowerCase();
     var m=str.split('');
-
-
-    m.reduce(f,0)
-    function f (a,b){
-   
-    return count; 
-}
+ 
+        function f (sum,cur){
+    if (vowels.includes (cur))
+     sum++
+    return sum; 
+   }
+    var result= m.reduce(f,0)
+ }
+    
 
     var s =prompt ('Введите строку на русском языке');
      alert (vowelCount3(s));
