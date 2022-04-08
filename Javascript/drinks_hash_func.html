@@ -105,9 +105,10 @@ this.addValue = function(key, value){    //  addValue(key,value) — сохра�
   function addDrinkInfo(){     
         var drinkName = prompt('Введите название напитка');
         var alco = confirm('Напиток алкогольный?');
-        var drinkRecipe =prompt ('Введите рецепт напитка')    
+        var drinkRecipe =prompt ('Введите рецепт напитка');    
   
-        var addDrink= drinkStorage.addValue(drinkName, {a:alco,r:drinkRecipe});
+        var ad=drinkStorage.addValue(drinkName, {a:alco,r:drinkRecipe});
+        console.log (ad)
        alert('Напиток ' + drinkName + ' добавлен и сохранен!')
   }
     
