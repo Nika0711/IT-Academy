@@ -26,17 +26,17 @@
             return [ -b/(2*a) ]; // один корень
 
 
-        if (( d==0 )&&( a==0 )){
+        if ( a==0 ){
           return [-c/b]; // один корень
 
         }
 
         var x1=(-b+Math.sqrt(d))/(2*a);
         var x2=(-b-Math.sqrt(d))/(2*a);
+       
         return [ x1, x2 ]; // два корня
 
-        var x3=(-c/b);
-        return [x3];
+      
     }  
     // если а=0, уравнение имеет вид bx+c=0, где x=-c/b
 
