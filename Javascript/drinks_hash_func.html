@@ -108,50 +108,64 @@ this.addValue = function(key, value){    //  addValue(key,value) — сохра�
         var drinkRecipe =prompt ('Введите рецепт напитка');    
     
         drinkStorage.addValue(drinkName, {a:alco,r:drinkRecipe});
-        console.log (c)
-        alert('Напиток ' + drinkName + ' добавлен и сохранен!')
+        alert('Напиток ' + drinkName + ' добавлен и сохранен!');
   }
-    
+       
 
 //  Кнопка "Получение информации о напитке"
 
      
     function getDrinkInfo() {  
         var drinkName =prompt('Введите название напитка');
+      
+        var d=drinkStorage.getValue(drinkName);
 
-        drinkStorage.getValue(drinkName)
-        
-        if ( drinkName in drinkStorage) {
-             alert( 'напиток: ' + drinkName + "\n" 
-            ,'алкогольный: ' + alco  + "\n" 
-            + drinkRecipe)
-        }else
+    //  должны проверять, что вернёт getValue, т.е. проверять надо вот эту d
+     // она содержит либо хэш с информацией о напитке, либо undefined
+
+        if (d === undefined){ 
             alert('Нет информации о напитке ' + drinkName + '!' )
- 
-           
-    }
+        }  else { 
 
+        if (d.a === true)
+             var alco="да";
+        else 
+            var alco="нет"; 
+
+         alert( 'напиток: ' + drinkName + "\n" +
+            'алкогольный: ' + alco  + "\n" +
+            'рецепт приготовления: '+ 
+            d.r)
+        }
+        
+        console.log(d) 
+    }
+        
 
 //  Кнопка "Удаление информации о напитке"
 
     function deleteDrinkInfo(){
         var drinkName =prompt('Введите название напитка');
 
-        if ( drinkName in drinkStorage) {
-             alert(' Информация о напитке ' +drinkName+ ' удалена!')    
-        } else {
-            alert('Напитка ' + drinkName +  ' нет!' )
+        var g=drinkStorage.deleteValue(drinkName);
+
+        if (g === false){ 
+            alert('Нет информации о напитке ' + drinkName + '!' )
+        } else {  
+           alert(' Информация о напитке ' +drinkName+ ' удалена!')   
         }
         
-      drinkStorage.deleteValue(drinkName)
+        console.log(g) 
+     
    }
    
 //  Кнопка "Перечень всех напитков"
 
     function listDrinksData() {
-       alert ( "Список всех напитков: "
+      
+       var m=drinkStorage.getKeys();
+       alert ( "Список всех напитков: " + m
        ) 
-       drinkStorage.getKeys()
     }
 
  
