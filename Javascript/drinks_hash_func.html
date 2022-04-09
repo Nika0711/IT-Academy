@@ -102,14 +102,14 @@ this.addValue = function(key, value){    //  addValue(key,value) — сохра�
 
 //  Кнопка "Введение информации о напитке"
  
-  function addDrinkInfo(){     
+  function addDrinkInfo() {     
         var drinkName = prompt('Введите название напитка');
         var alco = confirm('Напиток алкогольный?');
         var drinkRecipe =prompt ('Введите рецепт напитка');    
-  
-        var ad=drinkStorage.addValue(drinkName, {a:alco,r:drinkRecipe});
-        console.log (ad)
-       alert('Напиток ' + drinkName + ' добавлен и сохранен!')
+    
+        drinkStorage.addValue(drinkName, {a:alco,r:drinkRecipe});
+        console.log (c)
+        alert('Напиток ' + drinkName + ' добавлен и сохранен!')
   }
     
 
