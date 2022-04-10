@@ -1,0 +1,16 @@
+.longtext{
+    width:400px;
+    height: 30px;
+}
+.number{
+    width: 80px;
+
+}
+.shorttext{
+    width: 80px;
+
+}
+.memo{
+    width: 700px;
+    height: 400px;
+}
