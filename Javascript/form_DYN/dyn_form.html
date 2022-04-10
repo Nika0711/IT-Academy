@@ -7,8 +7,16 @@
     <title>DYN_FORM</title>
 </head>
 <body>
-    <script>
+  <form name="form1" action="http://fe.it-academy.by/TestForm.php" method="get"></form>
+  </form>
+  
+  <form name="form2" action="http://fe.it-academy.by/TestForm.php" method="get"></form>
+</form>
+
+  <script>
     "use strict"
+
+
     var formDef1=
 [
   {label:'Название сайта:',kind:'longtext',name:'sitename'},
@@ -33,6 +41,30 @@ var formDef2=
   {caption:'Зарегистрироваться',kind:'submit'},
 ];
 
+// Разработать функцию, которая в переданном ей теге <form> динамически строит элементы формы по переданному ей массиву.
+// Вызвать эту функцию дважды с указанными ниже массивами, чтобы она построила на веб-странице две формы по указанным ниже образцам. Точном соответствия внешнего вида форм образцам добиваться не обязательно.
+
+ formDef1.forEach(buildForm);
+
+ function buildForm(){
+  var labl=document.createElement('label');
+    fL.innerHTML=elem.label;
+    fE.appendChild(fL);
+    if (elem.kind == 'longtext') {
+      var tag = document.createElement('input');
+      tag.type = 'text';      
+      fE.appendChild(tag);
+      var carry=document.createElement('br');
+      fE.appendChild(carry);      
+    };
+
+
+
+
+
+
+
+ }
 
 
 
