@@ -53,10 +53,11 @@
 
 
 "use strict"
-var storage= {};
 
 class HashStorageClass {
-
+    constructor (key, value){
+        this.storage={};
+    }  
 addValue = function(key, value){    //  addValue(key,value) — сохраняет указанное значение под указанным ключом;
    storage[key]= value;                  
                                         //  если под этим ключом уже сохранено какое-то значение — оно должно быть перезаписано;
