@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Form Validation</title>
+</head>
+<body>
+    <form name='site' action='https://fe.it-academy.by/TestForm.php'>
+        Разработчики: <input class="longtext" type=text name='developers'><br /><br />
+        Название сайта: <input class="longtext" type=text  name='sitename'><br /><br />
+        URL сайта: <input class="averagetext"  type=text name='url' ><br /><br />
+        Дата запуска сайта: <input  class="shorttext" type=date name='launchdate'><br /><br />
+        Посетителей в сутки: <input class="shorttext" type=number name='visitors'><br /><br />
+        E-mail для связи: <input  class="midtext" type=text name='email'><br /><br />
+        Рубрика каталога:
+        <select class="midtext" name='catalog'>
+            <option value=1>бытовая техника</option>
+            <option value=2>здоровье</option>
+            <option value=3>домашний уют</option>
+        </select><br /><br />
+        Размещение:
+            <input type=radio name='payment' value=1>бесплатное
+            <input type=radio name='payment' value=2>платное
+            <input type=radio name='payment' value=3>VIP <br> <br> 
+        Разрешить отзывы: <input type=checkbox name='agree'><br /><br />
+        Описание сайта:<br>
+        <input class="descr" type=text name='desciption'><br /> <br />   
+        <input type='submit' value='Зарегистрироваться'>
+    </form>
+
+    
+</body>
+</html>

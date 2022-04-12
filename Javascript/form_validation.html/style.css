@@ -1,0 +1,20 @@
+.longtext{
+    width:400px;
+    height:20px;
+}
+.averagetext{
+    width:300px;
+    height:20px;
+}
+.shorttext{
+    width:100px;
+    height:20px;
+}
+.midtext{
+    width: 200px;
+    height:20px;
+}
+.descr{
+    width: 700px;
+    height:100px;
+}
