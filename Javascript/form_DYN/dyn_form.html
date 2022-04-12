@@ -7,14 +7,11 @@
     <title>DYN_FORM</title>
 </head>
 <body>
-  <form  id='f1' name="form1" action="http://fe.it-academy.by/TestForm.php" method="get"></form>
-  </form>
-  
-  <form  id='f2' name="form2" action="http://fe.it-academy.by/TestForm.php" method="get"></form>
-</form>
+  <form method=post action='https//:....TestForm.php' name='form1'></form><br><br><hr>
+  <form method=post action='https://....TestForm.php' name='form2'></form>
 
   <script>
-    "use strict"
+    "use strict";
 
 
     var formDef1=
@@ -41,152 +38,111 @@ var formDef2=
   {caption:'Зарегистрироваться',kind:'submit'},
 ];
 
-// Разработать функцию, которая в переданном ей теге <form> динамически строит элементы формы по переданному ей массиву.
-// Вызвать эту функцию дважды с указанными ниже массивами, чтобы она построила на веб-странице две формы по указанным ниже образцам. Точном соответствия внешнего вида форм образцам добиваться не обязательно.
-
- formDef1.forEach(buildForm);
-
- function buildForm(){
+ function buildForm(arr,f){
+  arr.forEach(elem=>{
   var labl=document.createElement('label');
-  // labl.textContent=  как положить тест в лейбл?
-  f1.appendChild(labl)
-
+  labl.innerHTML=elem.label  // содержимое ключа label становится содеримым тега labl
+  f.appendChild(labl);   // в форму добавляем новый элемент
+  
   switch(elem.kind){
     case 'longtext':
-     var input=documentCreateElement('input');
+     var input=document.createElement('input');
       input.type='text';
-      input.className='longtext';
-      var f1=document.getElementById('f1')
-      f1.apprendChild(input)
+      input.style.cssText='width: 400px; height:50px';
+
+      f.apprendChild(input);
       var br=document.createElement('br');
-      f1.appendChild(br); 
+      f.appendChild(br); 
       break;   
-
-    case 'number':
-    var input=documentCreateElement('input');
-      input.type='number';
-      input.className='number';
-      var f1=document.getElementById('f1')
-      f1.apprendChild(input)
-      var br=document.createElement('br');
-      f1.appendChild(br); 
-      break;  
-
-    case 'shorttext':
-      // нужно ли для каждого нового созданного тега заводить новую переменную
-      var input=documentCreateElement('input');
-      input.type='shorttext';
-      input.className='shorttext';
-      var f1=document.getElementById('f1')
-      f1.apprendChild(input)
-      var br=document.createElement('br');
-      f1.appendChild(br); 
-      break;  
-     
-    case 'shorttext':
-      var input=documentCreateElement('input');
-      input.type='shorttext';
-      input.className='shorttext';
-      var f1=document.getElementById('f1')
-      f1.apprendChild(input)
-      var br=document.createElement('br');
-      f1.appendChild(br); 
-      break;  
-   
-    case 'combo':
-      var sel= document.createElement('select');
-      f1.appendChild(sel);
-      var br=document.createElement('br');
-      f1.appendChild(br); 
       
-      elem.variants.forEach(g)
-      function g(elemLevel2) {
-        var option = document.createElement('option');
-        option.setAttribute('value', elemLevel2.value);
-        option.textContent = elemLevel2.text;
-        sel.appendChild(option)
-      }
-      break;
+  //    case 'number':
+  //   var input=document.createElement('input');
+  //     input.type='number';
+  //     input.style.cssText='width: 400px; height:50px';
+  //     f.apprendChild(input)
+  //     var br=document.createElement('br');
+  //     f.appendChild(br); 
+  //     break;  
+
+    // case 'shorttext':
+    //   var input=document.createElement('input');
+    //   input.type='shorttext';
+    //   input.style.cssText='width: 200px; height:50px';
+    //   f.apprendChild(input)
+    //   var br=document.createElement('br');
+    //   f.appendChild(br); 
+    //   break;  
+     
+    // case 'combo':
+    //   var sel= document.createElement('select');
+    //   f.appendChild(sel);
+    //   var br=document.createElement('br');
+    //   f.appendChild(br); 
       
-      case 'radio':
-      elem.variants.forEach(elemLevel2 => {
-        var radio = document.createElement('input');
-        radio.type = 'radio';
-        radio.name="payment";
-        radio.setAttribute('value', elemLevel2.value);          
-        var spanRad=document.createElement('span');
-        spanRadio.textContent=elemLevel2.text; 
-        f1.appendChild(radio);
-        rad.appendChild(spanRadio);
-        var br=document.createElement('br');
-        f1.appendChild(br);
-      });
-      break;
+    //   elem.variants.forEach(g)
+    //   function g(elemLevel2) {
+    //     var option = document.createElement('option');
+    //     option.setAttribute('value', elemLevel2.value);
+    //     option.textContent = elemLevel2.text;
+    //     sel.appendChild(option)
+    //   }
+    //   break;
+      
+    //   case 'radio':
+    //   elem.variants.forEach(elemLevel2 => {
+    //     var radio = document.createElement('input');
+    //     radio.type = 'radio';
+    //     radio.name="payment";
+    //     radio.setAttribute('value', elemLevel2.value);          
+    //     var spanRad=document.createElement('span');
+    //     spanRad.textContent=elemLevel2.text; 
+    //     f.appendChild(radio);
+    //     f.appendChild(spanRad);
+    //     var br=document.createElement('br');
+    //     f.appendChild(br);
+    //   });
+    //   break;
   
-    case 'check':
-      var input= document.createElement('input');
-      input.type = 'checkbox'; 
-      f1.appendChild(input);
-      var br=document.createElement('br');
-      f1.appendChild(br);
-      break;
+    // case 'check':
+    //   var input= document.createElement('input');
+    //   input.type = 'checkbox'; 
+    //   f.appendChild(input);
+    //   var br=document.createElement('br');
+    //   f.appendChild(br);
+    //   break;
 
-    case 'memo':
-    var input= document.createElement('input');
-    input.type='text'
-    input.className='memo';
-    f1.appendChild(input);
-      var br=document.createElement('br');
-      f1.appendChild(br);
-      break;
+    // case 'memo':
+    // var input= document.createElement('input');
+    // input.type='text'
+    // input.style.cssText='width: 400px; height:150px';
+    // f.appendChild(input);
+    // var br=document.createElement('br');
+    // f.appendChild(br);
+    // break;
      
-    case 'submit':
-    var input= document.createElement('input');
-    input.type='submit';
-    // можно так задать имя для кнопки?
-    input.value =elem.caption;;
-    f1.appendChild(input);
-      var br=document.createElement('br');
-      f1.appendChild(br);
-      break;
+    // case 'submit':
+    // var input= document.createElement('input');
+    // input.type='submit';
+    // input.value =elem.caption;
+    // f.appendChild(input);
+    // var br=document.createElement('br');
+    // f.appendChild(br);
+    // break;
 
-
-
-    };
-  
-
-    buildForm(formDef1, document.forms.f1);
-    buildForm(formDef2, document.forms.f2);
-     
-
-
-
+        
+ 
 
   
-   
-
-
-
-
-
-
-
+    
+    }  
+});
  }
-
-
-
-
-
-
-
+    
+ 
+    buildForm(formDef1, document.forms.form1);
+    buildForm(formDef2, document.forms.form2);
 
     </script>
-
-
-
-
-
-
 
 </body>
 </html>
