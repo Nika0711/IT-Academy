@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- novalidate - отменяет html5 валидацию -->
-    <form id='INFO' name='site' action='https://fe.it-academy.by/TestForm.php' novalidate>
+    <form id='INFO' name='site' method=post action='https://fe.it-academy.by/TestForm.php' novalidate>
         Разработчики: <input id='DEVELOPERS' class="longtext" type=text name='developers'> <br /><br /><span id="ERROR"></span>
         Название сайта: <input  id='SITE' class="longtext" type=text  name='sitename'><br /><br />
         URL сайта: <input  id='URL'  class="averagetext"  type=text name='url' ><br /><br />
@@ -40,21 +40,21 @@ formTag.addEventListener('submit',validateForm,false);
 
 function validateForm (EO){
     EO=EO||window.event;   
-    // try{  
+    
     var formTag=document.getElementById('INFO'); // дублируем переменную, делая ее локальной
     var errorCount=0;
-
+    var e=document.getElementById('ERROR'); // Переменная в которую попадает пустой span (выводит сообщ об ошибке)
 
 // Функция валидации поля "Разработчики"
 
 
     function validDevelop(af){
     var d=document.getElementById('DEVELOPERS');
-    var e=document.getElementById('ERROR'); // Переменная в которую попадает пустой span (выводит сообщ об ошибке)
       if(d.length>20){
           e.innerHTML('Поле не должно превышать 20 символов');
-          if(af){
+            if(af){
               d.focus();
+              EO.preventDefault();
               errorCount++;
           }
         else{
@@ -88,16 +88,16 @@ function validateForm (EO){
     errorCount+=validUrl(!errorCount);
     errorCount+=validDate(!errorCount);
 
-    if (errorCount)
+    if (errorCount){
     EO.preventDefault();
-    return;
-    }        
-//    catch (ex){
-//     alert('Извините, что-то пошло не так, неожиданный сбой! Пересмотрите заполнение формы!');
-//     EO.preventDefault();
-   }
-   return;
-}
+    }
+    }       
+
+
+
+
+
+
 
 // При уходе с поля по 'blur' валидировать содержимое без фокусировки поля
 // Ф-ция validRazr получит в аргумент EO  и будет всегда фокусировать.
