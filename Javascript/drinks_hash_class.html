@@ -78,8 +78,8 @@ deleteValue (key){  //  deleteValue(key) — удаляет значение с 
  }
 }
 
-getKeys =function(){    // getKeys() — возвращает массив, состоящий из одних ключей.
-     return Object.keys(this.storage);  // Object.keys() - возвращает массив, состоящий из ключей обЪекта.
+getKeys=function(){    // getKeys() — возвращает массив, состоящий из одних ключей.
+    return Object.keys(this.storage);  // Object.keys() - возвращает массив, состоящий из ключей обЪекта.
  }
 }
 
@@ -163,9 +163,9 @@ getKeys =function(){    // getKeys() — возвращает массив, со
 
     function listDrinksData() {
       
+       var m=drinkStorage.getKeys();  
        var result=m.join( ' / ');
-       alert ( "Список всех напитков: " + result
-       ) 
+       alert ( "Список всех напитков: " + result) 
     }
 
  
