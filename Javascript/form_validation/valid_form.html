@@ -11,7 +11,7 @@
 <body>
     <!-- novalidate - отменяет html5 валидацию -->
     <form id='INFO' name='site' action='https://fe.it-academy.by/TestForm.php' novalidate>
-        Разработчики: <input id='DEVELOPERS' class="longtext" type=text name='developers'> <span id="ERROR"></span><br /><br />
+        Разработчики: <input id='DEVELOPERS' class="longtext" type=text name='developers'> <br /><br /><span id="ERROR"></span>
         Название сайта: <input  id='SITE' class="longtext" type=text  name='sitename'><br /><br />
         URL сайта: <input  id='URL'  class="averagetext"  type=text name='url' ><br /><br />
         Дата запуска сайта: <input  id='DATE' class="shorttext" type=date name='launchdate'><br /><br />
@@ -40,7 +40,7 @@ formTag.addEventListener('submit',validateForm,false);
 
 function validateForm (EO){
     EO=EO||window.event;   
-    try{  
+    // try{  
     var formTag=document.getElementById('INFO'); // дублируем переменную, делая ее локальной
     var errorCount=0;
 
@@ -92,9 +92,9 @@ function validateForm (EO){
     EO.preventDefault();
     return;
     }        
-   catch (ex){
-    // alert('Извините, что-то пошло не так, неожиданный сбой! Пересмотрите заполнение формы!');
-    EO.preventDefault();
+//    catch (ex){
+//     alert('Извините, что-то пошло не так, неожиданный сбой! Пересмотрите заполнение формы!');
+//     EO.preventDefault();
    }
    return;
 }
