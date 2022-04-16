@@ -9,28 +9,118 @@
     <title>Form Validation</title>
 </head>
 <body>
-    <form name='site' action='https://fe.it-academy.by/TestForm.php'>
-        Разработчики: <input class="longtext" type=text name='developers'><br /><br />
-        Название сайта: <input class="longtext" type=text  name='sitename'><br /><br />
-        URL сайта: <input class="averagetext"  type=text name='url' ><br /><br />
-        Дата запуска сайта: <input  class="shorttext" type=date name='launchdate'><br /><br />
-        Посетителей в сутки: <input class="shorttext" type=number name='visitors'><br /><br />
-        E-mail для связи: <input  class="midtext" type=text name='email'><br /><br />
+    <!-- novalidate - отменяет html5 валидацию -->
+    <form id='INFO' name='site' action='https://fe.it-academy.by/TestForm.php' novalidate>
+        Разработчики: <input id='DEVELOPERS' class="longtext" type=text name='developers'> <span id="ERROR"></span><br /><br />
+        Название сайта: <input  id='SITE' class="longtext" type=text  name='sitename'><br /><br />
+        URL сайта: <input  id='URL'  class="averagetext"  type=text name='url' ><br /><br />
+        Дата запуска сайта: <input  id='DATE' class="shorttext" type=date name='launchdate'><br /><br />
+        Посетителей в сутки: <input  id='VISITORS' class="shorttext" type=number name='visitors'><br /><br />
+        E-mail для связи: <input  id='EMAIL'  class="midtext" type=text name='email'><br /><br />
         Рубрика каталога:
-        <select class="midtext" name='catalog'>
+        <select  id='CATALOG' class="midtext" name='catalog'>
             <option value=1>бытовая техника</option>
             <option value=2>здоровье</option>
             <option value=3>домашний уют</option>
-        </select><br /><br />
+        </select><br /><br /> 
         Размещение:
-            <input type=radio name='payment' value=1>бесплатное
+            <input type=radio  id='PAY' name='payment' value=1>бесплатное
             <input type=radio name='payment' value=2>платное
             <input type=radio name='payment' value=3>VIP <br> <br> 
-        Разрешить отзывы: <input type=checkbox name='agree'><br /><br />
+        Разрешить отзывы: <input type=checkbox id='AGREE' name='agree'><br /><br />
         Описание сайта:<br>
-        <input class="descr" type=text name='desciption'><br /> <br />   
-        <input type='submit' value='Зарегистрироваться'>
+        <input  id='DESCR' class="descr"  type=text name='desciption'><br /> <br />   
+        <input  id='SUBMIT' type='submit' value='Зарегистрироваться'>
     </form>
+
+<script>
+"use strict"
+var formTag=document.getElementById('INFO');
+formTag.addEventListener('submit',validateForm,false);
+
+function validateForm (EO){
+    EO=EO||window.event;   
+    try{  
+    var formTag=document.getElementById('INFO'); // дублируем переменную, делая ее локальной
+    var errorCount=0;
+
+
+// Функция валидации поля "Разработчики"
+
+
+    function validDevelop(af){
+    var d=document.getElementById('DEVELOPERS');
+    var e=document.getElementById('ERROR'); // Переменная в которую попадает пустой span (выводит сообщ об ошибке)
+      if(d.length>20){
+          e.innerHTML('Поле не должно превышать 20 символов');
+          if(af){
+              d.focus();
+              errorCount++;
+          }
+        else{
+            e.innerHTML=('');
+            return;
+        }
+        return errorCount;
+      }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // вызываем все функции и суммируем количество ошибок
+    // !errorCount-фокусируй, если ошибка. Если ошибки нет- вернется true, после ошибки -вернется false и фокусировки не будет
+    errorCount+=validDevelop(!errorCount);
+    errorCount+=validName(!errorCount);
+    errorCount+=validUrl(!errorCount);
+    errorCount+=validDate(!errorCount);
+
+    if (errorCount)
+    EO.preventDefault();
+    return;
+    }        
+   catch (ex){
+    // alert('Извините, что-то пошло не так, неожиданный сбой! Пересмотрите заполнение формы!');
+    EO.preventDefault();
+   }
+   return;
+}
+
+// При уходе с поля по 'blur' валидировать содержимое без фокусировки поля
+// Ф-ция validRazr получит в аргумент EO  и будет всегда фокусировать.
+// Ф-ция получает EO, где af=false)
+
+    //   var r=document.getELementByID('Developers');
+    //   r.addEventListener('blur', ()=>validRazr(false));
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
 
     
 </body>
