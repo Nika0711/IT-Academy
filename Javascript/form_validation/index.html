@@ -27,7 +27,7 @@
             <input type=radio  id='PAY' name='payment' value=1>бесплатное
             <input type=radio name='payment' value=2>платное
             <input type=radio name='payment' value=3>VIP <br> <br> 
-        Разрешить отзывы: <input type=checkbox id='AGREE' name='agree'><br /><br />
+        Разрешить отзывы: <input type=checkbox  id='AGREE' name='agree'><br /><br />
         Описание сайта:<br>
         <input  id='DESCR' class="descr"  type=text name='desciption'><br /> <br />   
         <input  id='SUBMIT' type='submit' value='Зарегистрироваться'>
@@ -36,13 +36,12 @@
 <script>
 "use strict"
 var formTag=document.getElementById('INFO');
-var devField=formTag.elements.DEVELOPERS; //находим поле "Разработчики"
 formTag.addEventListener('submit',validDevelop, false);
 var e=document.getElementById('ERROR');
 // Функция валидации поля "Разработчики"
 
 
-    function validDevelop(af){
+function validDevelop( af){
     EO=EO||window.event;
 
     var formTag=document.getElementById('INFO'); //находим форму
@@ -51,11 +50,13 @@ var e=document.getElementById('ERROR');
     var e=document.getElementById('ERROR');
     e.style.color='red';
     var errorCount=0;
+
       if(devValue.length>20){
-          alert('Введите пожалуйста ФИО не длиннее 30 символов!');
+          alert('Введите пожалуйста не больше 20 символов!');
           e.innerHTML('Поле не должно превышать 20 символов');
           errorCount++;
-          EO.preventDefault();
+          EO.preventDefault(); 
+        //   af-фокусируем , если была ошибка
             if(af){
                 devField.focus();    
           }

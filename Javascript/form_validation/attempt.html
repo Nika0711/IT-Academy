@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" scr="formvalid.js"> </script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Form Validation</title>
+</head>
+<body>
+    <!-- novalidate - отменяет html5 валидацию -->
+    <form id='INFO' class="js-form" name='site' method=post action='https://fe.it-academy.by/TestForm.php' novalidate>
+        Разработчики: <input id='DEVELOPERS' class="longtext input js-input" type=text name='developers'> <br /><br /><span id="ERROR"></span>
+        Название сайта: <input  id='SITE' class="longtext input  js-input" type=text  name='sitename'><br /><br />
+        URL сайта: <input  id='URL'  class="averagetext  input js-input"  type=text name='url' ><br /><br />
+        Дата запуска сайта: <input  id='DATE' class="shorttext input  js-input" type=date name='launchdate'><br /><br />
+        Посетителей в сутки: <input  id='VISITORS' class="shorttext  input js-input" type=number name='visitors'><br /><br />
+        E-mail для связи: <input  id='EMAIL'  class="midtext  input js-input-email" type=text name='email'><br /><br />
+        Рубрика каталога:
+        <select  id='CATALOG' class="midtext js-input-select" name='catalog'>
+            <option value=1>бытовая техника</option>
+            <option value=2>здоровье</option>
+            <option value=3>домашний уют</option>
+        </select><br /><br /> 
+        Размещение:
+            <input type=radio  id='PAY' class="input js-input-radio" name='payment' value=1>бесплатное
+            <input type=radio name='payment' value=2>платное
+            <input type=radio name='payment' value=3>VIP <br> <br> 
+        Разрешить отзывы: <input type=checkbox id='AGREE' class=" checkbox-input js-input-checkbox" name='agree'><br /><br />
+        Описание сайта:<br>
+        <input  id='DESCR' class="descr input js-input"  type=text name='desciption'><br /> <br />   
+        <input  id='SUBMIT' class="submit"  type='submit' value='Зарегистрироваться'>
+    </form>
+
+<script>
+"use strict"
+var formTag=document.getElementById('INFO');
+var formInputs=document.querySelectorAll('js-input');
+var inputEmail=document.querySelector('js-input-email');
+var inputCheckbox=document.querySelector('js-input-checkbox');
+
+var e=document.getElementById('ERROR');
+
+formTag.onsubmit=function(){
+    var emailVal=inputEmail.value;
+
+    formInputs.forEach(f);
+
+     function f (){
+      if (input.value === ''){
+          input.classList.add('error'); 
+          console.log ('input not filled');   
+      } else {
+          input.classList.remove('error');
+      }
+     }
+
+    return false;
+}
+
+
+
+// function validDevelop( af){
+//     console.log('works')
+//     EO=EO||window.event;
+
+//     var formTag=document.getElementById('INFO'); //находим форму
+//     var devField=formTag.elements.DEVELOPERS; //находим поле "Разработчики"
+//     var devValue=devField.value;  //достаем значение поля
+//     var e=document.getElementById('ERROR');
+//     e.style.color='red';
+//     var errorCount=0;
+
+//       if(devValue.length>20){
+//           alert('Введите пожалуйста не больше 20 символов!');
+//           e.innerHTML('Поле не должно превышать 20 символов');
+//           errorCount++;
+//           EO.preventDefault(); 
+//         //   af-фокусируем , если была ошибка
+//             if(af){
+//                 devField.focus();    
+//           }
+//         }else{
+//         e.innerHTML=('');
+//         }
+//         return false;
+//       }
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+    
+</body>
+</html>
