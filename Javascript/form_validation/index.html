@@ -36,37 +36,31 @@
 <script>
 "use strict"
 var formTag=document.getElementById('INFO');
-formTag.addEventListener('submit',validateForm,false);
-
-function validateForm(EO){
-    EO=EO||window.event;   
-    
-    var formTag=document.getElementById('INFO'); // дублируем переменную, делая ее локальной
-    var val=document.forms['INFO'].value;
-    var errorCount=0;
-    var e=document.getElementById('ERROR'); // Переменная в которую попадает пустой span (выводит сообщ об ошибке)
-
-     if (val==''){
-         alert('Форма должна быть заполнена');
-         EO.preventDefault();
-         return false;
-     }
-
-
+var devField=formTag.elements.DEVELOPERS; //находим поле "Разработчики"
+formTag.addEventListener('submit',validDevelop, false);
+var e=document.getElementById('ERROR');
 // Функция валидации поля "Разработчики"
 
 
     function validDevelop(af){
-    var d=document.getElementById('DEVELOPERS');
-      if(d.length>20){
+    EO=EO||window.event;
+
+    var formTag=document.getElementById('INFO'); //находим форму
+    var devField=formTag.elements.DEVELOPERS; //находим поле "Разработчики"
+    var devValue=devField.value;  //достаем значение поля
+    var e=document.getElementById('ERROR');
+    e.style.color='red';
+    var errorCount=0;
+      if(devValue.length>20){
+          alert('Введите пожалуйста ФИО не длиннее 30 символов!');
           e.innerHTML('Поле не должно превышать 20 символов');
+          errorCount++;
+          EO.preventDefault();
             if(af){
-              d.focus();
-              EO.preventDefault();
-              errorCount++;
+                devField.focus();    
           }
-        else{
-            e.innerHTML=('');
+        }else{
+        e.innerHTML=('');
         }
         return errorCount;
       }
@@ -74,7 +68,7 @@ function validateForm(EO){
 
 
 
-    }
+    
 
 
 
@@ -88,31 +82,6 @@ function validateForm(EO){
 
 
 
-    // вызываем все функции и суммируем количество ошибок
-    // !errorCount-фокусируй, если ошибка. Если ошибки нет- вернется true, после ошибки -вернется false и фокусировки не будет
-    errorCount+=validDevelop(!errorCount);
-    errorCount+=validName(!errorCount);
-    errorCount+=validUrl(!errorCount);
-    errorCount+=validDate(!errorCount);
-
-    if (errorCount){
-    EO.preventDefault();
-    }
-    return errorCount;
-    }       
-
-
-
-
-
-
-
-// При уходе с поля по 'blur' валидировать содержимое без фокусировки поля
-// Ф-ция validRazr получит в аргумент EO  и будет всегда фокусировать.
-// Ф-ция получает EO, где af=false)
-
-    //   var r=document.getELementByID('Developers');
-    //   r.addEventListener('blur', ()=>validRazr(false));
 
 
 
