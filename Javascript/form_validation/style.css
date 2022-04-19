@@ -19,6 +19,7 @@
     height:100px;
 }
  .error{
-     border-color:red;
+    color:red;
+    font-size: 20px;
  }
  
