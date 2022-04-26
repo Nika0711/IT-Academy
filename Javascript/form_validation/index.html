@@ -12,26 +12,25 @@
     <!-- novalidate - отменяет html5 валидацию -->
     <form id='INFO' name='site' method=post action='https://fe.it-academy.by/TestForm.php' novalidate>
         Разработчики: <input id='developers' class="longtext input" type=text name='developers'>  <span id="dev-error" class="error"></span><br /><br />
-        Название сайта: <input  id='site' class="longtext input" type=text  name='sitename'><span id="ERROR"></span><br /><br />
-        URL сайта: <input  id='URL'  class="averagetext input"  type=text name='url' ><span id="ERROR"></span><br /><br />
-        Дата запуска сайта: <input  id='DATE' class="shorttext input" type=date name='launchdate'><span id="ERROR"></span><br /><br />
-        Посетителей в сутки: <input  id='VISITORS' class="shorttext input" type=number name='visitors'><span id="ERROR"></span><br /><br />
-        E-mail для связи: <input  id='EMAIL'  class="midtext input" type=text name='email'><span id="ERROR"></span><br /><br />
+        Название сайта: <input  id='sitename' class="longtext input" type=text  name='sitename'><span id="site-error" class="error"></span><br /><br />
+        URL сайта: <input  id='url'  class="averagetext input"  type=text name='url' ><span id="url-error" class="error"></span><br /><br />
+        Дата запуска сайта: <input  id='date' class="shorttext input" type=date name='launchdate' min="2000-01-01" max="2022-04-26"><span id="date-error" class="error"></span><br /><br />
+        Посетителей в сутки: <input  id='visitors' class="shorttext input" type=number min="0" name='visitors'><span id="visitors-error" class="error"></span><br /><br />
+        E-mail для связи: <input  id='email'  class="midtext input" type=text name='email'><span id="email-error" class="error"></span><br /><br />
         Рубрика каталога:
-        <select  id='CATALOG' class="midtext" name='catalog'>
+        <select  id='catalog' class="midtext" name='catalog'> 
             <option value=1>бытовая техника</option>
             <option value=2>здоровье</option>
             <option value=3>домашний уют</option>
-        </select><span id="ERROR"></span><br /><br /> 
+        </select> <span id="catalog-error" class="error"></span><br /><br /> 
         Размещение:
-            <input type=radio  id='PAY' name='payment' value=1>бесплатное
-            <input type=radio name='payment' value=2>платное
-            <input type=radio name='payment' value=3>VIP <br> <br> <span id="pay-error"></span>
-        Разрешить отзывы: <input type=checkbox  id='AGREE' name='agree'><span id="ERROR"></span><br /><br />
+            <input type=radio  id='pay' name='payment' value=11>бесплатное
+            <input type=radio name='payment' value=22>платное
+            <input type=radio name='payment' value=33>VIP <br> <br> <span id="pay-error"></span>
+        Разрешить отзывы: <input type=checkbox  id='agree' name='agree'><span id="agree-error"></span><br /><br />
         Описание сайта:<br>
-        <input  id='DESCR' class="descr input"  type=text name='desciption'><span id="ERROR"></span><br /> <br />   
-        <input  id='SUBMIT' type='submit' value='Зарегистрироваться'>
-    </form>
+        <input  id='decription' class="descr input"  type=text name='description'><span id="description-error"></span><br /> <br />   
+        <input  id='submit' type='submit' value='Зарегистрироваться'>
 
 <script>
 "use strict"
@@ -41,11 +40,9 @@ var formInputs=document.querySelectorAll('input');
 
 var e=document.getElementById('dev-error');
 
-// Функция валидации поля "Разработчики"
+// 1. Функция валидации поля "Разработчики"                           
 
- // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
-
- function validDevelop(autoFocus){
+ function validDevelop(autoFocus){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
       
     var formTag=document.getElementById('INFO'); //находим форму
     var devField=document.getElementById('developers'); //находим поле "Разработчики"
@@ -58,11 +55,7 @@ var e=document.getElementById('dev-error');
       if(devValue === ""){
           e.innerHTML='Поле обязательно должно быть заполнено!';
           errorCount++;
-      } else {
-          e.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
-        }
-
-    if ( devValue.length>30 ) {
+      } else if ( devValue.length>30 ) {
         e.innerHTML='Введено более 30 символов!';
         errorCount++;
         } else {
@@ -75,18 +68,283 @@ var e=document.getElementById('dev-error');
         return errorCount;// функция возвращает количество найденных ошибок
     }
 
-      document.forms.INFO.developers.onblur=function(){validDevelop(false);}
-    
-      // у функции один формальный аргумент - autoFocus (я полагаю, я ещё не видел код)
-    // мы, вызывая функцию, передаём ей фактический аргумент false
-    // во время работы функции переменная autoFocus будет равна false  
 
-
-    //   var devField=document.getElementById('DEVELOPERS')
+    // 2-ой способ записи.  var devField=document.getElementById('DEVELOPERS')
     //   devField.addEventListener('blur', ()=>validDevelop(false));
 
   
-// Функция валидации поля "Имя сайта"
+//2. Функция валидации поля "Имя сайта"
+
+function validSiteName(autoFocus){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var siteField=document.getElementById('sitename'); //находим поле "Разработчики"
+      var siteValue=siteField.value;  //достаем значение поля
+      
+      var es=document.getElementById('site-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(siteValue === ""){
+            es.innerHTML='Поле обязательно должно быть заполнено!';
+            errorCount++;
+        } else if ( siteValue.length>30 ) {
+          es.innerHTML='Введено более 30 символов!';
+          errorCount++;
+          } else {
+            es.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+      if (errorCount && autoFocus)
+          siteField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+
+    //3. Функция валидации поля "URL сайта"
+
+function validUrl(autoFocus,str){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var urlField=document.getElementById('url'); //находим поле "Разработчики"
+      var urlValue=urlField.value;  //достаем значение поля
+      var validUrl=/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+      
+      var eurl=document.getElementById('url-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(urlValue === ""){
+            eurl.innerHTML='Поле обязательно должно быть заполнено!';
+            errorCount++;
+
+        } else if(!(validUrl.test(str))){ 
+            eurl.innerHTML='Введите url в таком формате (http://www.fb.com)';
+            errorCount++;
+       } else {
+            eurl.innerHTML=''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+  
+      if (errorCount && autoFocus)
+          urlField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+
+    //4. Функция валидации поля "Даты сайта"
+
+function validDate(autoFocus){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+
+   
+      var formTag=document.getElementById('INFO'); //находим форму
+      var today=new Date();
+      var dateField=document.getElementById('date'); //находим поле "Разработчики"
+      var dateValue=dateField.value;  //достаем значение поля
+      var inputDate= new Date(dateValue);
+      
+      var ed=document.getElementById('date-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(dateValue === ""){
+            ed.innerHTML='Выберите дату!';
+            errorCount++;
+        } else if(inputDate>today) {
+            ed.innerHTML=' Дата не может быть сегодня!';
+            errorCount++;  
+       }else {
+            ed.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+  
+      if (errorCount && autoFocus)
+          dateField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+     
+ //5. Функция валидации поля "Посетителей в сутки"
+
+ function validVisitors(autoFocus){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var visitField=document.getElementById('visitors'); //находим поле "Разработчики"
+      var visitValue=visitField.value;  //достаем значение поля
+      
+      
+      var ev=document.getElementById('visitors-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(visitValue === ""){
+            ev.innerHTML='Выберите количество!';
+            errorCount++;
+       } else {
+            ev.innerHTML=''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+  
+      if (errorCount && autoFocus)
+          visitField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+//6. Функция валидации поля "Email"
+
+function validEmail(autoFocus, email){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var emailField=document.getElementById('email'); //находим поле "Разработчики"
+      var emailValue=emailField.value;  //достаем значение поля
+      var validReg= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var validEmail =validReg.test(email);
+      var em=document.getElementById('email-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(emailValue === ""){
+            em.innerHTML='Поле обязательно должно быть заполнено!';
+            errorCount++;
+        } else if (!(emailValue.match(validEmail))) {
+          em.innerHTML='Введен некорректный email!';
+          errorCount++;
+          } else {
+            em.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+      if (errorCount && autoFocus)
+          emailField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+
+//7. Функция валидации выпадающего списка "Рубрика Каталога"
+
+function validCatalog(autoFocus){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var catalogField=document.getElementById('catalog'); //находим поле "Разработчики"
+      var catalogValue=catalogField.value;  //достаем значение поля
+      
+      var ec=document.getElementById('catalog-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(catalogValue === ""){
+            ec.innerHTML='Рубрика должна быть выбрана!';
+            errorCount++;
+          } else {
+            eс.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+      if (errorCount && autoFocus)
+          catalogField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+
+//8. Функция валидации кнопок "Размещение"
+
+
+  // каждая радиокнопка является отдельным элементом формы
+            // форма.elements[имя] для радиогруппы вернёт КОЛЛЕКЦИЮ
+            // т.е. несколько элементов формы с одинаковым именем
+            // и коллекция.value вернёт value ВЫБРАННОЙ радиокнопки
+            // (могут быть проблемы совместимости с IE, проверяйте!)
+
+function validPay(){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var payField=formTag.elements.payment; //
+      var payValue=payField.value;  //достаем значение поля
+      
+      var ep=document.getElementById('pay-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(payValue === ""){
+            ep.innerHTML='Выберете тип размещения!';
+            errorCount++;
+          } else {
+            ep.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+      if (errorCount)
+      document.getElementById('pay').scrollIntoView();; //  // payField.focus(); сфокусировать ВСЮ радиокнопку не получится
+                                                                 // но можно промотать страницу к первой из радиокнопок:
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+//9. Функция валидации чекбокса "Разрешить отзывы"
+
+function validAgree (autoFocus){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var agreeField=document.getElementById('agree'); //находим поле "Разработчики"
+      var agreeValue=agreeField.checked;  //достаем значение поля
+      
+      var eagr=document.getElementById('agree-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(!agreeValue){
+            eagr.innerHTML='Вы не разрешили отзывы!';
+            errorCount++;
+          } else {
+            eagr.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+      if (errorCount && autoFocus)
+          agreeField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+      //10. Функция валидации поля "Описание сайта"
+
+function validDescr(autoFocus){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
+      
+      var formTag=document.getElementById('INFO'); //находим форму
+      var descrField=document.getElementById('description'); //находим поле "Разработчики"
+      var descrValue=descrField.value;  //достаем значение поля
+      
+      var edescr=document.getElementById('description-error'); // - это span для ошибок возле поля разработчиков
+  
+      var errorCount=0;
+  
+        if(catalogValue === ""){
+            edescr.innerHTML='Рубрика должна быть выбрана!';
+            errorCount++;
+          } else {
+            edescr.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+  
+      if (errorCount && autoFocus)
+          descrField.focus(); // фокусируем поле, если разрешено и есть ошибки   
+          
+          return errorCount;// функция возвращает количество найденных ошибок
+      }
+
+
+
+
+    //   По событию blur (для текстовых полей) или change (для чекбоксов, радиокнопок, выпадающих списков) каждого поля нужно вызывать такую функцию с аргументом false (чтобы пользователь мог уйти с неверно заполненного поля).
+
+     // у функции один формальный аргумент - autoFocus 
+                    // мы, вызывая функцию, передаём ей фактический аргумент false
+                    // во время работы функции переменная autoFocus будет равна false  
+
+    document.forms.INFO.developers.onblur=function(){validDevelop(false);}; 
+    document.forms.INFO.sitename.onblur=function(){validSiteName(false);};
+    document.forms.INFO.url.onblur=function(){validUrl(false);};
+    document.forms.INFO.date.onchange=function(){validDate(false);};        
+    document.forms.INFO.visitors.onblur=function(){validVisitors(false);}; 
+    document.forms.INFO.email.onblur=function(){validEmail(false);};
+    document.forms.INFO.catalog.onchange=function(){validCatalog(false);};    
+    document.forms.INFO.payment.onchange=function(){validPay(false);};
+    document.forms.INFO.agree.onchange=function(){validAgree(false);};
+    document.forms.INFO.description.onblur=function(){validDescr(false);};
+
+
 
     // По нажатию submit нужно вызвать все функции валидации полей:
     
@@ -96,8 +354,16 @@ var e=document.getElementById('dev-error');
     try {
         var totalErrorCount=0;
         totalErrorCount+=validDevelop( !totalErrorCount ); // автофокус разрешаем только если ошибок пока нет ни одной, т.е. только для самого первого ошибочного поля
-        totalErrCount+=validSiteName( !totalErrCount );
-     
+        totalErrorCount+=validSiteName( !totalErrorCount );
+        totalErrorCount+=validUrl( !totalErrorCount );
+        totalErrorCount+=validDate( !totalErrorCount );
+        totalErrorCount+=validVisitors( !totalErrorCount );
+        totalErrorCount+=validEmail( !totalErrorCount );
+        totalErrorCount+=validCatalog( !totalErrorCount );
+        totalErrorCount+=validPay( !totalErrorCount );
+        totalErrorCount+=validAgree( !totalErrorCount );
+        totalErrorCount+=validDescr( !totalErrorCount );
+
         if ( totalErrorCount )
             EO.preventDefault(); // если ошибки были - отменяем отправку формы на сервер
     }
