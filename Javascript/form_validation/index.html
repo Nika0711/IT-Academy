@@ -26,10 +26,10 @@
         Размещение:
             <input type=radio  id='pay' name='payment' value=11>бесплатное
             <input type=radio name='payment' value=22>платное
-            <input type=radio name='payment' value=33>VIP <br> <br> <span id="pay-error"></span>
-        Разрешить отзывы: <input type=checkbox  id='agree' name='agree'><span id="agree-error"></span><br /><br />
+            <input type=radio name='payment' value=33>VIP <br> <br> <span id="pay-error" class="error"></span>
+        Разрешить отзывы: <input type=checkbox  id='agree' name='agree'><span id="agree-error" class="error"></span><br /><br />
         Описание сайта:<br>
-        <input  id='description' class="descr input"  type=text name='description'><span id="description-error"></span><br /> <br />   
+        <input  id='description' class="descr input"  type=text name='description'><span id="description-error" class="error"></span><br /> <br />   
         <input  id='submit' type='submit' value='Зарегистрироваться'>
 
 <script>
@@ -227,15 +227,15 @@ function validCatalog(autoFocus){ // autoFocus - авто-фокусироват
       var catalogField=document.getElementById('catalog'); //находим поле "Разработчики"
       var catalogValue=catalogField.value;  //достаем значение поля
       
-      var ec=document.getElementById('catalog-error'); // - это span для ошибок возле поля разработчиков
+      var ecat=document.getElementById('catalog-error'); // - это span для ошибок возле поля разработчиков
   
       var errorCount=0;
   
-        if(catalogValue === ""){
-            ec.innerHTML='Рубрика должна быть выбрана!';
+        if(catalogValue ===""){
+            ecat.innerHTML='Рубрика должна быть выбрана!';
             errorCount++;
           } else {
-            eс.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+            eсat.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
           }
   
       if (errorCount && autoFocus)
@@ -263,7 +263,7 @@ function validPay(){ // autoFocus - авто-фокусировать ли по�
   
       var errorCount=0;
   
-        if(payValue === ""){
+        if(payValue ===""){
             ep.innerHTML='Выберете тип размещения!';
             errorCount++;
           } else {
@@ -307,11 +307,11 @@ function validDescr(autoFocus){ // autoFocus - авто-фокусировать
       var descrField=document.getElementById('description'); //находим поле "Разработчики"
       var descrValue=descrField.value;  //достаем значение поля
       
-      var edescr=document.getElementById('description-error'); // - это span для ошибок возле поля разработчиков
+      var  edescr=document.getElementById('description-error'); // - это span для ошибок возле поля разработчиков
   
       var errorCount=0;
   
-        if(catalogValue === ""){
+        if(descrValue ===""){
             edescr.innerHTML='Рубрика должна быть выбрана!';
             errorCount++;
           } else {
