@@ -14,7 +14,7 @@
         Разработчики: <input id='developers' class="longtext input" type=text name='developers'>  <span id="dev-error" class="error"></span><br /><br />
         Название сайта: <input  id='sitename' class="longtext input" type=text  name='sitename'><span id="site-error" class="error"></span><br /><br />
         URL сайта: <input  id='url'  class="averagetext input"  type=text name='url' ><span id="url-error" class="error"></span><br /><br />
-        Дата запуска сайта: <input  id='date' class="shorttext input" type=date name='date' min="2000-01-01" max="2022-04-26"><span id="date-error" class="error"></span><br /><br />
+        Дата запуска сайта: <input  id='date' class="shorttext input" type=date name='date' min="2000-01-01"><span id="date-error" class="error"></span><br /><br />
         Посетителей в сутки: <input  id='visitors' class="shorttext input" type=number min="0" name='visitors'><span id="visitors-error" class="error"></span><br /><br />
         E-mail для связи: <input  id='email'  class="midtext input" type=text name='email'><span id="email-error" class="error"></span><br /><br />
         Рубрика каталога:
@@ -26,7 +26,7 @@
         Размещение:
             <input type=radio  id='pay' name='payment' value=11>бесплатное
             <input type=radio name='payment' value=22>платное
-            <input type=radio name='payment' value=33>VIP <br> <br> <span id="pay-error" class="error"></span>
+            <input type=radio name='payment' value=33>VIP <span id="pay-error" class="error"></span>  <br> <br>
         Разрешить отзывы: <input type=checkbox  id='agree' name='agree'><span id="agree-error" class="error"></span><br /><br />
         Описание сайта:<br>
         <input  id='description' class="descr input"  type=text name='description'><span id="description-error" class="error"></span><br /> <br />   
@@ -89,7 +89,7 @@ function validSiteName(autoFocus){ // autoFocus - авто-фокусирова�
             es.innerHTML='Поле обязательно должно быть заполнено!';
             errorCount++;
         } else if ( siteValue.length>30 ) {
-          es.innerHTML='Введено более 30 символов!';
+          es.innerHTML='Имя не должно первышать 30 символов!';
           errorCount++;
           } else {
             es.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
@@ -118,9 +118,9 @@ function validUrl(autoFocus,str){ // autoFocus - авто-фокусироват
             eurl.innerHTML='Поле обязательно должно быть заполнено!';
             errorCount++;
 
-        // } else if(!(validUrl.test(str))){ 
-        //     eurl.innerHTML='Введите url в таком формате (http://www.fb.com)';
-        //     errorCount++;
+        } else if(!(validUrl.test(str))){ 
+            eurl.innerHTML='Введите url в таком формате (http://www.fb.com)';
+            errorCount++;
        } else {
             eurl.innerHTML=''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
           }
@@ -177,9 +177,12 @@ function validDate(autoFocus){ // autoFocus - авто-фокусировать 
   
       var errorCount=0;
   
-        if(visitValue === ""){
+        if (visitValue === ""){
             ev.innerHTML='Выберите количество!';
             errorCount++;
+       } else if (visitValue === "0") {
+            ev.innerHTML=' Сайт должен иметь аудиторию!';
+            errorCount++; 
        } else {
             ev.innerHTML=''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
           }
@@ -206,9 +209,9 @@ function validEmail(autoFocus, email){ // autoFocus - авто-фокусиро�
         if(emailValue ===""){
             em.innerHTML='Поле обязательно должно быть заполнено!';
             errorCount++;
-        // } else if (!(emailValue.match(validEmail))) {
-        //   em.innerHTML='Введен некорректный email!';
-        //   errorCount++;
+        } else if (!(emailValue.match(validEmail))) {
+          em.innerHTML='Введен некорректный email!';
+          errorCount++;
           } else {
             em.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
           }
@@ -231,7 +234,7 @@ function validCatalog(autoFocus){ // autoFocus - авто-фокусироват
   
       var errorCount=0;
   
-        if(catalogValue ===""){
+        if(catalogValue === "1"){
             f.innerHTML='Рубрика должна быть выбрана!';
             errorCount++;
           } else {
@@ -241,7 +244,6 @@ function validCatalog(autoFocus){ // autoFocus - авто-фокусироват
       if (errorCount && autoFocus)
           catalogField.focus(); // фокусируем поле, если разрешено и есть ошибки   
           return errorCount;// функция возвращает количество найденных ошибок
-         console.log ('works')
         }
 
 // 8. Функция валидации кнопок "Размещение"
@@ -312,7 +314,7 @@ function validDescr(autoFocus){ // autoFocus - авто-фокусировать
       var errorCount=0;
   
         if(descrValue === ""){
-            er.innerHTML='Рубрика должна быть выбрана!';
+            er.innerHTML='Опишите сайт!';
             errorCount++;
           } else {
             er.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
