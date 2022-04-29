@@ -209,7 +209,7 @@ function validEmail(autoFocus){ // autoFocus - авто-фокусировать
         if(emailValue ===""){
             em.innerHTML='Поле обязательно должно быть заполнено!';
             errorCount++;
-        } else if (emailValue.match(validEmail)) {
+        } else if (!(validEmail).match(emailValue)) {
           em.innerHTML='Введен некорректный email!';
           errorCount++;
           } else {
