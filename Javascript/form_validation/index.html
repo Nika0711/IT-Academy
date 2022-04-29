@@ -209,9 +209,9 @@ function validEmail(autoFocus){ // autoFocus - авто-фокусировать
         if(emailValue ===""){
             em.innerHTML='Поле обязательно должно быть заполнено!';
             errorCount++;
-        } else if (!(validEmail).match(emailValue)) {
-          em.innerHTML='Введен некорректный email!';
-          errorCount++;
+        // } else if (!(validEmail).test(emailValue)) {
+        //   em.innerHTML='Введен некорректный email!';
+        //   errorCount++;
           } else {
             em.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
           }
