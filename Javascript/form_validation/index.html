@@ -258,27 +258,25 @@ function validCatalog(autoFocus){ // autoFocus - авто-фокусироват
 function validPay(){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
       
       var formTag=document.getElementById('INFO'); //находим форму
-      var payOptions=formTag.elements.payment; //
-      var payValue=payOptions.value;  //достаем значение поля
-      var formValid=false;
-      var i=0;
-
+      var payRadios = document.querySelectorAll('input[name="payment"]');
+      var payValue= '';
+    
       var ep=document.getElementById('pay-error'); // - это span для ошибок возле поля разработчиков
   
       var errorCount=0;
-  
-        while (!formValid && i < payOptions.length){
-          if (payOptions[i].checked){ 
-          formValid= true; 
-          i++;
-          ep.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
-          }
-          if (!formValid) {
+
+      for (var i = 0; i < payRadios.length; i++){
+        if(payRadios[i].checked){
+            ep.innerHTML= '';
+            payValue= payRadios[i];
+          } 
+      }  
+          
+         if (payValue === '') {
             ep.innerHTML='Выберете тип размещения!';
-            errorCount++;
+            errorCount++; 
           }
-        }
-  
+      
       if (errorCount)
       document.getElementById('pay').scrollIntoView();; //  // payField.focus(); сфокусировать ВСЮ радиокнопку не получится
                                                                  // но можно промотать страницу к первой из радиокнопок:
