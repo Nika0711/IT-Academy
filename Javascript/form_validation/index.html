@@ -200,7 +200,7 @@ function validEmail(autoFocus){ // autoFocus - авто-фокусировать
       var formTag=document.getElementById('INFO'); //находим форму
       var emailField=document.getElementById('email'); //находим поле "Разработчики"
       var emailValue=emailField.value;  //достаем значение поля
-      var validEmail= /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/;
+      var validEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   
       var em=document.getElementById('email-error'); // - это span для ошибок возле поля разработчиков
   
@@ -209,9 +209,9 @@ function validEmail(autoFocus){ // autoFocus - авто-фокусировать
         if(emailValue ===""){
             em.innerHTML='Поле обязательно должно быть заполнено!';
             errorCount++;
-        // } else if (!(validEmail).test(emailValue)) {
-        //   em.innerHTML='Введен некорректный email!';
-        //   errorCount++;
+        } else if (!(emailValue).match(validEmail)) {
+          em.innerHTML='Введен некорректный email!';
+          errorCount++;
           } else {
             em.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
           }
