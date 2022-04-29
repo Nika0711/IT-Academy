@@ -258,19 +258,26 @@ function validCatalog(autoFocus){ // autoFocus - авто-фокусироват
 function validPay(){ // autoFocus - авто-фокусировать ли поле, ЕСЛИ в нём будет найдена ошибка
       
       var formTag=document.getElementById('INFO'); //находим форму
-      var payField=formTag.elements.payment; //
-      var payValue=payField.value;  //достаем значение поля
-      
+      var payOptions=formTag.elements.payment; //
+      var payValue=payOptions.value;  //достаем значение поля
+      var formValid=false;
+      var i=0;
+
       var ep=document.getElementById('pay-error'); // - это span для ошибок возле поля разработчиков
   
       var errorCount=0;
   
-        if(payValue ===""){
+        while (!formValid && i < payOptions.length){
+          if (payOptions[i].checked){ 
+          formValid= true; 
+          i++;
+          ep.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
+          }
+          if (!formValid) {
             ep.innerHTML='Выберете тип размещения!';
             errorCount++;
-          } else {
-            ep.innerHTML= ''; // если ошибок не найдено - надо стереть старую ошибку, вдруг была
           }
+        }
   
       if (errorCount)
       document.getElementById('pay').scrollIntoView();; //  // payField.focus(); сфокусировать ВСЮ радиокнопку не получится
