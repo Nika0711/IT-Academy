@@ -259,22 +259,24 @@ function validPay(){ // autoFocus - авто-фокусировать ли по�
       
       var formTag=document.getElementById('INFO'); //находим форму
       var payRadios = document.querySelectorAll('input[name="payment"]');
+      var radios = document.getElementsByName('payment');
       var payValue= false;
     
       var ep=document.getElementById('pay-error'); // - это span для ошибок возле поля разработчиков
   
       var errorCount=0;
 
-      for (var i = 0; i <payRadios.length; i++){
-        if(payRadios[i].checked){
+      for (var i=0; i <payRadios.length; i++){
+         
+        if(radios[i].checked){
             payValue=true;
-            ep.innerHTML= '';
+            console.log (radios[i].value);
             break;
           } 
       }   
          if (payValue) {
-              ep.innerHTML= '';
-            }else {
+            ep.innerHTML= '';
+            } else {
             ep.innerHTML='Выберете тип размещения!';
             errorCount++; 
           }
@@ -348,7 +350,7 @@ function validDescr(autoFocus){ // autoFocus - авто-фокусировать
     document.forms.INFO.visitors.onblur=function(){validVisitors(false);}; 
     document.forms.INFO.email.onblur=function(){validEmail(false);};
     document.forms.INFO.catalog.onchange=function(){validCatalog(false);};    
-    document.forms.INFO.payment.onclick=function(){validPay(false);};
+    document.forms.INFO.payment.onchange=function(){validPay(false);};
     document.forms.INFO.agree.onchange=function(){validAgree(false);};
     document.forms.INFO.description.onblur=function(){validDescr(false);};
 
