@@ -24,7 +24,7 @@
             <option value=3>домашний уют</option>
         </select> <span id="catalog-error" class="error"></span><br /><br /> 
         Размещение:
-            <input type=radio  id='pay' name='payment' value=11>бесплатное
+            <input type=radio name='payment' id='pay' value=11>бесплатное
             <input type=radio name='payment' value=22>платное
             <input type=radio name='payment' value=33>VIP <span id="pay-error" class="error"></span>  <br> <br>
         Разрешить отзывы: <input type=checkbox  id='agree' name='agree'><span id="agree-error" class="error"></span><br /><br />
@@ -259,20 +259,22 @@ function validPay(){ // autoFocus - авто-фокусировать ли по�
       
       var formTag=document.getElementById('INFO'); //находим форму
       var payRadios = document.querySelectorAll('input[name="payment"]');
-      var payValue= '';
+      var payValue= false;
     
       var ep=document.getElementById('pay-error'); // - это span для ошибок возле поля разработчиков
   
       var errorCount=0;
 
-      for (var i = 0; i < payRadios.length; i++){
+      for (var i = 0; i <payRadios.length; i++){
         if(payRadios[i].checked){
+            payValue=true;
             ep.innerHTML= '';
-            payValue= payRadios[i];
+            break;
           } 
-      }  
-          
-         if (payValue === '') {
+      }   
+         if (payValue) {
+              ep.innerHTML= '';
+            }else {
             ep.innerHTML='Выберете тип размещения!';
             errorCount++; 
           }
@@ -346,7 +348,7 @@ function validDescr(autoFocus){ // autoFocus - авто-фокусировать
     document.forms.INFO.visitors.onblur=function(){validVisitors(false);}; 
     document.forms.INFO.email.onblur=function(){validEmail(false);};
     document.forms.INFO.catalog.onchange=function(){validCatalog(false);};    
-    document.forms.INFO.payment.onchange=function(){validPay(false);};
+    document.forms.INFO.payment.onclick=function(){validPay(false);};
     document.forms.INFO.agree.onchange=function(){validAgree(false);};
     document.forms.INFO.description.onblur=function(){validDescr(false);};
 
