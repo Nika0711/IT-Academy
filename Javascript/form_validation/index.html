@@ -350,6 +350,14 @@ function validDescr(autoFocus){ // autoFocus - авто-фокусировать
     document.forms.INFO.visitors.onblur=function(){validVisitors(false);}; 
     document.forms.INFO.email.onblur=function(){validEmail(false);};
     document.forms.INFO.catalog.onchange=function(){validCatalog(false);};    
+    
+    
+    var radios = document.getElementsByName('payment');
+    for (var i=0; i <radios.length; i++){     
+      radios[i].onchange=function(){validPay(false);};
+           } 
+      
+    
     document.forms.INFO.payment.onchange=function(){validPay(false);};
     document.forms.INFO.agree.onchange=function(){validAgree(false);};
     document.forms.INFO.description.onblur=function(){validDescr(false);};
