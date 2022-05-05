@@ -7,13 +7,73 @@
     <title>Drag and Drop</title>
 </head>
 <body>
-    <img src='http://fe.it-academy.by/Sites/0000007/sax.jpg'>
-<img src='http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png' width=100>
-<img src='http://fe.it-academy.by/Sites/0000007/Man-and-woman.png' width=150>
-<img src='http://fe.it-academy.by/Sites/0000007/No_smoking.png' style='padding-left: 50px'>
 
+<img src='http://fe.it-academy.by/Sites/0000007/sax.jpg' name="pic">
+<img src='http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png'  name="pic" width=100>
+<img src='http://fe.it-academy.by/Sites/0000007/Man-and-woman.png' name="pic"  width=150>
+<img src='http://fe.it-academy.by/Sites/0000007/No_smoking.png'  name="pic" style='padding-left: 50px'>
+
+<!-- <input type=button value='измерить высоту' onclick='getElemPos()'> -->
 <script>
-  // здесь ваш код
+  "use strict";
+
+  window.addEventListener('load',getElemPos,false);  // подписываемся на событие load для страницы 
+
+  
+  
+  function getElemPos(EO) {
+    EO=EO||window.event;
+    EO.preventDefault();
+   
+     
+    var imgs = document.getElementsByTagName ('img');
+    var imgPos= [];
+
+    for( var i=0; i<imgs.length; i++){
+      
+       var rect= imgs[i].getBoundingClientRect();  //определяем коордтнаты картинок 
+       var imgX=rect.left;
+       var imgY=rect.top;
+       imgPos.push( {x:imgX,y:imgY});
+       console.log(imgPos);  
+    }
+
+    function setElemPos (EO){
+        EO=EO||window.event;
+        EO.preventDefault();
+
+        var imgs = document.getElementsByTagName ('img');
+
+        for( var i=0; i<imgs.length; i++){
+          imgs[i].style.left=imgPos[i].x +'px';
+          imgs[i].style.top=imgPos[i].y +'px';
+          console.log (imgs[i].x, imgs[i].y)
+
+        }
+
+        for (var i=0; i<imgs.length; i++){
+            imgs[i].style.position='absolute';
+        }
+       console.log('');
+    }
+    
+           
+     
+       
+   
+    
+
+   
+
+
+ }
+
+
+
+
+
+
+
 
 </script>
 </body>
