@@ -48,8 +48,9 @@ function getElemPos(EO) {
     
  }
 
- 
-  var movedImg= null;
+  var imgs = document.getElementsByTagName ('img');
+  var img=imgs[i];
+
   var zIndex=10;
 
 //   обработчики событий
@@ -99,11 +100,7 @@ function imgMoveEnd (EO) {
 
    movedImg =null;
 }
-
-ball.ondragstart = function() {
-  return false;
-};
-  
+ 
 
 
 
