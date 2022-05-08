@@ -18,10 +18,8 @@
   "use strict";
 
   window.addEventListener('load',getElemPos,false);  // подписываемся на событие load для страницы 
-
   
-  
-  function getElemPos(EO) {
+function getElemPos(EO) {
     EO=EO||window.event;
     EO.preventDefault();
    
@@ -50,47 +48,62 @@
     
  }
 
-  var imgs = document.getElementsByTagName ('img');
-  var movedImg = imgs[i];
+ 
+  var movedImg= null;
   var zIndex=10;
 
 //   обработчики событий
 
- movedImg.onmousedown=imgMoveStart;
-
- movedImg.onmouseup=imgMoveEnd;
-
-  function imgMoveStart (EO){
+ movedImg.addEventListener('mousedown',imgMoveStart,false);
+ 
+function imgMoveStart (EO){
     EO=EO||window.event;
     EO.preventDefault ();
 
-    // разница между положением мыши и положением картинки 
-    var shiftX=EO.clientX - movedImg.getBoundingClientRect().left;
+    ++zIndex;
+    var movedImg=EO.target;
+
+    document.body.append(movedImg);
+
+    moveAt(EO.pageX, EO.pageY);
+    
+    var shiftX=EO.clientX - movedImg.getBoundingClientRect().left; // разница между положением мыши и положением картинки, координаты сдвига
     var shiftY=EO.clientY - movedImg.getBoundingClientRect().top;
-
-  }
-
-
-  function imgMove (EO){
-
-     movedImg.style.left= pageX - shiftX +'px'
-
-
-     ++zIndex;
-
-
-
-  document.onmousemove=imgMove;
-
-
-  }
-
-
-
-function imgMoveEnd (EO) {
-
+  
+function moveAt (){
+     movedImg.style.left= pageX - shiftX +'px'; // позиционируем картинку с тем же сдвигом относительно указателя мыши
+     movedImg.style.left= pageX - shiftX +'px';
+     
+}  
 }
 
+function imgMove (EO){
+    EO=EO||window.event;
+    EO.preventDefault ();
+
+    var movedImg=EO.target;
+    moveAt(EO.pageX, EO.pageY);
+
+    document.addEventListener('mousemove',imgMove,false);
+
+  }
+ 
+  movedImg.addEventListener('mouseup',imgMoveEnd,false);
+    
+function imgMoveEnd (EO) {
+    EO=EO||window.event;
+    EO.preventDefault ();
+
+    document.removeEventListener('mousemove',imgMove,false);
+    movedImg.removeEventListener('mousedown',imgMoveStart,false);
+
+   movedImg =null;
+}
+
+ball.ondragstart = function() {
+  return false;
+};
+  
 
 
 
